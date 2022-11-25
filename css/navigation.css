@@ -14,6 +14,16 @@ nav a{
     text-decoration: none;
 }
 
-nav a:hover{
-    color: blue;
+nav .active{
+    border-bottom: 2px solid black;
 }
+nav a:hover{
+    border-bottom: 2px solid black;
+}
+
+@media screen and (max-width: 600px) {
+    nav ul li{
+        display: block;
+        padding-top: 15px;
+    }
+  }

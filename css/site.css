@@ -17,3 +17,13 @@ body{
     background-color: #dbdbdb;
     padding:25px;
 }
+
+@media screen and (max-width: 600px) {
+    #container {
+      margin: 0;
+    }
+
+    #main{
+        width: 100%;
+    }
+  }
