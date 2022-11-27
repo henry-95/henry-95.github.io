@@ -1,3 +1,7 @@
+nav{
+    float:right;
+}
+
 nav ul{
     margin: 0;
     padding: 0;
@@ -25,5 +29,9 @@ nav a:hover{
     nav ul li{
         display: block;
         padding-top: 15px;
+    }
+
+    nav{
+        float:none;
     }
   }

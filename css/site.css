@@ -3,6 +3,7 @@
 
 body{
     margin: 0;
+    background-color: #062c43;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -13,9 +14,32 @@ body{
 }
 
 #main{
-    width: 600px;
-    background-color: #dbdbdb;
+    width: 750px;
+    background-color: white;
     padding:25px;
+    margin-bottom: 25px;
+}
+#header h2{
+    display: inline;
+    margin: 0px 25px 0px 0px;
+    color: #9f694b;
+}
+
+section{
+    border-bottom: 2px solid #9f694b;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+}
+
+#projects table td{
+    padding: 10px;
+    height: 100px;
+}
+
+#projects table td:first-child
+{
+    vertical-align: middle;
+    font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {
@@ -26,4 +50,4 @@ body{
     #main{
         width: 100%;
     }
-  }
+}
