@@ -13,7 +13,7 @@ nav ul li{
     margin-right: 10px;
 }
 
-nav a{
+nav a, #hamburger-menu{
     color: black;
     text-decoration: none;
 }
@@ -25,6 +25,18 @@ nav a:hover{
     border-bottom: 2px solid black;
 }
 
+#hamburger-menu{
+    display:none;
+}
+
+.fixed-top-navigation{
+    position:fixed;
+    top: 0;
+    background-color: white;
+    width:750px;
+    border-top: 10px solid #062c43;
+}
+
 @media screen and (max-width: 600px) {
     nav ul li{
         display: block;
@@ -32,6 +44,40 @@ nav a:hover{
     }
 
     nav{
-        float:none;
+        display:none;
     }
-  }
+
+    #hamburger-menu{
+        display:inline;
+        float:right;
+    }
+    
+}
+
+
+nav.open{
+    display: block !important;
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+
+@media screen and (max-width: 800px) {
+
+    .fixed-top-navigation{
+        padding: 25px;
+        top: 0;
+        left: 0;
+        right: 0;
+        border-left: 10px solid #062c43;
+        border-right: 10px solid #062c43;
+        width: unset;
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    .fixed-top-navigation{
+        width:700px;
+    }
+}

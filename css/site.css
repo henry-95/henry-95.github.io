@@ -10,15 +10,23 @@ body{
 #container{
     display: flex;
     justify-content: center;
-    margin-top: 25px;
+    margin: 25px 10px 0px 10px;
 }
 
 #main{
     width: 750px;
     background-color: white;
-    padding:25px;
     margin-bottom: 25px;
 }
+
+#content-container{
+    padding: 25px;
+}
+
+#header, footer{
+    padding: 25px;
+}
+
 #header h2{
     display: inline;
     margin: 0px 25px 0px 0px;
@@ -42,12 +50,13 @@ section{
     font-weight: bold;
 }
 
-@media screen and (max-width: 600px) {
-    #container {
-      margin: 0;
-    }
+.fixed-top-padding{
+    padding-top: 78px;
+}
 
+@media screen and (max-width: 600px) {
     #main{
         width: 100%;
     }
 }
+
