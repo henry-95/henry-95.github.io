@@ -2,9 +2,25 @@
 @import "footer.css";
 
 body{
+    display: flex;
     margin: 0;
     background-color: #062c43;
     font-family: Arial, Helvetica, sans-serif;
+    justify-content: center;
+}
+
+header h1{
+    color:#ff00c1;
+    font-style:italic;
+}
+
+header a{
+    margin-left: 10px;
+    color: white;
+}
+
+header a:hover{
+    cursor:pointer;
 }
 
 #main{
@@ -14,6 +30,7 @@ body{
     align-items: center;
     align-content: center;
     height: 100vh;
+    width: 1000px;
 }
 section{
     background-color: #dbdbdb;
@@ -24,7 +41,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    box-shadow: 10px 10px #ff00c1;
+    box-shadow: 7px 7px #ff00c1;
 }
 
 section:hover{
@@ -41,16 +58,16 @@ section:hover{
 
 .selected{
     height: 60%;
-    transition: height 0.5s;
+    transition: height 0.3s;
 }
 
 .selected h3{
     color:#ff00c1;
-    transition-duration: 0.5s;
+    transition-duration: 0.3s;
 }
 
 .content{
-    transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+    transition: opacity 0.3s, visibility 0.5s, height 0.3s;
     flex-direction: column;
     padding: 0px 30px;
 }
