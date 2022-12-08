@@ -1,0 +1,92 @@
+@import "navigation.css";
+@import "footer.css";
+
+body{
+    margin: 0;
+    background-color: #062c43;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#main{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+}
+section{
+    background-color: #dbdbdb;
+    width: 95%;
+    height: 10%;
+    transition: height 0.5s;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 10px 10px #ff00c1;
+}
+
+section:hover{
+    background-color: #d2d2d2;
+    cursor: pointer;
+}
+
+.hide{
+    height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-delay: 0.1s;
+}
+
+.selected{
+    height: 60%;
+    transition: height 0.5s;
+}
+
+.selected h3{
+    color:#ff00c1;
+    transition-duration: 0.5s;
+}
+
+.content{
+    transition: opacity 0.5s, visibility 0.5s, height 0.5s;
+    flex-direction: column;
+    padding: 0px 30px;
+}
+
+.project{
+    max-width: 700px;
+    min-height: 100px;
+    padding-bottom: 30px;
+}
+
+.project-title{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    min-width: 150px;
+}
+
+.project-text{
+    float: right;
+    width: 80%;
+}
+
+.flex-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    .project{
+        flex-direction: column !important;
+    }
+
+    .project-title{
+        padding-bottom: 15px;
+        padding-right: 0px;
+    }
+}
