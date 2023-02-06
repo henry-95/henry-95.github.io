@@ -1,0 +1,34 @@
+.typing-container{
+display: flex;
+justify-content: center;
+align-items: center;
+margin-bottom: 2em;
+}
+
+.typing-sentence{
+	font-size: 30px !important;
+	margin-bottom: 0 !important;
+}
+
+.typing-cursor{
+	display:inline-block;
+	width: 2px;
+	height: 35px;
+	background-color: white;
+	margin-left: 8px;
+	animation: blink .5s linear infinite alternate;
+	
+}
+
+/*Blinking typing cursor animation*/
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
+  }
+
+  #banner h2 span{
+	font-weight: 550;
+	color: #ffffff;
+  }

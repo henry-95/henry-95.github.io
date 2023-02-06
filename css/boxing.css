@@ -1,0 +1,46 @@
+#main{
+}
+
+#main section{
+    flex-direction: column;
+}
+
+.trainer-option{
+    width: 100px;
+    height: 50px;
+    border: none;
+    margin: 3px 3px;
+}
+
+.trainer-option:hover{
+    background-color: #50ace5;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.option-selected{
+    background-color: #258fcf;
+    font-weight: bold;
+}
+
+.option-selected:hover{
+    background-color: #258fcf !important;
+
+}
+
+#boxing .flex-container{
+    flex-direction: row;
+}
+
+.option-group{
+    width: 450px;
+}
+
+.button{
+    padding: 0;
+}
+
+.option-group .input{
+    text-align: left;
+    margin: 10px;
+}

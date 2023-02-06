@@ -1,8 +1,9 @@
-let sections = document.getElementsByTagName("section");
-let page = document.getElementsByTagName("section");
+let pageLinks = document.querySelectorAll("#home, #projects, #contact");
+let pages = document.getElementsByClassName("page");
 
-for(let section of sections){
-    section.addEventListener("click", clickSection, false);
+
+for(let page of pages){
+    page.querySelector("h3").addEventListener("click", clickSection, false);
 }
 
 document.getElementById("toggle-lights").addEventListener("click", toggleLights, false);
@@ -14,17 +15,17 @@ function toggleLights(){
 }
 
 function clickSection(){
-    let sectionId = this.id;
-    console.log(this);
+    let pageId = this.parentElement.id;
     
-    for(let section of sections){
-        if(sectionId != section.id)
+    for(let page of pages){
+        if(pageId != page.id)
         {
-            section.classList.remove("selected");
-            section.getElementsByClassName("content")[0].classList.add("hide");
+            page.classList.remove("selected");
+            page.getElementsByClassName("content")[0].classList.add("hide");
         }else{
-            section.classList.toggle("selected");
-            section.getElementsByClassName("content")[0].classList.toggle("hide");
+            page.classList.toggle("selected");
+            //this.classList.remove("page");
+            page.getElementsByClassName("content")[0].classList.toggle("hide");
         }
     }
 }

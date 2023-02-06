@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/chess.css"></script>
+        <script type="module" src="js/chess.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!---------------->
+        <!--JS Libraries-->
+        <!---------------->
+        <script src="/js/libraries/howler.min.js"></script>
+        <script src="/js/libraries/easytimer.min.js"></script>
+        <title>Chess</title>
+    </head>
+<body>
+    <div id="container">
+        <div id="main">
+            <section>
+                <h1>Practice Chess Coordinates</h1>
+                <p>I want to practice...</p>
+
+                <input type="radio" id="radio-ranks" title="ranks" name="ranks-or-files" value="rank" checked>
+                <label for="ranks">Ranks</label>
+                <input type="radio" id="radio-files" title="ranks" name="ranks-or-files" value="file">
+                <label for="files">Files</label>
+                <input type="radio" id="radio-ranks" title="ranks" name="ranks-or-files" value="both" checked>
+                <label for="ranks">Ranks and Files</label>
+                <a href="#" id="startGame">Start</a>
+            </section>
+            <div id="chessboard">
+                <h1 id="boardText">h3</h1>
+                <h1 id="boardTopText"></h1>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>

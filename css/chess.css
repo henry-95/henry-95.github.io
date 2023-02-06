@@ -1,0 +1,82 @@
+body{
+    margin: 0;
+    background-color: #1f1f1f;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    margin: 25px 10px 0px 10px;
+}
+
+#main{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    flex-direction:column;
+}
+
+#chessboard{
+    display: flex;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    margin-top: 20px;
+    bsox-shadow: 0 0px 80px rgb(107, 119, 146, 0.8);
+    border: 5px solid black;
+}
+
+#boardText{
+    position: absolute;
+    align-self: center;
+    text-align: center;
+    width: 500px;
+    pointer-events:none;
+    text-shadow: 0 0 2px rgb(255 255 255);
+    color: white;
+    font-size: 60px;
+}
+
+#boardTopText{
+    position: absolute;
+    text-align: center;
+    width: 500px;
+    pointer-events:none;
+}
+.light{
+    background-color:#8da6e0;
+}
+
+.dark{
+    background-color:#304d9d;
+}
+
+
+.square{
+height: 12.5%;
+width: 12.5%;
+}
+
+.hover{
+    background-color: red;
+}
+
+#startGame{
+margin: 20px;
+padding: 10px 20px;
+background-color:#304d9d;
+width: 100px;
+text-align: center;
+text-decoration: none;
+color: #8da6e0;
+font-weight: 700;
+font-size: 25px;
+}
+
+#startGame:hover{
+    background-color:#8da6e0;
+    color: #304d9d;
+}
