@@ -28,11 +28,11 @@ async function go(){
 	await waitForMs(waitTime);
 	await deleteSentence(document.getElementById("typing-sentence"));
 
-	await typeSentence("Class is in session!.", document.getElementById("typing-sentence"));
+	await typeSentence("Class is in session!", document.getElementById("typing-sentence"));
 	await waitForMs(waitTime);
 	await deleteSentence(document.getElementById("typing-sentence"));
 
-	await typeSentence("上课了.", document.getElementById("typing-sentence"));
+	await typeSentence("上课了!", document.getElementById("typing-sentence"));
 	await waitForMs(waitTime);
 	await deleteSentence(document.getElementById("typing-sentence"));
 	//await deleteSentence(document.getElementById("typing-sentence"));
