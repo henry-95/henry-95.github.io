@@ -1,56 +1,209 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="css/site2.css"></script>
-
-        <script type="module" src="js/index2.js" defer></script>
-        <script src="https://kit.fontawesome.com/9b8758cb09.js" crossorigin="anonymous"></script>
-
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>index</title>
-    </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Henry Northen – .NET Developer CV</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      line-height: 1.6;
+    }
+    .cv-container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    header {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    header img {
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-right: 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    header p {
+      margin: 5px 0;
+    }
+    section {
+      margin-bottom: 30px;
+    }
+    section h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      color: #444;
+    }
+    .subheader {
+      font-style: italic;
+      color: #777;
+      margin: 3px 0 10px;
+    }
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+    ul li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #007bff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .experience, .project {
+      margin-bottom: 25px;
+    }
+    .experience img, .project img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
 <body>
-    <div id="main">
-        <header><h1>Henry Northen <a id="toggle-lights"><i class="fa-solid fa-sun"></i></a></h1></header>
-        <section id="home" class="page flex-container">
-            <h3>Home</h3>
-            <div class="content hide">Welcome to my slice of the internet! Enjoy your stay.
-                <br />
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nec ante mi. Cras sit amet leo elementum, pellentesque lacus nec, tempus eros. Vestibulum enim ex, cursus quis sagittis ut, ornare a erat. Maecenas nulla ligula, ultrices quis metus ut, aliquam ullamcorper diam. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Duis interdum diam massa, eget suscipit nunc interdum vel.
-            </div>
-        </section>
-        <section id="projects" class="page flex-container">
-            <h3>Projects</h3>
-            <div class="content flex-container hide">
-                <div class="project flex-container">
-                    <div class="project-title">
-                        YardandGroom
-                    </div>
-                    <div class="project-text">
-                        What I am currently working on. I update and maintain the website. I fix bugs, implement new features, manage social media and answer customer enquiries.
-                    </div>
-                </div>
-                <div class="project flex-container">
-                    <div class="project-title">
-                        <a href="boxing.html">Boxing Trainer</a>
-                    </div>
-                    <div class="project-text">
-                        A hobby project. I had the idea of creating a customisable boxing trainer that would announce out loud each move. The 'player' can then customise how many rounds they want, what moves they want to perform, e.g punches, knees, elbows, kicks.
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="contact" class="page flex-container">
-            <h3>Contact</h3>
-            <div class="content hide">
-                <div class="social-media flex-container">
-                    <div>
-                        <input type="text" placeholder="Name"/>
-                    </div>
-                    
-                </div>
-            </div>
-        </section>
-    </div>
+  <div class="cv-container">
+    <!-- Header / Contact Information -->
+    <header>
+      <img src="me.jpg" alt="Henry Northen Photo" />
+      <div>
+        <h1>Henry Northen</h1>
+        <p><strong>.NET Developer</strong> – Full-Stack | Front-End &amp; Back-End</p>
+        <p>
+          📍 Cheltenham, UK | 
+          <a href="https://www.linkedin.com/in/henry-northen-1579672a/" target="_blank">LinkedIn</a> | 
+          <a href="https://www.x.com/wordofhenry" target="_blank">X</a>
+        </p>
+      </div>
+    </header>
+
+    <!-- Professional Summary -->
+    <section>
+      <h2>Professional Summary</h2>
+      <p>
+        Versatile Full-Stack .NET Developer with over six years of practical experience in software and web development. Since 2020, I have taken over the ongoing development and optimisation of <strong>YardandGroom</strong>, ensuring continuous improvements and robust performance on a well-established platform. My expertise spans modern UI/UX design, cloud solutions, automation, and DevOps, empowering me to tackle complex technical challenges with innovative solutions.
+      </p>
+    </section>
+
+    <!-- Career Experience -->
+    <section>
+      <h2>Career Experience</h2>
+      
+      <div class="experience">
+        <h3>Software/Web Developer – <a href="https://www.yardandgroom.com" target="_blank">YardandGroom</a></h3>
+        <p class="subheader">2020 – Present</p>
+        <ul>
+          <li>Took over the development and ongoing maintenance of a robust .NET Core platform hosted on Azure.</li>
+          <li>Oversee full-stack responsibilities including front-end enhancements, back-end improvements, and database automation.</li>
+          <li>Optimised SEO performance and automated critical workflows using various Azure services.</li>
+          <li>Integrated an advanced PayPal Checkout solution—with support for Apple Pay and Google Pay—to streamline the payment process.</li>
+          <li>Implemented automated social media content generation to boost engagement while adhering to platform policies.</li>
+          <li>Provided responsive customer support by efficiently resolving email inquiries.</li>
+        </ul>
+        <img src="yardandgroom.png" alt="YardandGroom Screenshot" />
+      </div>
+      
+      <div class="experience">
+        <h3>QA/Developer Consultant – <a href="https://www.northentradinglabs.com" target="_blank">Northen Trading Labs</a></h3>
+        <p class="subheader">2020 – Present</p>
+        <ul>
+          <li>Developed and deployed a Stripe subscription payment system, ensuring smooth recurring transactions.</li>
+          <li>Tested and debugged MetaTrader 5 expert advisors and indicators to maintain high performance.</li>
+          <li>Contributed innovative ideas and provided guidance for tool development aligned with user needs.</li>
+          <li>Crafted the front-end of a customer-ready website to facilitate product deployment.</li>
+        </ul>
+        <img src="northentradinglabs.png" alt="Northen Trading Labs Screenshot" />
+      </div>
+    </section>
+
+    <!-- Additional Projects -->
+    <section>
+      <h2>Additional Projects</h2>
+      
+      <div class="project">
+        <h3><a href="https://letsplaychess.azurewebsites.net" target="_blank">LetsPlayChess</a></h3>
+        <p class="subheader">Solo Developer</p>
+        <ul>
+          <li>Built an ASP.NET Core website that leverages the Google Maps API to connect chess enthusiasts for in-person meetups.</li>
+          <li>Implemented a seamless single-page application experience and integrated a Stripe payment system for membership management.</li>
+          <li>Developed a dynamic club system based on geographical locations, enabling users to create or join local chess clubs.</li>
+        </ul>
+        <img src="letsplaychess.png" alt="LetsPlayChess Screenshot" />
+      </div>
+      
+      <div class="project">
+        <h3>
+          <a href="https://t.me/Juliette_Personal_Assistant_Bot" target="_blank">
+            Juliette – Personal Assistant AI
+          </a>
+        </h3>
+        <p class="subheader">Solo Developer</p>
+        <ul>
+          <li>Engineered a personal assistant AI using Azure Functions, Azure Table Storage, and the Telegram API.</li>
+          <li>Designed interactive features where the AI proactively initiates conversations and sends task reminders.</li>
+          <li>Achieved full Telegram integration to enhance user engagement and daily productivity.</li>
+        </ul>
+        <img src="juliette.png" alt="Juliette AI Screenshot" />
+      </div>
+    </section>
+
+    <!-- Notable Achievements -->
+    <section>
+      <h2>Notable Achievements</h2>
+      <ul>
+        <li>Revamped website design to deliver a modern, user-friendly interface and improved UX.</li>
+        <li>Developed an intelligent employer/jobseeker matching system using database stored procedures with automated notifications.</li>
+        <li>Streamlined social media posting by automating content generation with Azure screenshot services, significantly reducing manual workload.</li>
+        <li>Enhanced search visibility by integrating the Google Job Post schema, boosting rankings for equestrian-related searches.</li>
+        <li>Created automated Facebook Dynamic Ads that update weekly with the latest job listings and images.</li>
+        <li>Optimised Azure resource usage to reduce costs by over 50% through careful performance and capacity analysis.</li>
+        <li>Explored modern tech stacks by prototyping a React-based version of YardandGroom for potential future scalability.</li>
+        <li>Managed the design and production of YardandGroom branded merchandise, including supplier negotiations on Alibaba.</li>
+      </ul>
+    </section>
+
+    <!-- Core Competencies -->
+    <section>
+      <h2>Core Competencies</h2>
+      <ul>
+        <li><strong>Languages:</strong> C#, JavaScript, TypeScript, Python, HTML, CSS</li>
+        <li>
+          <strong>Frameworks &amp; APIs:</strong> .NET Core, Entity Framework, React (basic), Stripe API, PayPal Advanced Checkout
+        </li>
+        <li><strong>Databases:</strong> SQL Server</li>
+        <li>
+          <strong>Cloud &amp; DevOps:</strong> Azure (Web Apps, Functions, Table Storage, App Insights), Automation, Cost Optimisation
+        </li>
+        <li>
+          <strong>Tools:</strong> Visual Studio, GitHub, VS Code, Photoshop, Umami Analytics, BoxySVG, MetaTrader 5, Google Maps API
+        </li>
+      </ul>
+    </section>
+
+    <!-- Education -->
+    <section>
+      <h2>Education</h2>
+      <p><strong>Bachelor of Science in Web Design</strong></p>
+      <p>University of Gloucestershire, 2014 – 2017</p>
+      <p>Graduated with Second Class Honours (1st Division)</p>
+    </section>
+  </div>
 </body>
 </html>
