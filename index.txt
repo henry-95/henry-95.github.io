@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Henry Northen | Software Developer CV</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
+        .container { width: 90%; max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        h1, h2, h3 { color: #444; margin-bottom: 10px; }
+        p { margin: 5px 0; }
+        ul { padding: 0 20px; }
+        .section { margin-bottom: 20px; }
+        .skills li, .achievements li { margin-bottom: 8px; }
+        .bold { font-weight: bold; }
+        a{ color: #007bff; text-decoration: none; font-weight: bold; }
+        a:hover { text-decoration: underline; }
+
+        header{
+            display:flex;
+        }
+        header img{
+            border-radius: 100px;
+            margin-right: 20px;
+        }
+
+        section img{
+            border-radius: 15px;
+            max-width: 85%;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Personal Details -->
+        <header>
+            <img src="me.jpg" width="150" height="150"/>
+            <div>
+            <h1>Henry Northen</h1>
+            <p><span class="bold">.NET Developer</span> | Full-Stack, Front-End, Back-End</p>
+            <p>📍Cheltenham, UK | <a target="_blank" href="https://www.linkedin.com/in/henry-northen-1579672a/">LinkedIn</a> | <a target="_blank" href="https://www.x.com/wordofhenry">X</a> | <a target="_blank" href="https://www.github.com/henry-95">Github</a></p>
+        </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section class="section">
+            <h2>Professional Summary</h2>
+            <p>Experienced <strong>Full-Stack .NET Developer with 6+ years</strong> of hands-on experience in software and web development. <strong>Sole developer of YardandGroom</strong>, responsible for the entire platform, from <strong>design and development to deployment and optimization</strong>. Skilled in <strong>modern UI/UX, cloud technologies, automation, and DevOps</strong>. Adept at solving complex technical challenges, implementing new features, and enhancing system performance.
+        </section>
+        <hr/>
+        <!-- Technical Skills -->
+        <section class="section">
+            <h2>Technical Skills</h2>
+            <ul class="skills">
+                <li><strong>Programming Languages:</strong> C#, JavaScript, TypeScript, Python, HTML, CSS</li>
+                <li><strong>Frameworks & APIs:</strong> .NET Core, Entity Framework, React (basic), Stripe API, Paypal Advanced Checkout</li>
+                <li><strong>Databases:</strong> SQL Server</li>
+                <li><strong>Cloud Services:</strong> Azure Portal (Web Apps, Functions, Table Storage, Cost Analysis, App Insights)</li>
+                <li><strong>Tools & Platforms:</strong> Visual Studio, GitHub, VS Code, Photoshop, Umami Analytics, BoxySVG, MetaTrader 5, Google Maps/Addresses API</li>
+            </ul>
+        </section>
+        <hr/>
+        <!-- Key Achievements -->
+        <section class="section">
+            <h2>Key Achievements</h2>
+            <ul class="achievements">
+                <li><strong>Led the full website redesign</strong>, modernizing UI/UX for a cleaner, more intuitive experience</li>
+                <li>Solely responsible for development, updates, and maintenance, ensuring platform stability</li>
+                <li>Designed, developed, and deployed new features, based on customer feedback and business needs.</li>
+                <li>Implemented <strong>intelligent employer/jobseeker matching</strong> via database-stored procedures, enhancing user engagement with automated notifications.</li>
+                <li>Automated <strong>social media posts and images</strong> for job listings using Azure screenshot services, significantly reducing manual workload while adhering to Facebook and Instagram's rules.</li>
+                <li>Improved SEO performance by implementing Google job post schema, boosting visibility for key equestrian-related searches.</li>
+                <li>Created and deployed <strong>automated Facebook Dynamic Ads</strong> that update weekly with the latest job listings and images.</li>
+                <li>Implemented <strong>PayPal Advanced Checkout System</strong> on YardandGroom, integrating Apple Pay, Google Pay, and the PayPal button for a seamless payment experience.</li>
+                <li>Prototyped YardandGroom as a React application, exploring modern tech stacks for potential future implementations.</li>
+                <li>Led design and production of branded YardandGroom merchandise (caps), finding suitable manufacturers on Alibaba, communicating with them and negotiating a price.</li>
+                <li>Reduced <strong>YardandGroom's Azure costs by over 50%</strong> by analysing app service and database usage, optimising DTU and vCPU levels while maintaining performance.</li>
+            </ul>
+        </section>
+        <hr/>
+        <!-- Professional Experience -->
+        <section class="section">
+            <h2>Professional Experience</h2>
+            <h3 id="yardandgroom">Software/Web Developer | <a target="_blank" href="https://www.yardandgroom.com">YardandGroom</a></h3>
+            <p><em>2017 - Present</em></p>
+            <ul>
+                <li>Spearheaded development and updates for a large-scale platform built on .NET Core and Azure.</li>
+                <li>Managed full-stack tasks including front-end redesigns, back-end improvements, and database automation.</li>
+                <li>Enhanced website SEO performance and automated key operational processes using Azure services.</li>
+                <li>Implemented the <strong>PayPal JavaScript Advanced Checkout System</strong>, providing multiple payment options including Apple Pay, Google Pay, and PayPal.</li>
+                <li>Automated social media content and post generation, reducing manual effort while adhering to social platform guidelines.</li>
+                <li>Handled <strong>customer email queries</strong> professionally, resolving issues promptly and ensuring customer satisfaction.</li>
+            </ul>
+            <img src="yardandgroom.png"/>
+            <hr/>
+            
+            <h3 id="northentradinglabs">QA/Developer Consultant | <a target="_blank" href="https://www.northentradinglabs.com">Northen Trading Labs</a></h3>
+            <p><em>2020 - Present</em></p>
+            <ul>
+                <li>Implemented a <strong>Stripe subscription payment system</strong> for the website, enabling seamless subscription-based transactions.</li>
+                <li>Tested and debugged MetaTrader 5 expert advisors and indicators, ensuring high performance.</li>
+                <li>Provided ideas and guided tool development to align with end-user needs and expectations.</li>
+                <li>Built the front-end of the customer-ready website for product deployment.</li>
+            </ul>
+            <img src="northentradinglabs.png" />
+        </section>
+        <hr/>
+        
+        <!-- Side Projects -->
+        <section class="section">
+            <h2>Side Projects</h2>
+            <h3 id="letsplaychess"><a target="_blank" href="https://letsplaychess.azurewebsites.net">LetsPlayChess</a></h3>
+            <p><em>Solo Developer</em></p>
+            <ul>
+                <li>Built a website using <strong>ASP.NET Core</strong> and the <strong>Google Maps API</strong> to connect chess players for real-life meetups.</li>
+                <li>Implemented a single-page application design with seamless user experience.</li>
+                <li>Integrated a fully functional <strong>Stripe payment system</strong> to manage memberships and transactions.</li>
+                <li>Developed the minimum viable product (MVP) independently, showcasing full-stack development skills.</li>
+                <li>Implemented a club system based on Google Maps town/cities. Players can create or join their own town's LetsPlayChess club.</li>
+            </ul>
+            <img src="letsplaychess.png" />
+            <hr/>
+            <h3 id="juliette"><a target="_blank" href="https://t.me/Juliette_Personal_Assistant_Bot">Juliette - Personal Assistant AI</a></h3>
+            <p><em>Solo Developer</em></p>
+            <ul>
+                <li>Developed a personal assistant AI using <strong>Azure Functions</strong>, <strong>Azure Table Storage</strong>, and the <strong>Telegram API</strong>.</li>
+                <li>Designed a unique feature where the AI initiates conversations and reminds users of tasks in a realistic conversational manner.</li>
+                <li>Implemented a fully functional integration within Telegram to enhance user engagement and utility.</li>
+            </ul>
+            <img src="juliette.png"/>
+        </section>
+        <hr/>
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+            <p><strong>Bachelor of Science (BSc) in Web Design</strong></p>
+            <p><em>University of Gloucestershire</em>, 2014 - 2017</p>
+            <p>Graduated with <strong>Second Class Honours, 1st Division</strong></p>
+        </section>
+    </div>
+</body>
+</html>

@@ -1,143 +1,251 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henry Northen | Software Developer CV</title>
+    <title>Henry Northen | Equestrian Web Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #333; }
-        .container { width: 90%; max-width: 800px; margin: 20px auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-        h1, h2, h3 { color: #444; margin-bottom: 10px; }
-        p { margin: 5px 0; }
-        ul { padding: 0 20px; }
-        .section { margin-bottom: 20px; }
-        .skills li, .achievements li { margin-bottom: 8px; }
-        .bold { font-weight: bold; }
-        a{ color: #007bff; text-decoration: none; font-weight: bold; }
-        a:hover { text-decoration: underline; }
-
-        header{
-            display:flex;
-        }
-        header img{
-            border-radius: 100px;
-            margin-right: 20px;
+        :root {
+            --color-bg-white: #FFFFFF;
+            --color-primary-brown: #5D4037;
+            --rgb-primary-brown: 93, 64, 55; /* For rgba() overlays */
+            --color-primary-brown-dark: #4E342E;
+            --color-accent-tan: #C6A68D;
         }
 
-        section img{
-            border-radius: 15px;
-            max-width: 85%;
-            width: 300px;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--color-bg-white); /* Clean crisp white */
+            color: var(--color-primary-brown); /* Dark leather brown for text */
+        }
+        h1, h2, h3 {
+            font-family: 'Lora', serif;
+        }
+        .hero-bg {
+            position: relative; /* For pseudo-element positioning */
+            background-color: rgba(var(--rgb-primary-brown), 0.6); /* The dark overlay */
+            overflow: hidden; /* Hide the blurred edges of the pseudo-element */
+        }
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('bg.jpg');
+            background-size: cover;
+            background-position: center;
+            filter: blur(5px);
+            transform: scale(1.1); /* Prevent blurred edges from showing */
+            z-index: -1;
+        }
+        .nav-link {
+            transition: color 0.3s;
+        }
+        .nav-link:hover {
+            color: var(--color-accent-tan); /* Tan accent */
+        }
+        .btn {
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .pricing-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        .icon-circle {
+            background-color: var(--color-primary-brown); /* Dark leather brown */
         }
     </style>
 </head>
-<body>
-    <div class="container">
-        <!-- Personal Details -->
-        <header>
-            <img src="me.jpg" width="150" height="150"/>
-            <div>
-            <h1>Henry Northen</h1>
-            <p><span class="bold">.NET Developer</span> | Full-Stack, Front-End, Back-End</p>
-            <p>📍Cheltenham, UK | <a target="_blank" href="https://www.linkedin.com/in/henry-northen-1579672a/">LinkedIn</a> | <a target="_blank" href="https://www.x.com/wordofhenry">X</a> | <a target="_blank" href="https://www.github.com/henry-95">Github</a></p>
-        </div>
-        </header>
+<body class="text-[color:var(--color-primary-brown)]">
 
-        <!-- Professional Summary -->
-        <section class="section">
-            <h2>Professional Summary</h2>
-            <p>Experienced <strong>Full-Stack .NET Developer with 6+ years</strong> of hands-on experience in software and web development. <strong>Sole developer of YardandGroom</strong>, responsible for the entire platform, from <strong>design and development to deployment and optimization</strong>. Skilled in <strong>modern UI/UX, cloud technologies, automation, and DevOps</strong>. Adept at solving complex technical challenges, implementing new features, and enhancing system performance.
+    <!-- Header & Navigation -->
+    <header class="bg-[color:var(--color-primary-brown)] text-white p-4 sticky top-0 z-50 shadow-md">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-xl font-bold font-serif tracking-wider">Henry Northen</a>
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-[color:var(--color-primary-brown)]">
+            <a href="#about" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">About</a>
+            <a href="#services" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">Services</a>
+            <a href="#pricing" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">Pricing</a>
+            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main>
+        <section class="hero-bg text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
+                <img src="me.jpg" alt="Henry Northen" class="w-36 h-36 object-cover rounded-full border-4 border-white mb-6 shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Web Services for the Modern Ranch & Equestrian Business</h1>
+                <p class="text-lg md:text-xl max-w-3xl mb-8 text-gray-200">Professional, reliable, and tailored web solutions to help your business thrive online.</p>
+                <a href="#contact" class="btn bg-[color:var(--color-accent-tan)] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90">Contact Me</a>
+            </div>
         </section>
-        <hr/>
-        <!-- Technical Skills -->
-        <section class="section">
-            <h2>Technical Skills</h2>
-            <ul class="skills">
-                <li><strong>Programming Languages:</strong> C#, JavaScript, TypeScript, Python, HTML, CSS</li>
-                <li><strong>Frameworks & APIs:</strong> .NET Core, Entity Framework, React (basic), Stripe API, Paypal Advanced Checkout</li>
-                <li><strong>Databases:</strong> SQL Server</li>
-                <li><strong>Cloud Services:</strong> Azure Portal (Web Apps, Functions, Table Storage, Cost Analysis, App Insights)</li>
-                <li><strong>Tools & Platforms:</strong> Visual Studio, GitHub, VS Code, Photoshop, Umami Analytics, BoxySVG, MetaTrader 5, Google Maps/Addresses API</li>
-            </ul>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Your Partner in the Digital Arena</h2>
+                <div class="w-20 h-1 bg-[color:var(--color-accent-tan)] mx-auto mb-8"></div>
+                <p class="max-w-3xl mx-auto text-gray-700 text-lg">
+                    Having worked with major equestrian platforms like YardandGroom, I understand the digital landscape of the horse world. My goal is to build you a stunning, reliable website that works as hard as you do. Ready to boost your online presence? Let's connect!
+                </p>
+            </div>
         </section>
-        <hr/>
-        <!-- Key Achievements -->
-        <section class="section">
-            <h2>Key Achievements</h2>
-            <ul class="achievements">
-                <li><strong>Led the full website redesign</strong>, modernizing UI/UX for a cleaner, more intuitive experience</li>
-                <li>Solely responsible for development, updates, and maintenance, ensuring platform stability</li>
-                <li>Designed, developed, and deployed new features, based on customer feedback and business needs.</li>
-                <li>Implemented <strong>intelligent employer/jobseeker matching</strong> via database-stored procedures, enhancing user engagement with automated notifications.</li>
-                <li>Automated <strong>social media posts and images</strong> for job listings using Azure screenshot services, significantly reducing manual workload while adhering to Facebook and Instagram's rules.</li>
-                <li>Improved SEO performance by implementing Google job post schema, boosting visibility for key equestrian-related searches.</li>
-                <li>Created and deployed <strong>automated Facebook Dynamic Ads</strong> that update weekly with the latest job listings and images.</li>
-                <li>Implemented <strong>PayPal Advanced Checkout System</strong> on YardandGroom, integrating Apple Pay, Google Pay, and the PayPal button for a seamless payment experience.</li>
-                <li>Prototyped YardandGroom as a React application, exploring modern tech stacks for potential future implementations.</li>
-                <li>Led design and production of branded YardandGroom merchandise (caps), finding suitable manufacturers on Alibaba, communicating with them and negotiating a price.</li>
-                <li>Reduced <strong>YardandGroom's Azure costs by over 50%</strong> by analysing app service and database usage, optimising DTU and vCPU levels while maintaining performance.</li>
-            </ul>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 md:py-28 bg-stone-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">What I Offer</h2>
+                    <div class="w-20 h-1 bg-[color:var(--color-accent-tan)] mx-auto"></div>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
+                    <!-- Service Card 1 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
+                            <i data-lucide="shield-check" class="text-white w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Hosting & Security</h3>
+                        <p class="text-gray-700">Secure, high-speed website hosting with included SSL certificates to protect your data and build trust with your customers.</p>
+                    </div>
+                    <!-- Service Card 2 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
+                            <i data-lucide="database-backup" class="text-white w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Maintenance & Backups</h3>
+                        <p class="text-gray-700">Regular website monitoring, software updates, and daily backups to ensure your site is always online and your data is safe.</p>
+                    </div>
+                    <!-- Service Card 3 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
+                            <i data-lucide="edit" class="text-white w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Content Updates</h3>
+                        <p class="text-gray-700">Need to post new sale horses, update event dates, or add photos? I provide fast and accurate content updates. Just text or email your requests for a hassle-free experience.</p>
+                    </div>
+                     <!-- Service Card 4 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
+                            <i data-lucide="gauge-circle" class="text-white w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Performance Optimization</h3>
+                        <p class="text-gray-700">I'll fine-tune your website for speed, ensuring a fast-loading experience for your visitors on any device.</p>
+                    </div>
+                     <!-- Service Card 5 -->
+                     <div class="text-center">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
+                            <i data-lucide="search" class="text-white w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Basic SEO</h3>
+                        <p class="text-gray-700">Improving your site's visibility on search engines like Google to help potential customers find you more easily.</p>
+                    </div>
+                     <!-- Service Card 6 -->
+                    <div class="text-center">
+                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
+                            <i data-lucide="life-buoy" class="text-white w-10 h-10"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-2">Technical Support</h3>
+                        <p class="text-gray-700">Reliable troubleshooting and technical support when you need it, providing peace of mind for your online operations.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-        <hr/>
-        <!-- Professional Experience -->
-        <section class="section">
-            <h2>Professional Experience</h2>
-            <h3 id="yardandgroom">Software/Web Developer | <a target="_blank" href="https://www.yardandgroom.com">YardandGroom</a></h3>
-            <p><em>2017 - Present</em></p>
-            <ul>
-                <li>Spearheaded development and updates for a large-scale platform built on .NET Core and Azure.</li>
-                <li>Managed full-stack tasks including front-end redesigns, back-end improvements, and database automation.</li>
-                <li>Enhanced website SEO performance and automated key operational processes using Azure services.</li>
-                <li>Implemented the <strong>PayPal JavaScript Advanced Checkout System</strong>, providing multiple payment options including Apple Pay, Google Pay, and PayPal.</li>
-                <li>Automated social media content and post generation, reducing manual effort while adhering to social platform guidelines.</li>
-                <li>Handled <strong>customer email queries</strong> professionally, resolving issues promptly and ensuring customer satisfaction.</li>
-            </ul>
-            <img src="yardandgroom.png"/>
-            <hr/>
-            
-            <h3 id="northentradinglabs">QA/Developer Consultant | <a target="_blank" href="https://www.northentradinglabs.com">Northen Trading Labs</a></h3>
-            <p><em>2020 - Present</em></p>
-            <ul>
-                <li>Implemented a <strong>Stripe subscription payment system</strong> for the website, enabling seamless subscription-based transactions.</li>
-                <li>Tested and debugged MetaTrader 5 expert advisors and indicators, ensuring high performance.</li>
-                <li>Provided ideas and guided tool development to align with end-user needs and expectations.</li>
-                <li>Built the front-end of the customer-ready website for product deployment.</li>
-            </ul>
-            <img src="northentradinglabs.png" />
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-20 md:py-28 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">One Simple, All-Inclusive Plan</h2>
+                    <p class="max-w-2xl mx-auto text-gray-700 text-lg">Everything you need for a professional online presence. No hidden fees, no long-term contracts.</p>
+                </div>
+                <div class="max-w-2xl mx-auto">
+                    <div class="pricing-card border-2 border-[color:var(--color-accent-tan)] rounded-lg p-8 flex flex-col relative shadow-xl">
+                        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-[color:var(--color-accent-tan)] text-white text-sm font-bold px-4 py-1 rounded-full">FULL SERVICE</div>
+                        <p class="text-6xl font-bold text-center mb-2">$175<span class="text-2xl font-normal text-gray-500">/mo</span></p>
+                        <p class="text-center text-gray-600 mb-8">Your complete website solution.</p>
+                        
+                        <ul class="space-y-4 text-gray-700 mb-8 flex-grow">
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Custom Design & Development (Up to 5 Pages)</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Unlimited Edits & Content Updates</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Secure Hosting & SSL Certificate</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>24/7 Text & Email Support</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Lifetime Software Updates</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Basic SEO & Performance Tuning</li>
+                        </ul>
+
+                        <div class="border-t pt-6 mt-6 text-center text-gray-600">
+                            <h4 class="font-bold text-lg mb-4 text-[color:var(--color-primary-brown)]">Optional Add-ons:</h4>
+                            <p><strong>+$100</strong> per additional page</p>
+                            <p><strong>+$250</strong> to add a blog</p>
+                        </div>
+                        
+                        <a href="#contact" class="btn block w-full text-center bg-[color:var(--color-primary-brown)] text-white font-bold py-4 px-6 rounded-lg hover:bg-[color:var(--color-primary-brown-dark)] mt-8 text-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
         </section>
-        <hr/>
-        
-        <!-- Side Projects -->
-        <section class="section">
-            <h2>Side Projects</h2>
-            <h3 id="letsplaychess"><a target="_blank" href="https://letsplaychess.azurewebsites.net">LetsPlayChess</a></h3>
-            <p><em>Solo Developer</em></p>
-            <ul>
-                <li>Built a website using <strong>ASP.NET Core</strong> and the <strong>Google Maps API</strong> to connect chess players for real-life meetups.</li>
-                <li>Implemented a single-page application design with seamless user experience.</li>
-                <li>Integrated a fully functional <strong>Stripe payment system</strong> to manage memberships and transactions.</li>
-                <li>Developed the minimum viable product (MVP) independently, showcasing full-stack development skills.</li>
-                <li>Implemented a club system based on Google Maps town/cities. Players can create or join their own town's LetsPlayChess club.</li>
-            </ul>
-            <img src="letsplaychess.png" />
-            <hr/>
-            <h3 id="juliette"><a target="_blank" href="https://t.me/Juliette_Personal_Assistant_Bot">Juliette - Personal Assistant AI</a></h3>
-            <p><em>Solo Developer</em></p>
-            <ul>
-                <li>Developed a personal assistant AI using <strong>Azure Functions</strong>, <strong>Azure Table Storage</strong>, and the <strong>Telegram API</strong>.</li>
-                <li>Designed a unique feature where the AI initiates conversations and reminds users of tasks in a realistic conversational manner.</li>
-                <li>Implemented a fully functional integration within Telegram to enhance user engagement and utility.</li>
-            </ul>
-            <img src="juliette.png"/>
+
+        <!-- CTA Section -->
+        <section id="contact" class="py-20 md:py-32 bg-[color:var(--color-primary-brown)] text-white">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Paddock?</h2>
+                <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-8">Let's chat about your website needs. I'm here to help your equestrian business make a powerful first impression online. Reach out today for a no-obligation consultation.</p>
+                <a href="mailto:henry.northen95@gmail.com" class="btn bg-[color:var(--color-accent-tan)] text-white font-bold py-3 px-8 rounded-lg text-lg inline-block hover:bg-opacity-90">Email Me Today</a>
+            </div>
         </section>
-        <hr/>
-        <!-- Education -->
-        <section class="section">
-            <h2>Education</h2>
-            <p><strong>Bachelor of Science (BSc) in Web Design</strong></p>
-            <p><em>University of Gloucestershire</em>, 2014 - 2017</p>
-            <p>Graduated with <strong>Second Class Honours, 1st Division</strong></p>
-        </section>
-    </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[color:var(--color-primary-brown-dark)] text-gray-400 py-6">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Henry Northen Web Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = document.querySelectorAll('#mobile-menu a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>
+
+
