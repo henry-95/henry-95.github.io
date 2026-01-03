@@ -1,251 +1,494 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Henry Northen | Equestrian Web Services</title>
+    <title>Henry Northen | Premium Equestrian Web Services</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        equestrian: {
+                            dark: '#1a2e26',   /* Deep Hunter Green */
+                            green: '#2d5a4c',  /* Rich Green */
+                            gold: '#c5a059',   /* Muted Gold */
+                            cream: '#f4f1ea',  /* Cream/Off-white */
+                            leather: '#8b5a2b', /* Saddle Brown */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Lora', 'serif'],
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 1s ease-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(20px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora:wght@500;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
+        rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        :root {
-            --color-bg-white: #FFFFFF;
-            --color-primary-brown: #5D4037;
-            --rgb-primary-brown: 93, 64, 55; /* For rgba() overlays */
-            --color-primary-brown-dark: #4E342E;
-            --color-accent-tan: #C6A68D;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--color-bg-white); /* Clean crisp white */
-            color: var(--color-primary-brown); /* Dark leather brown for text */
-        }
-        h1, h2, h3 {
-            font-family: 'Lora', serif;
-        }
-        .hero-bg {
-            position: relative; /* For pseudo-element positioning */
-            background-color: rgba(var(--rgb-primary-brown), 0.6); /* The dark overlay */
-            overflow: hidden; /* Hide the blurred edges of the pseudo-element */
-        }
-        .hero-bg::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('bg.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px);
-            transform: scale(1.1); /* Prevent blurred edges from showing */
-            z-index: -1;
-        }
-        .nav-link {
-            transition: color 0.3s;
-        }
-        .nav-link:hover {
-            color: var(--color-accent-tan); /* Tan accent */
-        }
-        .btn {
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-        .btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-        .pricing-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .pricing-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-        }
-        .icon-circle {
-            background-color: var(--color-primary-brown); /* Dark leather brown */
-        }
-    </style>
 </head>
-<body class="text-[color:var(--color-primary-brown)]">
+
+<body class="bg-equestrian-cream text-equestrian-dark font-sans antialiased">
 
     <!-- Header & Navigation -->
-    <header class="bg-[color:var(--color-primary-brown)] text-white p-4 sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-xl font-bold font-serif tracking-wider">Henry Northen</a>
-            <nav class="hidden md:flex space-x-6">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#pricing" class="nav-link">Pricing</a>
-                <a href="#contact" class="nav-link">Contact</a>
+    <header
+        class="fixed w-full top-0 z-50 transition-all duration-300 bg-equestrian-dark/95 backdrop-blur-sm text-white shadow-lg border-b border-equestrian-gold/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#"
+                class="text-2xl font-bold font-serif tracking-widest text-equestrian-gold hover:text-white transition-colors">
+                HENRY NORTHEN
+            </a>
+
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about"
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">About</a>
+                <a href="#services"
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Services</a>
+                <a href="#pricing"
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Membership</a>
+                <a href="#contact"
+                    class="px-6 py-2 bg-equestrian-gold text-equestrian-dark font-bold rounded-full hover:bg-white hover:scale-105 transition-all shadow-lg transform">
+                    Contact Me
+                </a>
             </nav>
-            <button id="mobile-menu-button" class="md:hidden">
-                <i data-lucide="menu"></i>
+
+            <button id="mobile-menu-button" class="md:hidden text-equestrian-gold">
+                <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
+
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 bg-[color:var(--color-primary-brown)]">
-            <a href="#about" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">About</a>
-            <a href="#services" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">Services</a>
-            <a href="#pricing" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">Pricing</a>
-            <a href="#contact" class="block py-2 px-4 text-sm hover:bg-[color:var(--color-primary-brown-dark)] rounded">Contact</a>
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-equestrian-dark border-t border-gray-800 absolute w-full left-0">
+            <div class="flex flex-col p-4 space-y-4">
+                <a href="#about" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">About</a>
+                <a href="#services" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Services</a>
+                <a href="#pricing" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Membership</a>
+                <a href="#contact"
+                    class="block py-2 px-4 bg-equestrian-gold/20 text-equestrian-gold rounded font-bold">Contact</a>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <main>
-        <section class="hero-bg text-white">
-            <div class="container mx-auto px-6 py-24 md:py-32 flex flex-col items-center text-center">
-                <img src="me.jpg" alt="Henry Northen" class="w-36 h-36 object-cover rounded-full border-4 border-white mb-6 shadow-lg">
-                <h1 class="text-4xl md:text-6xl font-bold mb-4">Web Services for the Modern Ranch & Equestrian Business</h1>
-                <p class="text-lg md:text-xl max-w-3xl mb-8 text-gray-200">Professional, reliable, and tailored web solutions to help your business thrive online.</p>
-                <a href="#contact" class="btn bg-[color:var(--color-accent-tan)] text-white font-bold py-3 px-8 rounded-lg text-lg hover:bg-opacity-90">Contact Me</a>
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
+            <!-- Background Image with Overlay -->
+            <div class="absolute inset-0 z-0">
+                <div class="absolute inset-0 bg-gradient-to-r from-equestrian-dark/90 to-equestrian-green/80 z-10">
+                </div>
+                <!-- Using the existing background image, styled better -->
+                <div class="absolute inset-0 bg-[url('bg.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
+            </div>
+
+            <div class="container mx-auto px-6 relative z-20 text-center text-white">
+                <div class="animate-fade-in flex flex-col items-center">
+                    <div
+                        class="w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-br from-equestrian-gold to-transparent mb-8 shadow-2xl">
+                        <img src="me.jpg" alt="Henry Northen"
+                            class="w-full h-full object-cover rounded-full border-4 border-equestrian-dark shadow-inner">
+                    </div>
+
+                    <span
+                        class="text-equestrian-gold uppercase tracking-[0.2em] mb-4 font-semibold text-sm md:text-base animate-slide-up">Digital
+                        Excellence for Equestrians</span>
+
+                    <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight animate-slide-up"
+                        style="animation-delay: 0.1s;">
+                        Elevate Your <br />
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-equestrian-gold to-amber-200">Equine
+                            Business</span>
+                    </h1>
+
+                    <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-10 font-light animate-slide-up"
+                        style="animation-delay: 0.2s;">
+                        Premium web management for stables, breeders, and trainers. Dedicated support for those who
+                        demand excellence.
+                    </p>
+
+                    <div class="flex flex-col md:flex-row gap-4 animate-slide-up" style="animation-delay: 0.3s;">
+                        <a href="#pricing"
+                            class="px-8 py-4 bg-equestrian-gold text-equestrian-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all shadow-xl text-lg flex items-center gap-2">
+                            View Membership
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#contact"
+                            class="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all text-lg backdrop-blur-sm">
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Decorative curve at bottom -->
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
+                <svg class="relative block w-full h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="fill-equestrian-cream"></path>
+                </svg>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about" class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Your Partner in the Digital Arena</h2>
-                <div class="w-20 h-1 bg-[color:var(--color-accent-tan)] mx-auto mb-8"></div>
-                <p class="max-w-3xl mx-auto text-gray-700 text-lg">
-                    Having worked with major equestrian platforms like YardandGroom, I understand the digital landscape of the horse world. My goal is to build you a stunning, reliable website that works as hard as you do. Ready to boost your online presence? Let's connect!
-                </p>
+        <section id="about" class="py-24 bg-equestrian-cream relative">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-16">
+                    <div class="md:w-1/2">
+                        <div class="relative">
+                            <div
+                                class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-equestrian-gold opacity-50">
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1534008897965-db5925d10d9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                                alt="Horse Eye"
+                                class="rounded-lg shadow-2xl w-full object-cover h-[500px] grayscale hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-equestrian-green opacity-50">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6">
+                            Understanding the <br /><span class="text-equestrian-leather">Equestrian World</span>
+                        </h2>
+                        <div class="h-1 w-20 bg-equestrian-gold mb-8"></div>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            My journey isn't just in code; it's in the paddock. With experience working alongside
+                            platforms like <strong>YardandGroom</strong>, I possess a unique understanding of the
+                            equestrian industry's specific needs.
+                        </p>
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            You need a website that reflects the prestige of your stable and the quality of your stock.
+                            I build digital experiences that are as reliable as a good stable hand and as elegant as a
+                            dressage performance.
+                        </p>
+                        <div class="flex gap-8">
+                            <div>
+                                <h3 class="text-4xl font-bold text-equestrian-gold mb-2">100%</h3>
+                                <p class="text-sm uppercase tracking-wider font-semibold text-equestrian-dark">
+                                    Reliability</p>
+                            </div>
+                            <div>
+                                <h3 class="text-4xl font-bold text-equestrian-gold mb-2">24/7</h3>
+                                <p class="text-sm uppercase tracking-wider font-semibold text-equestrian-dark">Support
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="services" class="py-20 md:py-28 bg-stone-50">
+        <!-- Services Grid -->
+        <section id="services" class="py-24 bg-white">
             <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">What I Offer</h2>
-                    <div class="w-20 h-1 bg-[color:var(--color-accent-tan)] mx-auto"></div>
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block">What I
+                        Provide</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6">Comprehensive
+                        Management</h2>
+                    <p class="text-gray-600 text-lg">Focus on your horses while I handle the entire digital side of your
+                        business. Seamless, professional, and always available.</p>
                 </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <!-- Service Card 1 -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
-                            <i data-lucide="shield-check" class="text-white w-10 h-10"></i>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Card 1 -->
+                    <div
+                        class="group p-8 bg-equestrian-cream rounded-xl hover:bg-equestrian-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                        <div
+                            class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="shield-check" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-2">Hosting & Security</h3>
-                        <p class="text-gray-700">Secure, high-speed website hosting with included SSL certificates to protect your data and build trust with your customers.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif">
+                            Secure Hosting</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300">
+                            Enterprise-grade hosting with SSL encryption. Your site remains fast, secure, and always
+                            online, protecting your client data.
+                        </p>
                     </div>
-                    <!-- Service Card 2 -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
-                            <i data-lucide="database-backup" class="text-white w-10 h-10"></i>
+
+                    <!-- Card 2 -->
+                    <div
+                        class="group p-8 bg-equestrian-cream rounded-xl hover:bg-equestrian-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                        <div
+                            class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="smartphone" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-2">Maintenance & Backups</h3>
-                        <p class="text-gray-700">Regular website monitoring, software updates, and daily backups to ensure your site is always online and your data is safe.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif">
+                            Personal Access</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300">
+                            Skip the help desk tickets. You get my personal mobile number for direct text/call access
+                            whenever you need updates.
+                        </p>
                     </div>
-                    <!-- Service Card 3 -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
-                            <i data-lucide="edit" class="text-white w-10 h-10"></i>
+
+                    <!-- Card 3 -->
+                    <div
+                        class="group p-8 bg-equestrian-cream rounded-xl hover:bg-equestrian-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+                        <div
+                            class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
+                            <i data-lucide="image" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-2">Content Updates</h3>
-                        <p class="text-gray-700">Need to post new sale horses, update event dates, or add photos? I provide fast and accurate content updates. Just text or email your requests for a hassle-free experience.</p>
-                    </div>
-                     <!-- Service Card 4 -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
-                            <i data-lucide="gauge-circle" class="text-white w-10 h-10"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Performance Optimization</h3>
-                        <p class="text-gray-700">I'll fine-tune your website for speed, ensuring a fast-loading experience for your visitors on any device.</p>
-                    </div>
-                     <!-- Service Card 5 -->
-                     <div class="text-center">
-                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
-                            <i data-lucide="search" class="text-white w-10 h-10"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Basic SEO</h3>
-                        <p class="text-gray-700">Improving your site's visibility on search engines like Google to help potential customers find you more easily.</p>
-                    </div>
-                     <!-- Service Card 6 -->
-                    <div class="text-center">
-                        <div class="w-20 h-20 rounded-full inline-flex items-center justify-center icon-circle mb-5">
-                            <i data-lucide="life-buoy" class="text-white w-10 h-10"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-2">Technical Support</h3>
-                        <p class="text-gray-700">Reliable troubleshooting and technical support when you need it, providing peace of mind for your online operations.</p>
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif">
+                            Content Updates</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300">
+                            New foal? Sale horse? Send me a photo and text, and I'll have it live on your site
+                            instantly. Effortless management.
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="py-20 md:py-28 bg-white">
-            <div class="container mx-auto px-6">
-                <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold mb-4">One Simple, All-Inclusive Plan</h2>
-                    <p class="max-w-2xl mx-auto text-gray-700 text-lg">Everything you need for a professional online presence. No hidden fees, no long-term contracts.</p>
-                </div>
-                <div class="max-w-2xl mx-auto">
-                    <div class="pricing-card border-2 border-[color:var(--color-accent-tan)] rounded-lg p-8 flex flex-col relative shadow-xl">
-                        <div class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-[color:var(--color-accent-tan)] text-white text-sm font-bold px-4 py-1 rounded-full">FULL SERVICE</div>
-                        <p class="text-6xl font-bold text-center mb-2">$175<span class="text-2xl font-normal text-gray-500">/mo</span></p>
-                        <p class="text-center text-gray-600 mb-8">Your complete website solution.</p>
-                        
-                        <ul class="space-y-4 text-gray-700 mb-8 flex-grow">
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Custom Design & Development (Up to 5 Pages)</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Unlimited Edits & Content Updates</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Secure Hosting & SSL Certificate</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>24/7 Text & Email Support</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Lifetime Software Updates</li>
-                            <li class="flex items-center"><i data-lucide="check" class="w-5 h-5 text-green-500 mr-3"></i>Basic SEO & Performance Tuning</li>
-                        </ul>
+        <section id="pricing" class="py-24 bg-equestrian-dark text-white relative overflow-hidden">
+            <!-- Background element -->
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-equestrian-green/50 transform skew-x-12 translate-x-32 opacity-20">
+            </div>
 
-                        <div class="border-t pt-6 mt-6 text-center text-gray-600">
-                            <h4 class="font-bold text-lg mb-4 text-[color:var(--color-primary-brown)]">Optional Add-ons:</h4>
-                            <p><strong>+$100</strong> per additional page</p>
-                            <p><strong>+$250</strong> to add a blog</p>
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+
+                    <div class="lg:w-1/2 text-center lg:text-left">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Concierge Web Services</h2>
+                        <p class="text-xl text-gray-300 mb-8 max-w-md mx-auto lg:mx-0">
+                            Simple, transparent pricing for a service that feels like having an in-house tech team.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-center lg:justify-start gap-4">
+                                <div class="p-2 bg-equestrian-gold/20 rounded-full text-equestrian-gold"><i
+                                        data-lucide="check" class="w-5 h-5"></i></div>
+                                <span class="text-lg">No Setup Fees</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start gap-4">
+                                <div class="p-2 bg-equestrian-gold/20 rounded-full text-equestrian-gold"><i
+                                        data-lucide="check" class="w-5 h-5"></i></div>
+                                <span class="text-lg">Cancel Anytime</span>
+                            </div>
+                            <div class="flex items-center justify-center lg:justify-start gap-4">
+                                <div class="p-2 bg-equestrian-gold/20 rounded-full text-equestrian-gold"><i
+                                        data-lucide="check" class="w-5 h-5"></i></div>
+                                <span class="text-lg">Personal Relationship</span>
+                            </div>
                         </div>
-                        
-                        <a href="#contact" class="btn block w-full text-center bg-[color:var(--color-primary-brown)] text-white font-bold py-4 px-6 rounded-lg hover:bg-[color:var(--color-primary-brown-dark)] mt-8 text-lg">Get Started</a>
+                    </div>
+
+                    <div class="lg:w-1/2 w-full max-w-md">
+                        <div
+                            class="relative bg-white text-equestrian-dark rounded-2xl p-8 md:p-12 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 border border-equestrian-gold/50">
+                            <div
+                                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-equestrian-gold text-equestrian-dark font-bold px-6 py-2 rounded-full shadow-lg uppercase tracking-wider text-sm">
+                                All-Inclusive
+                            </div>
+
+                            <div class="text-center border-b border-gray-100 pb-8 mb-8">
+                                <span class="block text-gray-500 font-serif text-lg mb-2">Monthly Retainer</span>
+                                <div class="flex items-start justify-center text-equestrian-green">
+                                    <span class="text-4xl font-serif font-bold mt-2">£</span>
+                                    <span class="text-7xl font-sans font-bold">75</span>
+                                </div>
+                                <p class="text-gray-500 mt-2">per month</p>
+                            </div>
+
+                            <ul class="space-y-4 mb-10">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2"
+                                        class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
+                                    <span class="font-medium">Complete Website Management</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2"
+                                        class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
+                                    <span class="font-bold text-equestrian-leather">Personal Mobile Number Access</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2"
+                                        class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
+                                    <span class="font-medium">Unlimited Content Updates</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check-circle-2"
+                                        class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
+                                    <span class="font-medium">Design & Hosting Included</span>
+                                </li>
+                            </ul>
+
+                            <a href="#contact"
+                                class="block w-full py-4 bg-equestrian-green text-white font-bold text-center rounded-lg hover:bg-equestrian-dark transition-colors text-lg shadow-lg mb-4">
+                                Start Your Membership
+                            </a>
+
+                            <p class="text-xs text-gray-400 text-center flex items-center justify-center gap-1">
+                                <i data-lucide="lock" class="w-3 h-3"></i>
+                                Payments processed securely via <strong>Stripe</strong>. <br>Pause or cancel your
+                                subscription anytime.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
-        <section id="contact" class="py-20 md:py-32 bg-[color:var(--color-primary-brown)] text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4">Ready to Grow Your Paddock?</h2>
-                <p class="max-w-2xl mx-auto text-gray-300 text-lg mb-8">Let's chat about your website needs. I'm here to help your equestrian business make a powerful first impression online. Reach out today for a no-obligation consultation.</p>
-                <a href="mailto:henry.northen95@gmail.com" class="btn bg-[color:var(--color-accent-tan)] text-white font-bold py-3 px-8 rounded-lg text-lg inline-block hover:bg-opacity-90">Email Me Today</a>
+        <!-- FAQ Section -->
+        <section id="faq" class="py-24 bg-white">
+            <div class="container mx-auto px-6 max-w-4xl">
+                <div class="text-center mb-16">
+                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block">Common
+                        Questions</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-equestrian-dark">Frequently Asked
+                        Questions</h2>
+                </div>
+
+                <div class="space-y-6">
+                    <!-- FAQ Item 1 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                        <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
+                            <i data-lucide="credit-card" class="text-equestrian-gold w-5 h-5"></i>
+                            How does payment work?
+                        </h3>
+                        <p class="text-gray-600">
+                            We use <strong>Stripe</strong>, the industry standard for secure online payments. You'll be
+                            billed £75 automatically each month. It's safe, encrypted, and hassle-free.
+                        </p>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                        <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
+                            <i data-lucide="calendar-off" class="text-equestrian-gold w-5 h-5"></i>
+                            Can I cancel or pause my subscription?
+                        </h3>
+                        <p class="text-gray-600">
+                            Absolutely. You are never locked in. You can pause your membership during the off-season or
+                            cancel anytime with a single click in your portal. No questions asked.
+                        </p>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                        <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
+                            <i data-lucide="globe" class="text-equestrian-gold w-5 h-5"></i>
+                            Do I own my domain name?
+                        </h3>
+                        <p class="text-gray-600">
+                            Yes! You always retain 100% ownership of your domain name (e.g., yourstables.com). I simply
+                            manage the technical side to keep it running smoothly.
+                        </p>
+                    </div>
+
+                    <!-- FAQ Item 4 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                        <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
+                            <i data-lucide="message-square" class="text-equestrian-gold w-5 h-5"></i>
+                            How do I request updates?
+                        </h3>
+                        <p class="text-gray-600">
+                            Once you're a member, you'll have my personal mobile number. Just text or WhatsApp me your
+                            photos and text updates, and I'll upload them for you. It's that simple.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 bg-equestrian-cream">
+            <div class="container mx-auto px-6">
+                <div class="bg-equestrian-dark rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
+                    <div class="md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Let's Discuss Your Vision
+                        </h2>
+                        <p class="text-gray-300 mb-8 text-lg">
+                            Ready to upgrade your online presence? Send me an email to get started. Once you join,
+                            you'll get my direct line for instant support.
+                        </p>
+
+                        <div class="space-y-6">
+                            <a href="mailto:henry.northen95@gmail.com"
+                                class="flex items-center gap-4 text-white hover:text-equestrian-gold transition-colors group">
+                                <div
+                                    class="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center group-hover:bg-equestrian-gold group-hover:text-equestrian-dark transition-all">
+                                    <i data-lucide="mail" class="w-6 h-6"></i>
+                                </div>
+                                <span class="text-lg">henry.northen95@gmail.com</span>
+                            </a>
+                            <div class="flex items-center gap-4 text-white/50 group cursor-not-allowed"
+                                title="Available for members">
+                                <div class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center">
+                                    <i data-lucide="phone" class="w-6 h-6"></i>
+                                </div>
+                                <div class="flex flex-col">
+                                    <span class="text-lg font-mono">07XXX XXXXXX</span>
+                                    <span class="text-xs uppercase tracking-wider text-equestrian-gold">Members Only
+                                        Access</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="md:w-1/2 bg-[url('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center min-h-[300px] relative">
+                        <div class="absolute inset-0 bg-equestrian-green/40 mix-blend-multiply"></div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-[color:var(--color-primary-brown-dark)] text-gray-400 py-6">
-        <div class="container mx-auto px-6 text-center">
-            <p>&copy; 2025 Henry Northen Web Services. All Rights Reserved.</p>
+    <footer class="bg-gray-900 border-t border-gray-800 text-gray-400 py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <span class="text-2xl font-serif font-bold text-white block mb-2">HENRY NORTHEN</span>
+                <p class="text-sm">Premium Web Services for the Equestrian World.</p>
+            </div>
+            <div class="text-sm">
+                &copy; 2025 Henry Northen. All Rights Reserved.
+            </div>
         </div>
     </footer>
 
     <script>
+        // Initialize Lucide Icons
         lucide.createIcons();
 
-        // Mobile menu toggle
+        // Mobile Menu Logic
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
+
         mobileMenuButton.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
 
-        // Close mobile menu when a link is clicked
-        const mobileLinks = document.querySelectorAll('#mobile-menu a');
-        mobileLinks.forEach(link => {
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         });
     </script>
 </body>
+
 </html>
-
-
