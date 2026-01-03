@@ -47,6 +47,7 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/translations.js"></script>
 </head>
 
 <body class="bg-equestrian-cream text-equestrian-dark font-sans antialiased">
@@ -61,14 +62,40 @@
             </a>
 
             <nav class="hidden md:flex items-center space-x-8">
-                <a href="#about"
-                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">About</a>
+                <a href="#about" class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
+                    data-i18n="nav.about">About</a>
                 <a href="#services"
-                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Services</a>
-                <a href="#pricing"
-                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Membership</a>
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
+                    data-i18n="nav.services">Services</a>
+                <a href="#pricing" class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
+                    data-i18n="nav.membership">Membership</a>
+
+                <!-- Desktop Language Selector -->
+                <!-- Desktop Language Selector -->
+                <div class="relative group">
+                    <button
+                        class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors flex items-center gap-1 py-3">
+                        <i data-lucide="globe" class="w-4 h-4"></i> <span class="text-xs">LANG</span>
+                    </button>
+                    <!-- Wrapper with padding-top to bridge the gap -->
+                    <div class="absolute right-0 top-full pt-1 w-32 hidden group-hover:block">
+                        <div class="bg-equestrian-dark border border-gray-700 rounded shadow-xl overflow-hidden">
+                            <button onclick="changeLanguage('en')"
+                                class="lang-btn block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                                data-lang="en">English</button>
+                            <button onclick="changeLanguage('de')"
+                                class="lang-btn block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                                data-lang="de">Deutsch</button>
+                            <button onclick="changeLanguage('es')"
+                                class="lang-btn block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
+                                data-lang="es">Español</button>
+                        </div>
+                    </div>
+                </div>
+
                 <a href="#contact"
-                    class="px-6 py-2 bg-equestrian-gold text-equestrian-dark font-bold rounded-full hover:bg-white hover:scale-105 transition-all shadow-lg transform">
+                    class="px-6 py-2 bg-equestrian-gold text-equestrian-dark font-bold rounded-full hover:bg-white hover:scale-105 transition-all shadow-lg transform"
+                    data-i18n="nav.contact">
                     Contact Me
                 </a>
             </nav>
@@ -82,11 +109,27 @@
         <div id="mobile-menu"
             class="hidden md:hidden bg-equestrian-dark border-t border-gray-800 absolute w-full left-0">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="#about" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">About</a>
-                <a href="#services" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Services</a>
-                <a href="#pricing" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Membership</a>
-                <a href="#contact"
-                    class="block py-2 px-4 bg-equestrian-gold/20 text-equestrian-gold rounded font-bold">Contact</a>
+                <a href="#about" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
+                    data-i18n="nav.about">About</a>
+                <a href="#services" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
+                    data-i18n="nav.services">Services</a>
+                <a href="#pricing" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
+                    data-i18n="nav.membership">Membership</a>
+
+                <div class="flex gap-4 px-4 py-2">
+                    <button onclick="changeLanguage('en')"
+                        class="text-white text-xs uppercase border border-gray-600 px-2 py-1 rounded hover:bg-white/10"
+                        data-lang="en">EN</button>
+                    <button onclick="changeLanguage('de')"
+                        class="text-white text-xs uppercase border border-gray-600 px-2 py-1 rounded hover:bg-white/10"
+                        data-lang="de">DE</button>
+                    <button onclick="changeLanguage('es')"
+                        class="text-white text-xs uppercase border border-gray-600 px-2 py-1 rounded hover:bg-white/10"
+                        data-lang="es">ES</button>
+                </div>
+
+                <a href="#contact" class="block py-2 px-4 bg-equestrian-gold/20 text-equestrian-gold rounded font-bold"
+                    data-i18n="nav.contact">Contact</a>
             </div>
         </div>
     </header>
@@ -102,7 +145,7 @@
                 <div class="absolute inset-0 bg-[url('bg.jpg')] bg-cover bg-center opacity-40 mix-blend-overlay"></div>
             </div>
 
-            <div class="container mx-auto px-6 relative z-20 text-center text-white">
+            <div class="container mx-auto px-6 relative z-30 text-center text-white">
                 <div class="animate-fade-in flex flex-col items-center">
                     <div
                         class="w-40 h-40 md:w-48 md:h-48 rounded-full p-1 bg-gradient-to-br from-equestrian-gold to-transparent mb-8 shadow-2xl">
@@ -111,19 +154,18 @@
                     </div>
 
                     <span
-                        class="text-equestrian-gold uppercase tracking-[0.2em] mb-4 font-semibold text-sm md:text-base animate-slide-up">Digital
-                        Excellence for Equestrians</span>
+                        class="text-equestrian-gold uppercase tracking-[0.2em] mb-4 font-semibold text-sm md:text-base animate-slide-up"
+                        data-i18n="hero.subtitle">Digital Excellence for Equestrians</span>
 
                     <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight animate-slide-up"
                         style="animation-delay: 0.1s;">
-                        Elevate Your <br />
-                        <span
-                            class="text-transparent bg-clip-text bg-gradient-to-r from-equestrian-gold to-amber-200">Equine
-                            Business</span>
+                        <span data-i18n="hero.title_prefix">Elevate Your</span> <br />
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-equestrian-gold to-amber-200"
+                            data-i18n="hero.title_highlight">Equine Business</span>
                     </h1>
 
                     <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-10 font-light animate-slide-up"
-                        style="animation-delay: 0.2s;">
+                        style="animation-delay: 0.2s;" data-i18n="hero.description">
                         Premium web management for stables, breeders, and trainers. Dedicated support for those who
                         demand excellence.
                     </p>
@@ -131,11 +173,12 @@
                     <div class="flex flex-col md:flex-row gap-4 animate-slide-up" style="animation-delay: 0.3s;">
                         <a href="#pricing"
                             class="px-8 py-4 bg-equestrian-gold text-equestrian-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all shadow-xl text-lg flex items-center gap-2">
-                            View Membership
+                            <span data-i18n="hero.btn_membership">View Membership</span>
                             <i data-lucide="arrow-right" class="w-5 h-5"></i>
                         </a>
                         <a href="#contact"
-                            class="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all text-lg backdrop-blur-sm">
+                            class="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold rounded-lg hover:bg-white/10 hover:border-white transition-all text-lg backdrop-blur-sm"
+                            data-i18n="hero.btn_contact">
                             Get in Touch
                         </a>
                     </div>
@@ -162,9 +205,8 @@
                             <div
                                 class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-equestrian-gold opacity-50">
                             </div>
-                            <img src="https://images.unsplash.com/photo-1534008897965-db5925d10d9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                                alt="Horse Eye"
-                                class="rounded-lg shadow-2xl w-full object-cover h-[500px] grayscale hover:grayscale-0 transition-all duration-700">
+                            <img src="img/horses.png" alt="Horses"
+                                class="rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px] grayscale hover:grayscale-0 transition-all duration-700">
                             <div
                                 class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-equestrian-green opacity-50">
                             </div>
@@ -172,15 +214,17 @@
                     </div>
                     <div class="md:w-1/2">
                         <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6">
-                            Understanding the <br /><span class="text-equestrian-leather">Equestrian World</span>
+                            <span data-i18n="about.title_prefix">Understanding the</span> <br /><span
+                                class="text-equestrian-leather" data-i18n="about.title_highlight">Equestrian
+                                World</span>
                         </h2>
                         <div class="h-1 w-20 bg-equestrian-gold mb-8"></div>
-                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed" data-i18n="about.paragraph1">
                             My journey isn't just in code; it's in the paddock. With experience working alongside
                             platforms like <strong>YardandGroom</strong>, I possess a unique understanding of the
                             equestrian industry's specific needs.
                         </p>
-                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed" data-i18n="about.paragraph2">
                             You need a website that reflects the prestige of your stable and the quality of your stock.
                             I build digital experiences that are as reliable as a good stable hand and as elegant as a
                             dressage performance.
@@ -188,13 +232,13 @@
                         <div class="flex gap-8">
                             <div>
                                 <h3 class="text-4xl font-bold text-equestrian-gold mb-2">100%</h3>
-                                <p class="text-sm uppercase tracking-wider font-semibold text-equestrian-dark">
-                                    Reliability</p>
+                                <p class="text-sm uppercase tracking-wider font-semibold text-equestrian-dark"
+                                    data-i18n="about.reliability">Reliability</p>
                             </div>
                             <div>
                                 <h3 class="text-4xl font-bold text-equestrian-gold mb-2">24/7</h3>
-                                <p class="text-sm uppercase tracking-wider font-semibold text-equestrian-dark">Support
-                                </p>
+                                <p class="text-sm uppercase tracking-wider font-semibold text-equestrian-dark"
+                                    data-i18n="about.support">Support</p>
                             </div>
                         </div>
                     </div>
@@ -206,12 +250,13 @@
         <section id="services" class="py-24 bg-white">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block">What I
-                        Provide</span>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6">Comprehensive
-                        Management</h2>
-                    <p class="text-gray-600 text-lg">Focus on your horses while I handle the entire digital side of your
-                        business. Seamless, professional, and always available.</p>
+                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block"
+                        data-i18n="services.subtitle">What I Provide</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6"
+                        data-i18n="services.title">Comprehensive Management</h2>
+                    <p class="text-gray-600 text-lg" data-i18n="services.description">Focus on your horses while I
+                        handle the entire digital side of your business. Seamless, professional, and always available.
+                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
@@ -222,9 +267,9 @@
                             class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
                             <i data-lucide="shield-check" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif">
-                            Secure Hosting</h3>
-                        <p class="text-gray-600 group-hover:text-gray-300">
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif"
+                            data-i18n="services.s1_title">Secure Hosting</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300" data-i18n="services.s1_desc">
                             Enterprise-grade hosting with SSL encryption. Your site remains fast, secure, and always
                             online, protecting your client data.
                         </p>
@@ -237,9 +282,9 @@
                             class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
                             <i data-lucide="smartphone" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif">
-                            Personal Access</h3>
-                        <p class="text-gray-600 group-hover:text-gray-300">
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif"
+                            data-i18n="services.s2_title">Personal Access</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300" data-i18n="services.s2_desc">
                             Skip the help desk tickets. You get my personal mobile number for direct text/call access
                             whenever you need updates.
                         </p>
@@ -252,9 +297,9 @@
                             class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
                             <i data-lucide="image" class="w-7 h-7"></i>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif">
-                            Content Updates</h3>
-                        <p class="text-gray-600 group-hover:text-gray-300">
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif"
+                            data-i18n="services.s3_title">Content Updates</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300" data-i18n="services.s3_desc">
                             New foal? Sale horse? Send me a photo and text, and I'll have it live on your site
                             instantly. Effortless management.
                         </p>
@@ -274,25 +319,26 @@
                 <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
 
                     <div class="lg:w-1/2 text-center lg:text-left">
-                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Concierge Web Services</h2>
-                        <p class="text-xl text-gray-300 mb-8 max-w-md mx-auto lg:mx-0">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6" data-i18n="pricing.title">Concierge
+                            Web Services</h2>
+                        <p class="text-xl text-gray-300 mb-8 max-w-md mx-auto lg:mx-0" data-i18n="pricing.description">
                             Simple, transparent pricing for a service that feels like having an in-house tech team.
                         </p>
                         <div class="space-y-4">
                             <div class="flex items-center justify-center lg:justify-start gap-4">
                                 <div class="p-2 bg-equestrian-gold/20 rounded-full text-equestrian-gold"><i
                                         data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-lg">No Setup Fees</span>
+                                <span class="text-lg" data-i18n="pricing.check1">No Setup Fees</span>
                             </div>
                             <div class="flex items-center justify-center lg:justify-start gap-4">
                                 <div class="p-2 bg-equestrian-gold/20 rounded-full text-equestrian-gold"><i
                                         data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-lg">Cancel Anytime</span>
+                                <span class="text-lg" data-i18n="pricing.check2">Cancel Anytime</span>
                             </div>
                             <div class="flex items-center justify-center lg:justify-start gap-4">
                                 <div class="p-2 bg-equestrian-gold/20 rounded-full text-equestrian-gold"><i
                                         data-lucide="check" class="w-5 h-5"></i></div>
-                                <span class="text-lg">Personal Relationship</span>
+                                <span class="text-lg" data-i18n="pricing.check3">Personal Relationship</span>
                             </div>
                         </div>
                     </div>
@@ -300,52 +346,56 @@
                     <div class="lg:w-1/2 w-full max-w-md">
                         <div
                             class="relative bg-white text-equestrian-dark rounded-2xl p-8 md:p-12 shadow-2xl transform hover:scale-[1.02] transition-transform duration-300 border border-equestrian-gold/50">
-                            <div
-                                class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-equestrian-gold text-equestrian-dark font-bold px-6 py-2 rounded-full shadow-lg uppercase tracking-wider text-sm">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-equestrian-gold text-equestrian-dark font-bold px-6 py-2 rounded-full shadow-lg uppercase tracking-wider text-sm"
+                                data-i18n="pricing.card_tag">
                                 All-Inclusive
                             </div>
 
                             <div class="text-center border-b border-gray-100 pb-8 mb-8">
-                                <span class="block text-gray-500 font-serif text-lg mb-2">Monthly Retainer</span>
+                                <span class="block text-gray-500 font-serif text-lg mb-2"
+                                    data-i18n="pricing.card_title">Monthly Retainer</span>
                                 <div class="flex items-start justify-center text-equestrian-green">
                                     <span class="text-4xl font-serif font-bold mt-2">£</span>
                                     <span class="text-7xl font-sans font-bold">75</span>
                                 </div>
-                                <p class="text-gray-500 mt-2">per month</p>
+                                <p class="text-gray-500 mt-2" data-i18n="pricing.per_month">per month</p>
                             </div>
 
                             <ul class="space-y-4 mb-10">
                                 <li class="flex items-start gap-3">
                                     <i data-lucide="check-circle-2"
                                         class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
-                                    <span class="font-medium">Complete Website Management</span>
+                                    <span class="font-medium" data-i18n="pricing.feat1">Complete Website
+                                        Management</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i data-lucide="check-circle-2"
                                         class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
-                                    <span class="font-bold text-equestrian-leather">Personal Mobile Number Access</span>
+                                    <span class="font-bold text-equestrian-leather" data-i18n="pricing.feat2">Personal
+                                        Mobile Number Access</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i data-lucide="check-circle-2"
                                         class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
-                                    <span class="font-medium">Unlimited Content Updates</span>
+                                    <span class="font-medium" data-i18n="pricing.feat3">Unlimited Content Updates</span>
                                 </li>
                                 <li class="flex items-start gap-3">
                                     <i data-lucide="check-circle-2"
                                         class="w-6 h-6 text-equestrian-green flex-shrink-0"></i>
-                                    <span class="font-medium">Design & Hosting Included</span>
+                                    <span class="font-medium" data-i18n="pricing.feat4">Design & Hosting Included</span>
                                 </li>
                             </ul>
 
                             <a href="#contact"
-                                class="block w-full py-4 bg-equestrian-green text-white font-bold text-center rounded-lg hover:bg-equestrian-dark transition-colors text-lg shadow-lg mb-4">
+                                class="block w-full py-4 bg-equestrian-green text-white font-bold text-center rounded-lg hover:bg-equestrian-dark transition-colors text-lg shadow-lg mb-4"
+                                data-i18n="pricing.btn_start">
                                 Start Your Membership
                             </a>
 
                             <p class="text-xs text-gray-400 text-center flex items-center justify-center gap-1">
                                 <i data-lucide="lock" class="w-3 h-3"></i>
-                                Payments processed securely via <strong>Stripe</strong>. <br>Pause or cancel your
-                                subscription anytime.
+                                <span data-i18n="pricing.stripe_note">Payments processed securely via Stripe. Pause or
+                                    cancel anytime.</span>
                             </p>
                         </div>
                     </div>
@@ -357,10 +407,10 @@
         <section id="faq" class="py-24 bg-white">
             <div class="container mx-auto px-6 max-w-4xl">
                 <div class="text-center mb-16">
-                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block">Common
-                        Questions</span>
-                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-equestrian-dark">Frequently Asked
-                        Questions</h2>
+                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block"
+                        data-i18n="faq.subtitle">Common Questions</span>
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold text-equestrian-dark" data-i18n="faq.title">
+                        Frequently Asked Questions</h2>
                 </div>
 
                 <div class="space-y-6">
@@ -368,9 +418,9 @@
                     <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <i data-lucide="credit-card" class="text-equestrian-gold w-5 h-5"></i>
-                            How does payment work?
+                            <span data-i18n="faq.q1">How does payment work?</span>
                         </h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600" data-i18n="faq.a1">
                             We use <strong>Stripe</strong>, the industry standard for secure online payments. You'll be
                             billed £75 automatically each month. It's safe, encrypted, and hassle-free.
                         </p>
@@ -380,9 +430,9 @@
                     <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <i data-lucide="calendar-off" class="text-equestrian-gold w-5 h-5"></i>
-                            Can I cancel or pause my subscription?
+                            <span data-i18n="faq.q2">Can I cancel or pause my subscription?</span>
                         </h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600" data-i18n="faq.a2">
                             Absolutely. You are never locked in. You can pause your membership during the off-season or
                             cancel anytime with a single click in your portal. No questions asked.
                         </p>
@@ -392,9 +442,9 @@
                     <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <i data-lucide="globe" class="text-equestrian-gold w-5 h-5"></i>
-                            Do I own my domain name?
+                            <span data-i18n="faq.q3">Do I own my domain name?</span>
                         </h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600" data-i18n="faq.a3">
                             Yes! You always retain 100% ownership of your domain name (e.g., yourstables.com). I simply
                             manage the technical side to keep it running smoothly.
                         </p>
@@ -404,9 +454,9 @@
                     <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <i data-lucide="message-square" class="text-equestrian-gold w-5 h-5"></i>
-                            How do I request updates?
+                            <span data-i18n="faq.q4">How do I request updates?</span>
                         </h3>
-                        <p class="text-gray-600">
+                        <p class="text-gray-600" data-i18n="faq.a4">
                             Once you're a member, you'll have my personal mobile number. Just text or WhatsApp me your
                             photos and text updates, and I'll upload them for you. It's that simple.
                         </p>
@@ -420,9 +470,9 @@
             <div class="container mx-auto px-6">
                 <div class="bg-equestrian-dark rounded-3xl overflow-hidden shadow-2xl flex flex-col md:flex-row">
                     <div class="md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
-                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6">Let's Discuss Your Vision
-                        </h2>
-                        <p class="text-gray-300 mb-8 text-lg">
+                        <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6" data-i18n="contact.title">
+                            Let's Discuss Your Vision</h2>
+                        <p class="text-gray-300 mb-8 text-lg" data-i18n="contact.description">
                             Ready to upgrade your online presence? Send me an email to get started. Once you join,
                             you'll get my direct line for instant support.
                         </p>
@@ -443,8 +493,8 @@
                                 </div>
                                 <div class="flex flex-col">
                                     <span class="text-lg font-mono">07XXX XXXXXX</span>
-                                    <span class="text-xs uppercase tracking-wider text-equestrian-gold">Members Only
-                                        Access</span>
+                                    <span class="text-xs uppercase tracking-wider text-equestrian-gold"
+                                        data-i18n="contact.members_only">Members Only Access</span>
                                 </div>
                             </div>
                         </div>
@@ -462,10 +512,10 @@
         <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
             <div class="text-center md:text-left">
                 <span class="text-2xl font-serif font-bold text-white block mb-2">HENRY NORTHEN</span>
-                <p class="text-sm">Premium Web Services for the Equestrian World.</p>
+                <p class="text-sm" data-i18n="footer.tagline">Premium Web Services for the Equestrian World.</p>
             </div>
             <div class="text-sm">
-                &copy; 2025 Henry Northen. All Rights Reserved.
+                &copy; 2025 Henry Northen. <span data-i18n="footer.rights">All Rights Reserved.</span>
             </div>
         </div>
     </footer>
