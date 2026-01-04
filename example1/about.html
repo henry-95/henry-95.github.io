@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Aurum Equestrian</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',
+                            gold: '#c5a059',
+                            cream: '#f8f5f2',
+                            gray: '#8b8b8b'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                        display: ['Cinzel', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark antialiased font-sans">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="./assets/images/logo.png" alt="Aurum Equestrian Logo"
+                        class="h-12 w-auto invert brightness-0 filter invert-[1] opacity-90">
+                    <span class="font-display text-white text-xl tracking-[0.2em] font-semibold">AURUM</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html"
+                        class="text-white/80 hover:text-white transition-colors text-xs tracking-widest uppercase font-medium">Home</a>
+                    <a href="about.html"
+                        class="text-white hover:text-brand-gold transition-colors text-xs tracking-widest uppercase font-medium">About</a>
+                    <a href="services.html"
+                        class="text-white/80 hover:text-white transition-colors text-xs tracking-widest uppercase font-medium">Services</a>
+                    <a href="contact.html"
+                        class="text-brand-gold border border-brand-gold px-6 py-2 hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 text-xs tracking-widest uppercase font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="md:hidden hidden bg-brand-dark" id="mobile-menu">
+            <div class="px-4 pt-2 pb-8 space-y-4">
+                <a href="index.html"
+                    class="block text-white/80 hover:text-white text-sm tracking-widest uppercase py-2">Home</a>
+                <a href="about.html"
+                    class="block text-white hover:text-brand-gold text-sm tracking-widest uppercase py-2">About</a>
+                <a href="services.html"
+                    class="block text-white/80 hover:text-white text-sm tracking-widest uppercase py-2">Services</a>
+                <a href="contact.html" class="block text-brand-gold py-2 text-sm tracking-widest uppercase">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="relative h-[60vh] flex items-center justify-center overflow-hidden bg-brand-dark">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-brand-dark/70 z-10"></div>
+            <img src="./assets/images/stable.png" alt="Stable" class="w-full h-full object-cover">
+        </div>
+        <div class="relative z-20 text-center px-4 max-w-4xl mx-auto">
+            <h1 class="font-serif text-5xl md:text-7xl text-white mb-6">Our Legacy</h1>
+            <p class="text-white/80 text-lg font-light max-w-xl mx-auto">
+                Founded on passion, built on excellence.
+            </p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="py-24 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center mb-20">
+            <span class="text-brand-gold tracking-widest uppercase text-xs font-semibold mb-4 block">The Team</span>
+            <h2 class="font-serif text-4xl text-brand-dark mb-8">Meet the Trainers</h2>
+            <p class="text-gray-600 font-light leading-relaxed">
+                Led by head trainer Sarah Montgomery, our team brings decades of international experience. We are united
+                by a common goal: to bring out the best in every horse.
+            </p>
+        </div>
+
+        <!-- Team Grid -->
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 mb-32">
+            <!-- Trainer 1 -->
+            <div class="group">
+                <div class="aspect-[3/4] overflow-hidden mb-6 bg-gray-200">
+                    <!-- Using hero image as placeholder for person for now, ideally would generate face -->
+                    <img src="./assets/images/hero.png" alt="Sarah Montgomery"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500">
+                </div>
+                <h3 class="font-serif text-2xl text-brand-dark">Sarah Montgomery</h3>
+                <p class="text-brand-gold text-xs uppercase tracking-widest mb-4">Head Trainer</p>
+                <p class="text-gray-500 font-light text-sm leading-relaxed">
+                    Former Olympic team reserve with over 20 years of experience producing horses from unbroken to Grand
+                    Prix.
+                </p>
+            </div>
+
+            <!-- Trainer 2 -->
+            <div class="group">
+                <div class="aspect-[3/4] overflow-hidden mb-6 bg-gray-200">
+                    <img src="./assets/images/hero.png" alt="James Sterling"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                        style="object-position: right;">
+                </div>
+                <h3 class="font-serif text-2xl text-brand-dark">James Sterling</h3>
+                <p class="text-brand-gold text-xs uppercase tracking-widest mb-4">Assistant Trainer</p>
+                <p class="text-gray-500 font-light text-sm leading-relaxed">
+                    Specializing in young horse development, James has a gentle approach that builds confidence and
+                    correct foundation.
+                </p>
+            </div>
+        </div>
+
+        <!-- Facilities -->
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center bg-brand-cream p-12 md:p-24">
+                <div>
+                    <h2 class="font-serif text-4xl text-brand-dark mb-8">World Class Facilities</h2>
+                    <ul class="space-y-6 text-gray-600 font-light">
+                        <li class="flex items-center">
+                            <span class="w-12 h-px bg-brand-gold mr-4"></span>
+                            20m x 60m Indoor Arena with mirrors
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-12 h-px bg-brand-gold mr-4"></span>
+                            Outdoor ebb-and-flow dressage court
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-12 h-px bg-brand-gold mr-4"></span>
+                            Covered lunge pen
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-12 h-px bg-brand-gold mr-4"></span>
+                            Climate controlled tack rooms
+                        </li>
+                        <li class="flex items-center">
+                            <span class="w-12 h-px bg-brand-gold mr-4"></span>
+                            Owners lounge with arena viewing
+                        </li>
+                    </ul>
+                </div>
+                <div class="aspect-square relative">
+                    <img src="./assets/images/stable.png" alt="Facilities"
+                        class="w-full h-full object-cover shadow-2xl transform md:translate-x-12 md:-translate-y-12 border-8 border-white">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="mb-8">
+                <p class="font-display text-2xl tracking-[0.1em]">AURUM</p>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 text-sm tracking-widest uppercase font-light text-gray-400 mb-12">
+                <a href="index.html" class="hover:text-white transition-colors">Home</a>
+                <a href="about.html" class="hover:text-white transition-colors">About</a>
+                <a href="services.html" class="hover:text-white transition-colors">Services</a>
+                <a href="contact.html" class="hover:text-white transition-colors">Contact</a>
+            </div>
+            <p class="text-xs text-gray-600">&copy; 2024 Aurum Equestrian.</p>
+            <a href="https://henry-95.github.io" target="_blank"
+                class="block text-[10px] uppercase tracking-widest text-brand-gold/80 hover:text-brand-gold transition-colors mt-2">
+                Managed by Henry • Expert Equestrian Web Services
+            </a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

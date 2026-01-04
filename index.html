@@ -69,6 +69,9 @@
                 <a href="#services"
                     class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
                     data-i18n="nav.services">Services</a>
+                <a href="#portfolio"
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
+                    data-i18n="nav.portfolio">Portfolio</a>
                 <a href="#pricing" class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
                     data-i18n="nav.membership">Membership</a>
 
@@ -115,6 +118,8 @@
                     data-i18n="nav.about">About</a>
                 <a href="#services" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
                     data-i18n="nav.services">Services</a>
+                <a href="#portfolio" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
+                    data-i18n="nav.portfolio">Portfolio</a>
                 <a href="#pricing" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
                     data-i18n="nav.membership">Membership</a>
 
@@ -208,7 +213,7 @@
                                 class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-equestrian-gold opacity-50">
                             </div>
                             <img src="img/horses.png" alt="Horses"
-                                class="rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px] grayscale hover:grayscale-0 transition-all duration-700">
+                                class="rounded-lg shadow-2xl w-full object-cover h-64 md:h-[500px] transition-all duration-700">
                             <div
                                 class="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-equestrian-green opacity-50">
                             </div>
@@ -310,6 +315,60 @@
             </div>
         </section>
 
+        <!-- Portfolio/Examples Section -->
+        <section id="portfolio" class="py-24 bg-equestrian-cream">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16 max-w-3xl mx-auto">
+                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block"
+                        data-i18n="portfolio.subtitle">Previous Work</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6"
+                        data-i18n="portfolio.title">Example Projects</h2>
+                    <p class="text-gray-600 text-lg" data-i18n="portfolio.description">
+                        See what's possible for your stable. High-end, responsive, and tailored to your brand.
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Example 1: Aurum Equestrian -->
+                    <a href="./example1/index.html" target="_blank"
+                        class="group block relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
+                            <img src="./example1/assets/images/hero.png" alt="Aurum Equestrian"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                            <div
+                                class="absolute inset-0 bg-equestrian-dark/20 group-hover:bg-equestrian-dark/40 transition-colors">
+                            </div>
+
+                            <!-- Overlay Text -->
+                            <div
+                                class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-equestrian-dark/90 to-transparent">
+                                <h3 class="text-2xl font-serif font-bold mb-1">Aurum Equestrian</h3>
+                                <p class="text-sm font-light text-equestrian-gold uppercase tracking-wider">Dressage
+                                    Stable & Sales</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Placeholder: Your Stable -->
+                    <a href="#contact"
+                        class="group block relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-2 border-dashed border-equestrian-gold/30 bg-equestrian-cream/50">
+                        <div
+                            class="aspect-[4/3] flex flex-col items-center justify-center text-center p-8 group-hover:bg-equestrian-gold/5 transition-colors">
+                            <div
+                                class="w-16 h-16 rounded-full bg-equestrian-gold/10 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                                <i data-lucide="plus" class="w-8 h-8 text-equestrian-gold"></i>
+                            </div>
+                            <h3 class="text-xl font-serif font-bold text-equestrian-dark mb-2"
+                                data-i18n="portfolio.placeholder_title">Your Stable Here</h3>
+                            <p class="text-sm text-gray-500 max-w-xs mx-auto" data-i18n="portfolio.placeholder_desc">
+                                Ready to join the elite? Let's build your digital legacy together.
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
         <!-- Pricing Section -->
         <section id="pricing" class="py-24 bg-equestrian-dark text-white relative overflow-hidden">
             <!-- Background element -->
@@ -388,8 +447,8 @@
                                 </li>
                             </ul>
 
-                            <stripe-buy-button buy-button-id="buy_btn_1SlXtNIuseuWmdS0Nc11Nd92"
-                                publishable-key="pk_test_51SlXagIuseuWmdS0gjhimdq2n6P24pgMlLBmLJfEuVjPJx6FDWCpQRd86aY1vQ3WyV8vJYbUx4zGkeqwHfG5CKzG00sG83HJEt">
+                            <stripe-buy-button buy-button-id="buy_btn_1SlYqHRANXTanePjg0r1XwDQ"
+                                publishable-key="pk_live_51SlXaaRANXTanePjKfsfVtEVdcvW8a7qcXVm9Wdn8PtP235H8rZ218bXCzhFEaoBfVYYJxkn4zeZwBDjoPrIWeep006cHYAUXB">
                             </stripe-buy-button>
 
                             <p class="text-xs text-gray-400 text-center flex items-center justify-center gap-1">
@@ -514,8 +573,10 @@
                 <span class="text-2xl font-serif font-bold text-white block mb-2">HENRY NORTHEN</span>
                 <p class="text-sm" data-i18n="footer.tagline">Premium Web Services for the Equestrian World.</p>
             </div>
-            <div class="text-sm">
-                &copy; 2025 Henry Northen. <span data-i18n="footer.rights">All Rights Reserved.</span>
+            <div class="text-sm flex flex-col md:flex-row items-center gap-4">
+                <a href="terms.html" class="hover:text-white transition-colors" data-i18n="footer.terms_link">Service
+                    Terms</a>
+                <span>&copy; 2026 Henry Northen. <span data-i18n="footer.rights">All Rights Reserved.</span></span>
             </div>
         </div>
     </footer>

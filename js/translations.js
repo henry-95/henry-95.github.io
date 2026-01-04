@@ -3,16 +3,17 @@ const glossary = {
         about: { en: "About", de: "Über Mich", es: "Sobre Mí" },
         services: { en: "Services", de: "Dienstleistungen", es: "Servicios" },
         membership: { en: "Membership", de: "Mitgliedschaft", es: "Membresía" },
+        portfolio: { en: "Portfolio", de: "Portfolio", es: "Portafolio" },
         contact: { en: "Contact Me", de: "Kontakt", es: "Contacto" }
     },
     hero: {
-        subtitle: { en: "Digital Excellence for Equestrians", de: "Digitale Exzellenz für den Reitsport", es: "Excelencia Digital para Ecuestres" },
+        subtitle: { en: "Dedicated Web Partner for Equestrians", de: "Ihr engagierter Web-Partner für den Reitsport", es: "Su Socio Web Dedicado para el Mundo Ecuestre" },
         title_prefix: { en: "Elevate Your", de: "Stärken Sie Ihr", es: "Eleva Tu" },
         title_highlight: { en: "Equine Business", de: "Pferdegeschäft", es: "Negocio Equino" },
         description: {
-            en: "Premium web management for stables, breeders, and trainers. Dedicated support for those who demand excellence.",
-            de: "Premium-Webmanagement für Ställe, Züchter und Trainer. Dedizierter Support für alle, die Exzellenz verlangen.",
-            es: "Gestión web premium para establos, criadores y entrenadores. Soporte dedicado para aquellos que exigen excelencia."
+            en: "I provide complete peace of mind for your equine business. I ensure your website always looks professional and is updated instantly, so you can focus entirely on your horses.",
+            de: "Ich biete Ihnen vollkommene Sicherheit für Ihr Pferdegeschäft. Ich sorge dafür, dass Ihre Website immer professionell aussieht und sofort aktualisiert wird, damit Sie sich ganz auf Ihre Pferde konzentrieren können.",
+            es: "Ofrezco total tranquilidad para su negocio equino. Me aseguro de que su sitio web siempre luzca profesional y se actualice al instante, para que pueda concentrarse completamente en sus caballos."
         },
         btn_membership: { en: "View Membership", de: "Mitgliedschaft ansehen", es: "Ver Membresía" },
         btn_contact: { en: "Get in Touch", de: "Kontakt aufnehmen", es: "Contactar" }
@@ -37,9 +38,9 @@ const glossary = {
         subtitle: { en: "What I Provide", de: "Was ich biete", es: "Lo Que Ofrezco" },
         title: { en: "Comprehensive Management", de: "Umfassendes Management", es: "Gestión Integral" },
         description: {
-            en: "Focus on your horses while I handle the entire digital side of your business. Seamless, professional, and always available.",
-            de: "Konzentrieren Sie sich auf Ihre Pferde, während ich mich um die gesamte digitale Seite Ihres Unternehmens kümmere. Nahtlos, professionell und immer verfügbar.",
-            es: "Concéntrate en tus caballos mientras yo manejo todo el lado digital de tu negocio. Sin problemas, profesional y siempre disponible."
+            en: "I build, manage, and host your website so you don't have to. I am a reliable and caring team member who is always on your side, ensuring your site is updated quickly and effectively.",
+            de: "Ich erstelle, verwalte und hoste Ihre Website, damit Sie es nicht müssen. Als verlässliches und engagiertes Teammitglied stehe ich immer an Ihrer Seite und sorge für schnelle und effektive Updates.",
+            es: "Construyo, gestiono y alojo su sitio web. Soy un miembro del equipo fiable y atento que siempre está de su lado, asegurando actualizaciones rápidas y efectivas."
         },
         s1_title: { en: "Secure Hosting", de: "Sicheres Hosting", es: "Alojamiento Seguro" },
         s1_desc: {
@@ -60,28 +61,43 @@ const glossary = {
             es: "¿Nuevo potro? ¿Caballo en venta? Envíame una foto y texto, y lo tendré en tu sitio al instante. Gestión sin esfuerzo."
         }
     },
+    portfolio: {
+        subtitle: { en: "Previous Work", de: "Bisherige Arbeiten", es: "Trabajos Anteriores" },
+        title: { en: "Example Projects", de: "Beispielprojekte", es: "Proyectos de Ejemplo" },
+        description: {
+            en: "See what's possible for your stable. High-end, responsive, and tailored to your brand.",
+            de: "Sehen Sie, was für Ihren Stall möglich ist. High-End, reaktionsschnell und auf Ihre Marke zugeschnitten.",
+            es: "Vea lo que es posible para su establo. De alta gama, adaptable y a medida de su marca."
+        },
+        placeholder_title: { en: "Your Stable Here", de: "Ihr Stall Hier", es: "Su Establo Aquí" },
+        placeholder_desc: {
+            en: "Ready to stand out? Let's build your digital legacy together.",
+            de: "Bereit, herauszustechen? Lassen Sie uns gemeinsam Ihr digitales Erbe aufbauen.",
+            es: "¿Listo para destacar? Construyamos juntos su legado digital."
+        }
+    },
     pricing: {
-        title: { en: "Concierge Web Services", de: "Concierge Webservices", es: "Servicios Web de Conserjería" },
+        title: { en: "All-Inclusive Web Partnership", de: "All-Inclusive Web-Partnerschaft", es: "Asociación Web Todo Incluido" },
         description: {
             en: "Simple, transparent pricing for a service that feels like having an in-house tech team.",
             de: "Einfache, transparente Preise für einen Service, der sich anfühlt wie ein internes Tech-Team.",
             es: "Precios simples y transparentes para un servicio que se siente como tener un equipo técnico interno."
         },
-        check1: { en: "No Setup Fees", de: "Keine Einrichtungsgebühren", es: "Sin tarifas de configuración" },
-        check2: { en: "Cancel Anytime", de: "Jederzeit kündbar", es: "Cancela cuando quieras" },
-        check3: { en: "Personal Relationship", de: "Persönliche Beziehung", es: "Relación personal" },
+        check1: { en: "Expert Design & Build", de: "Experten-Design & Aufbau", es: "Diseño y Construcción Expertos" },
+        check2: { en: "Hosting & Updates Included", de: "Hosting & Updates inklusive", es: "Alojamiento y Actualizaciones Incluidos" },
+        check3: { en: "Direct Personal Support", de: "Direkter persönlicher Support", es: "Soporte Personal Directo" },
         card_tag: { en: "All-Inclusive", de: "All-Inclusive", es: "Todo Incluido" },
         card_title: { en: "Monthly Retainer", de: "Monatliches Honorar", es: "Retención Mensual" },
         per_month: { en: "per month", de: "pro Monat", es: "por mes" },
         feat1: { en: "Complete Website Management", de: "Komplettes Website-Management", es: "Gestión completa del sitio web" },
         feat2: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a número móvil personal" },
-        feat3: { en: "Unlimited Content Updates", de: "Unbegrenzte Inhalts-Updates", es: "Actualizaciones de contenido ilimitadas" },
+        feat3: { en: "Monthly Content Updates", de: "Monatliche Inhalts-Updates", es: "Actualizaciones de contenido mensuales" },
         feat4: { en: "Design & Hosting Included", de: "Design & Hosting inklusive", es: "Diseño y alojamiento incluidos" },
         btn_start: { en: "Start Your Membership", de: "Mitgliedschaft starten", es: "Iniciar Membresía" },
         stripe_note: {
-            en: "Payments processed securely via Stripe. Pause or cancel anytime.",
-            de: "Zahlungen sicher über Stripe. Abonnement jederzeit pausieren oder kündigen.",
-            es: "Pagos procesados de forma segura vía Stripe. Pausa o cancela tu suscripción en cualquier momento."
+            en: "£100 one-time setup fee. 6-month minimum term. Secure payments via Stripe.",
+            de: "100 £ einmalige Einrichtungsgebühr. 6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
+            es: "Tarifa única de configuración de £100. Plazo mínimo de 6 meses. Pagos seguros vía Stripe."
         }
     },
     faq: {
@@ -89,15 +105,15 @@ const glossary = {
         title: { en: "Frequently Asked Questions", de: "Häufig gestellte Fragen (FAQ)", es: "Preguntas Frecuentes" },
         q1: { en: "How does payment work?", de: "Wie funktioniert die Bezahlung?", es: "¿Cómo funciona el pago?" },
         a1: {
-            en: "We use Stripe, the industry standard for secure online payments. You'll be billed £75 automatically each month. It's safe, encrypted, and hassle-free.",
-            de: "Wir nutzen Stripe, den Industriestandard für sichere Online-Zahlungen. Ihnen werden automatisch 75 £ pro Monat berechnet. Es ist sicher, verschlüsselt und unkompliziert.",
-            es: "Usamos Stripe, el estándar de la industria para pagos en línea seguros. Se te cobrarán £75 automáticamente cada mes. Es seguro, encriptado y sin complicaciones."
+            en: "I use Stripe, the industry standard for secure online payments. You'll be billed £75 automatically each month. It's safe, encrypted, and hassle-free.",
+            de: "Ich nutze Stripe, den Industriestandard für sichere Online-Zahlungen. Ihnen werden automatisch 75 £ pro Monat berechnet. Es ist sicher, verschlüsselt und unkompliziert.",
+            es: "Uso Stripe, el estándar de la industria para pagos en línea seguros. Se te cobrarán £75 automáticamente cada mes. Es seguro, encriptado y sin complicaciones."
         },
         q2: { en: "Can I cancel or pause my subscription?", de: "Kann ich mein Abonnement kündigen oder pausieren?", es: "¿Puedo cancelar o pausar mi suscripción?" },
         a2: {
-            en: "Absolutely. You are never locked in. You can pause your membership during the off-season or cancel anytime with a single click in your portal. No questions asked.",
-            de: "Absolut. Sie sind niemals gebunden. Sie können Ihre Mitgliedschaft außerhalb der Saison pausieren oder jederzeit mit einem Klick kündigen.",
-            es: "Absolutamente. Nunca estás atado. Puedes pausar tu membresía durante la temporada baja o cancelar en cualquier momento con un solo clic."
+            en: "To keep monthly costs low, there is a 6-month minimum commitment. After that, you are free to cancel anytime with 30 days' notice.",
+            de: "Um die monatlichen Kosten niedrig zu halten, gibt es eine Mindestbindung von 6 Monaten. Danach können Sie jederzeit mit einer Frist von 30 Tagen kündigen.",
+            es: "Para mantener bajos los costos mensuales, hay un compromiso mínimo de 6 meses. Después de eso, puede cancelar en cualquier momento con 30 días de antelación."
         },
         q3: { en: "Do I own my domain name?", de: "Gehört mir mein Domainname?", es: "¿Soy dueño de mi nombre de dominio?" },
         a3: {
@@ -123,7 +139,8 @@ const glossary = {
     },
     footer: {
         tagline: { en: "Premium Web Services for the Equestrian World.", de: "Premium Webservices für die Welt des Pferdesports.", es: "Servicios Web Premium para el Mundo Ecuestre." },
-        rights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten.", es: "Todos los derechos reservados." }
+        rights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten.", es: "Todos los derechos reservados." },
+        terms_link: { en: "Service Terms", de: "AGB", es: "Términos del Servicio" }
     }
 };
 
