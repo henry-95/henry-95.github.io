@@ -126,14 +126,20 @@ const glossary = {
             en: "Once you're a member, you'll have my personal mobile number. Just text or WhatsApp me your photos and text updates, and I'll upload them for you.",
             de: "Als Mitglied haben Sie meine persönliche Handynummer. Schicken Sie mir einfach Ihre Fotos und Texte per WhatsApp, und ich lade sie für Sie hoch.",
             es: "Una vez que eres miembro, tendrás mi número de móvil personal. Solo envíame tus fotos y textos por WhatsApp, y yo los subiré por ti."
+        },
+        q5: { en: "Who is Henry Northen?", de: "Wer ist Henry Northen?", es: "¿Quién es Henry Northen?" },
+        a5: {
+            en: "I am a web developer who grew up in the equestrian world. I've worked with platforms like YardandGroom and understand the unique needs of stables and breeders. You get a tech expert who speaks 'horse'.",
+            de: "Ich bin Webentwickler, der in der Reitwelt aufgewachsen ist. Ich habe mit Plattformen wie YardandGroom gearbeitet und verstehe die besonderen Bedürfnisse von Ställen und Züchtern. Sie erhalten einen Technikexperten, der Ihre Sprache spricht.",
+            es: "Soy un desarrollador web que creció en el mundo ecuestre. He trabajado con plataformas como YardandGroom y entiendo las necesidades únicas de establos y criadores. Obtienes un experto técnico que habla tu idioma."
         }
     },
     contact: {
         title: { en: "Let's Discuss Your Vision", de: "Lassen Sie uns Ihre Vision besprechen", es: "Hablemos de Tu Visión" },
         description: {
-            en: "Ready to upgrade your online presence? Send me an email to get started. Once you join, you'll get my direct line for instant support.",
-            de: "Bereit, Ihre Online-Präsenz zu verbessern? Senden Sie mir eine E-Mail, um zu beginnen. Sobald Sie Mitglied sind, erhalten Sie meine Direktwahl für sofortigen Support.",
-            es: "¿Listo para mejorar tu presencia en línea? Envíame un correo para comenzar. Una vez que te unas, obtendrás mi línea directa para soporte instantáneo."
+            en: "Send me an email to let me know everything you need out of your new website, or if you just need to change site hosting or management. Once you join, you'll get my direct line for instant support.",
+            de: "Senden Sie mir eine E-Mail, um mir mitzuteilen, was Sie für Ihre neue Website benötigen, oder ob Sie einfach nur das Hosting oder die Verwaltung wechseln möchten. Sobald Sie Mitglied sind, erhalten Sie meine Direktwahl für sofortigen Support.",
+            es: "Envíame un correo para contarme lo que necesitas para tu nuevo sitio web, o si solo necesitas cambiar el alojamiento o la gestión. Una vez que te unas, obtendrás mi línea directa para soporte instantáneo."
         },
         members_only: { en: "Members Only Access", de: "Nur für Mitglieder", es: "Acceso Solo Miembros" }
     },
