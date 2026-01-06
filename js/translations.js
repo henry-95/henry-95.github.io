@@ -149,7 +149,14 @@ const glossary = {
             de: "Senden Sie mir eine E-Mail, um mir mitzuteilen, was Sie für Ihre neue Website benötigen, oder ob Sie einfach nur das Hosting oder die Verwaltung wechseln möchten. Sobald Sie Mitglied sind, erhalten Sie meine Direktwahl für sofortigen Support.",
             es: "Envíame un correo para contarme lo que necesitas para tu nuevo sitio web, o si solo necesitas cambiar el alojamiento o la gestión. Una vez que te unas, obtendrás mi línea directa para soporte instantáneo."
         },
-        members_only: { en: "Members Only Access", de: "Nur für Mitglieder", es: "Acceso Solo Miembros" }
+        members_only: { en: "Members Only Access", de: "Nur für Mitglieder", es: "Acceso Solo Miembros" },
+        form_name: { en: "Your Name", de: "Ihr Name", es: "Tu Nombre" },
+        form_email: { en: "Email Address", de: "E-Mail-Adresse", es: "Correo Electrónico" },
+        form_message: { en: "How can I help you?", de: "Wie kann ich Ihnen helfen?", es: "¿Cómo puedo ayudarte?" },
+        form_btn: { en: "Send Message", de: "Nachricht senden", es: "Enviar Mensaje" },
+        form_sending: { en: "Sending...", de: "Senden...", es: "Enviando..." },
+        form_success: { en: "Message sent successfully!", de: "Nachricht erfolgreich gesendet!", es: "¡Mensaje enviado con éxito!" },
+        form_error: { en: "Error sending message. Please try again.", de: "Fehler beim Senden. Bitte versuchen Sie es erneut.", es: "Error al enviar mensaje. Por favor intente de nuevo." }
     },
     footer: {
         tagline: { en: "Premium Web Services for the Equestrian World.", de: "Premium Webservices für die Welt des Pferdesports.", es: "Servicios Web Premium para el Mundo Ecuestre." },
