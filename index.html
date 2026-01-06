@@ -695,13 +695,11 @@
                     body: JSON.stringify(formData)
                 });
 
-                // Simulate success for now since endpoint doesn't exist
-                // const result = await response.json(); 
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
 
-                // --- MOCK SUCCESS FOR DEMO ---
-                await new Promise(r => setTimeout(r, 1500));
-                const result = { success: true };
-                // -----------------------------
+                const result = await response.json();
 
                 if (result.success) {
                     // Success State
@@ -710,7 +708,7 @@
                     statusMsg.classList.add('text-green-400');
                     contactForm.reset();
                 } else {
-                    throw new Error('Submission failed');
+                    throw new Error('Submission failed: ' + (result.message || 'Unknown error'));
                 }
             } catch (error) {
                 // Error State
