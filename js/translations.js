@@ -12,7 +12,7 @@ const glossary = {
         title_highlight: { en: "Equine Business", de: "Pferdegeschäft", es: "Negocio Equino" },
         description: {
             en: "I provide complete peace of mind for your equine business. I ensure your website always looks professional and is updated instantly, so you can focus entirely on your horses.",
-            de: "Ich biete Ihnen vollkommene Sicherheit für Ihr Pferdegeschäft. Ich sorge dafür, dass Ihre Website immer professionell aussieht und sofort aktualisiert wird, damit Sie sich ganz auf Ihre Pferde konzentrieren können.",
+            de: "Ich sorge für vollkommene Sorgenfreiheit in Ihrem Pferdegeschäft. Ihre Website wirkt stets professionell und wird sofort aktualisiert, damit Sie sich ganz auf Ihre Pferde konzentrieren können.",
             es: "Ofrezco total tranquilidad para su negocio equino. Me aseguro de que su sitio web siempre luzca profesional y se actualice al instante, para que pueda concentrarse completamente en sus caballos."
         },
         btn_membership: { en: "View Membership", de: "Mitgliedschaft ansehen", es: "Ver Membresía" },
@@ -89,15 +89,17 @@ const glossary = {
         card_tag: { en: "All-Inclusive", de: "All-Inclusive", es: "Todo Incluido" },
         card_title: { en: "Monthly Retainer", de: "Monatliches Honorar", es: "Retención Mensual" },
         per_month: { en: "per month", de: "pro Monat", es: "por mes" },
-        feat1: { en: "Complete Website Management", de: "Komplettes Website-Management", es: "Gestión completa del sitio web" },
-        feat2: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a número móvil personal" },
-        feat3: { en: "Monthly Content Updates", de: "Monatliche Inhalts-Updates", es: "Actualizaciones de contenido mensuales" },
-        feat4: { en: "Design & Hosting Included", de: "Design & Hosting inklusive", es: "Diseño y alojamiento incluidos" },
+        feat_domain: { en: "Managed .com Domain Included", de: "Verwaltete .com Domain Inklusive", es: "Dominio .com Gestionado Incluido" },
+        feat_hosting: { en: "Secure Cloud Hosting & SSL", de: "Sicheres Cloud-Hosting & SSL", es: "Alojamiento en la Nube y SSL" },
+        feat_mobile: { en: "Mobile Optimized Design", de: "Für Mobilgeräte optimiertes Design", es: "Diseño Optimizado para Móviles" },
+        feat_form: { en: "Visitor Contact Form", de: "Besucher-Kontaktformular", es: "Formulario de Contacto" },
+        feat_updates: { en: "2 Hours Monthly Updates Included", de: "2 Stunden monatliche Updates inklusive", es: "2 Horas de Actualizaciones Mensuales Incluidas" },
+        feat_support: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a Número Móvil Personal" },
         btn_start: { en: "Start Your Membership", de: "Mitgliedschaft starten", es: "Iniciar Membresía" },
         stripe_note: {
-            en: "£100 one-time setup fee. 6-month minimum term. Secure payments via Stripe.",
-            de: "100 £ einmalige Einrichtungsgebühr. 6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
-            es: "Tarifa única de configuración de £100. Plazo mínimo de 6 meses. Pagos seguros vía Stripe."
+            en: "£250 one-time setup fee. 6-month minimum term. Secure payments via Stripe.",
+            de: "250 £ einmalige Einrichtungsgebühr. 6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
+            es: "Tarifa única de configuración de £250. Plazo mínimo de 6 meses. Pagos seguros vía Stripe."
         }
     },
     faq: {
@@ -118,8 +120,8 @@ const glossary = {
         q3: { en: "Do I own my domain name?", de: "Gehört mir mein Domainname?", es: "¿Soy dueño de mi nombre de dominio?" },
         a3: {
             en: "Yes! You always retain 100% ownership of your domain name (e.g., yourstables.com). I simply manage the technical side to keep it running smoothly.",
-            de: "Ja! Sie behalten immer 100% Eigentum an Ihrem Domainnamen (z.B. ihrstall.de). Ich kümmere mich nur um die Technik.",
-            es: "¡Sí! Siempre conservas el 100% de la propiedad de tu nombre de dominio (ej. tusestablos.com). Yo simplemente gestiono el lado técnico."
+            de: "Ja! Sie behalten immer 100% Eigentum an Ihrem Domainnamen (z.B. ihrstall.de). Ich übernehme lediglich die technische Betreuung.",
+            es: "¡Sí! Siempre conservas el 100% de la propiedad de tu nombre de dominio (ej. tusestablos.com). Yo me encargo de la gestión técnica para que todo funcione correctamente."
         },
         q4: { en: "How do I request updates?", de: "Wie fordere ich Updates an?", es: "¿Cómo solicito actualizaciones?" },
         a4: {
@@ -127,11 +129,17 @@ const glossary = {
             de: "Als Mitglied haben Sie meine persönliche Handynummer. Schicken Sie mir einfach Ihre Fotos und Texte per WhatsApp, und ich lade sie für Sie hoch.",
             es: "Una vez que eres miembro, tendrás mi número de móvil personal. Solo envíame tus fotos y textos por WhatsApp, y yo los subiré por ti."
         },
-        q5: { en: "Who is Henry Northen?", de: "Wer ist Henry Northen?", es: "¿Quién es Henry Northen?" },
+        q5: { en: "Who am I?", de: "Wer bin ich?", es: "¿Quién soy?" },
         a5: {
-            en: "I am a web developer who grew up in the equestrian world. I've worked with platforms like YardandGroom and understand the unique needs of stables and breeders. You get a tech expert who speaks 'horse'.",
-            de: "Ich bin Webentwickler, der in der Reitwelt aufgewachsen ist. Ich habe mit Plattformen wie YardandGroom gearbeitet und verstehe die besonderen Bedürfnisse von Ställen und Züchtern. Sie erhalten einen Technikexperten, der Ihre Sprache spricht.",
-            es: "Soy un desarrollador web que creció en el mundo ecuestre. He trabajado con plataformas como YardandGroom y entiendo las necesidades únicas de establos y criadores. Obtienes un experto técnico que habla tu idioma."
+            en: "I am a web developer who grew up in the equestrian world. I work directly with YardandGroom and understand the unique needs of stables and breeders. You get a trustworthy partner who is on your side in the digital arena.",
+            de: "Ich bin Webentwickler und in der Reitwelt aufgewachsen. Ich arbeite direkt mit YardandGroom zusammen und verstehe die besonderen Bedürfnisse von Ställen und Züchtern. Sie erhalten einen vertrauenswürdigen Partner an Ihrer Seite.",
+            es: "Soy desarrollador web y crecí en el mundo ecuestre. Trabajo directamente con YardandGroom y entiendo las necesidades únicas de establos y criadores. Obtienes un socio de confianza que está de tu lado."
+        },
+        q6: { en: "What languages do you support?", de: "Welche Sprachen unterstützen Sie?", es: "¿Qué idiomas soporta?" },
+        a6: {
+            en: "I build websites in any language. For personal communication, I speak English natively. For prompt replies in other languages, I recommend texting on WhatsApp. Calls are always welcome if you are an English speaker.",
+            de: "Ich erstelle Websites in jeder Sprache. Persönlich spreche ich Englisch. Für schnelle Antworten in anderen Sprachen empfehle ich Textnachrichten über WhatsApp. Wenn Sie Englisch sprechen, rufe ich Sie gerne an.",
+            es: "Construyo sitios web en cualquier idioma. Personalmente hablo inglés. Para respuestas rápidas en otros idiomas, recomiendo escribir por WhatsApp. Las llamadas son bienvenidas si habla inglés."
         }
     },
     contact: {
