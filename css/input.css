@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@source "../**/*.html";
+@source "../**/*.js";
+
+@theme {
+    --color-equestrian-dark: #1a2e26;
+    --color-equestrian-green: #2d5a4c;
+    --color-equestrian-gold: #c5a059;
+    --color-equestrian-cream: #f4f1ea;
+    --color-equestrian-leather: #8b5a2b;
+
+    --font-sans: Inter, sans-serif;
+    --font-serif: Lora, serif;
+
+    --animate-fade-in: fadeIn 1s ease-out;
+    --animate-slide-up: slideUp 0.8s ease-out;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideUp {
+        0% {
+            transform: translateY(20px);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}

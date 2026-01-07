@@ -5,43 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Henry Northen | Premium Equestrian Web Services</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- SEO & Metadata -->
+    <meta name="description"
+        content="Premium concierge web services for the equestrian world. I build, secure, and manage sophisticated websites for stables and breeders. Personal support included.">
+    <meta name="keywords"
+        content="Equestrian Web Design, Stable Website, Horse Business Marketing, YardandGroom, Henry Northen, Web Developer for Horses">
+    <meta name="author" content="Henry Northen">
+    <link rel="canonical" href="https://henrynorthen.com/">
+
+    <!-- Social Media / Open Graph (For beautiful link previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://henrynorthen.com/">
+    <meta property="og:title" content="Henry Northen | Premium Equestrian Web Services">
+    <meta property="og:description"
+        content="DO YOU NEED A MODERN EQUESTRIAN WEBSITE? Let me build and manage it for you. Secure hosting, domain & personal support included.">
+    <meta property="og:image" content="opengraph.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Henry Northen | Equestrian Web Expert">
+    <meta name="twitter:description"
+        content="Stress-free, premium web management for stables. I handle the tech, you focus on the horses.">
+    <meta name="twitter:image" content="opengraph.png">
+    <link rel="stylesheet" href="css/output.css">
     <script async src="https://js.stripe.com/v3/buy-button.js">
-    </script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        equestrian: {
-                            dark: '#1a2e26',   /* Deep Hunter Green */
-                            green: '#2d5a4c',  /* Rich Green */
-                            gold: '#c5a059',   /* Muted Gold */
-                            cream: '#f4f1ea',  /* Cream/Off-white */
-                            leather: '#8b5a2b', /* Saddle Brown */
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Lora', 'serif'],
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 1s ease-out',
-                        'slide-up': 'slideUp 0.8s ease-out',
-                    },
-                    keyframes: {
-                        fadeIn: {
-                            '0%': { opacity: '0' },
-                            '100%': { opacity: '1' },
-                        },
-                        slideUp: {
-                            '0%': { transform: 'translateY(20px)', opacity: '0' },
-                            '100%': { transform: 'translateY(0)', opacity: '1' },
-                        }
-                    }
-                }
-            }
-        }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -63,7 +51,7 @@
                 HENRY NORTHEN
             </a>
 
-            <nav class="hidden md:flex items-center space-x-8">
+            <nav class="hidden lg:flex items-center space-x-8">
                 <a href="#about" class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
                     data-i18n="nav.about">About</a>
                 <a href="#services"
@@ -105,14 +93,14 @@
                 </a>
             </nav>
 
-            <button id="mobile-menu-button" class="md:hidden text-equestrian-gold">
+            <button id="mobile-menu-button" class="lg:hidden text-equestrian-gold">
                 <i data-lucide="menu" class="w-8 h-8"></i>
             </button>
         </div>
 
         <!-- Mobile Menu -->
         <div id="mobile-menu"
-            class="hidden md:hidden bg-equestrian-dark border-t border-gray-800 absolute w-full left-0">
+            class="hidden lg:hidden bg-equestrian-dark border-t border-gray-800 absolute w-full left-0">
             <div class="flex flex-col p-4 space-y-4">
                 <a href="#about" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
                     data-i18n="nav.about">About</a>
@@ -177,7 +165,7 @@
                         demand excellence.
                     </p>
 
-                    <div class="flex flex-col md:flex-row gap-4 animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="flex flex-col md:flex-row gap-4 mb-20 animate-slide-up" style="animation-delay: 0.3s;">
                         <a href="#pricing"
                             class="px-8 py-4 bg-equestrian-gold text-equestrian-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all shadow-xl text-lg flex items-center gap-2">
                             <span data-i18n="hero.btn_membership">View Membership</span>
@@ -547,19 +535,6 @@
                             is on your side in the digital arena.
                         </p>
                     </div>
-
-                    <!-- FAQ Item 6 -->
-                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
-                        <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
-                            <i data-lucide="languages" class="text-equestrian-gold w-5 h-5"></i>
-                            <span data-i18n="faq.q6">What languages do you support?</span>
-                        </h3>
-                        <p class="text-gray-600" data-i18n="faq.a6">
-                            I build websites in any language. For personal communication, I speak English natively. For
-                            prompt replies in other languages, I recommend texting on WhatsApp. Calls are always welcome
-                            if you are an English speaker.
-                        </p>
-                    </div>
                 </div>
             </div>
         </section>
@@ -687,7 +662,7 @@
 
             try {
                 // Placeholder URL - Update this when you have your Azure Function URL
-                const response = await fetch('https://henrynorthenfunctions-bta7cbgvc2ezeag2.uksouth-01.azurewebsites.net/api/contact', {
+                const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
