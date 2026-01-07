@@ -91,7 +91,7 @@ const glossary = {
         per_month: { en: "per month", de: "pro Monat", es: "por mes" },
         feat_domain: { en: "Managed .com Domain Included", de: "Verwaltete .com Domain Inklusive", es: "Dominio .com Gestionado Incluido" },
         feat_hosting: { en: "Secure Cloud Hosting & SSL", de: "Sicheres Cloud-Hosting & SSL", es: "Alojamiento en la Nube y SSL" },
-        feat_mobile: { en: "Mobile Optimized Design", de: "Für Mobilgeräte optimiertes Design", es: "Diseño Optimizado para Móviles" },
+        feat_mobile: { en: "Mobile Optimised Design", de: "Für Mobilgeräte optimiertes Design", es: "Diseño Optimizado para Móviles" },
         feat_form: { en: "Visitor Contact Form", de: "Besucher-Kontaktformular", es: "Formulario de Contacto" },
         feat_updates: { en: "2 Hours Monthly Updates Included", de: "2 Stunden monatliche Updates inklusive", es: "2 Horas de Actualizaciones Mensuales Incluidas" },
         feat_support: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a Número Móvil Personal" },
@@ -131,7 +131,7 @@ const glossary = {
         },
         q5: { en: "Who am I?", de: "Wer bin ich?", es: "¿Quién soy?" },
         a5: {
-            en: "I am a web developer who grew up in the equestrian world. I work directly with YardandGroom and understand the unique needs of stables and breeders. You get a trustworthy partner who is on your side in the digital arena.",
+            en: "I am a web developer who grew up in the countryside. I work directly with YardandGroom and understand the unique needs of stables and breeders. You get a trustworthy partner who is on your side in the digital arena.",
             de: "Ich bin Webentwickler und in der Reitwelt aufgewachsen. Ich arbeite direkt mit YardandGroom zusammen und verstehe die besonderen Bedürfnisse von Ställen und Züchtern. Sie erhalten einen vertrauenswürdigen Partner an Ihrer Seite.",
             es: "Soy desarrollador web y crecí en el mundo ecuestre. Trabajo directamente con YardandGroom y entiendo las necesidades únicas de establos y criadores. Obtienes un socio de confianza que está de tu lado."
         },
