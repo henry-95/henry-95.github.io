@@ -59,6 +59,12 @@ const glossary = {
             en: "New foal? Sale horse? Send me a photo and text, and I'll have it live on your site instantly. Effortless management.",
             de: "Neues Fohlen? Verkaufspferd? Schicken Sie mir ein Foto und Text, und es ist sofort online. Müheloses Management.",
             es: "¿Nuevo potro? ¿Caballo en venta? Envíame una foto y texto, y lo tendré en tu sitio al instante. Gestión sin esfuerzo."
+        },
+        s4_title: { en: "Lightning Fast", de: "Blitzschnelle Performance", es: "Velocidad del Rayo" },
+        s4_desc: {
+            en: "Zero bloat. No slow page builders. Just clean, optimized code for instant load times and better Google rankings.",
+            de: "Kein unnötiger Ballast. Keine langsamen Baukästen. Nur sauberer, optimierter Code für sofortige Ladezeiten.",
+            es: "Sin código innecesario. Sin constructores lentos. Solo código limpio y optimizado para una carga instantánea."
         }
     },
     portfolio: {
@@ -74,7 +80,8 @@ const glossary = {
             en: "Ready to stand out? Let's build your digital legacy together.",
             de: "Bereit, herauszustechen? Lassen Sie uns gemeinsam Ihr digitales Erbe aufbauen.",
             es: "¿Listo para destacar? Construyamos juntos su legado digital."
-        }
+        },
+        sample_badge: { en: "Sample Site", de: "Beispielseite", es: "Sitio de Muestra" }
     },
     pricing: {
         title: { en: "All-Inclusive Web Partnership", de: "All-Inclusive Web-Partnerschaft", es: "Asociación Web Todo Incluido" },
@@ -97,9 +104,19 @@ const glossary = {
         feat_support: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a Número Móvil Personal" },
         btn_start: { en: "Start Your Membership", de: "Mitgliedschaft starten", es: "Iniciar Membresía" },
         stripe_note: {
-            en: "£250 one-time setup fee. 6-month minimum term. Secure payments via Stripe.",
-            de: "250 £ einmalige Einrichtungsgebühr. 6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
-            es: "Tarifa única de configuración de £250. Plazo mínimo de 6 meses. Pagos seguros vía Stripe."
+            en: "6-month minimum term. Secure payments via Stripe.",
+            de: "6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
+            es: "Plazo mínimo de 6 meses. Pagos seguros vía Stripe."
+        },
+        setup_fee: {
+            en: "+ £250 One-Time Setup Fee",
+            de: "+ 250 £ Einmalige Einrichtungsgebühr",
+            es: "+ £250 Tarifa Única de Configuración"
+        },
+        custom_work_note: {
+            en: "* Special bespoke features (e.g., blogs with comments) are not included and will incur an extra one-off cost.",
+            de: "* Besondere maßgeschneiderte Funktionen (z. B. Blogs mit Kommentaren) sind nicht inbegriffen und verursachen zusätzliche einmalige Kosten.",
+            es: "* Las características especiales a medida (por ejemplo, blogs con comentarios) no están incluidas y tendrán un costo extra único."
         }
     },
     faq: {
@@ -140,6 +157,12 @@ const glossary = {
             en: "I build websites in any language. For personal communication, I speak English natively. For prompt replies in other languages, I recommend texting on WhatsApp. Calls are always welcome if you are an English speaker.",
             de: "Ich erstelle Websites in jeder Sprache. Persönlich spreche ich Englisch. Für schnelle Antworten in anderen Sprachen empfehle ich Textnachrichten über WhatsApp. Wenn Sie Englisch sprechen, rufe ich Sie gerne an.",
             es: "Construyo sitios web en cualquier idioma. Personalmente hablo inglés. Para respuestas rápidas en otros idiomas, recomiendo escribir por WhatsApp. Las llamadas son bienvenidas si habla inglés."
+        },
+        q7: { en: "Are there extra costs for custom features?", de: "Gibt es zusätzliche Kosten für benutzerdefinierte Funktionen?", es: "¿Hay costos adicionales por características personalizadas?" },
+        a7: {
+            en: "Yes. The monthly membership covers standard website design, hosting, and management. Complex features like blogs with comments, booking systems, or bespoke applications require significant extra development time and are billed as a one-time project fee.",
+            de: "Ja. Die monatliche Mitgliedschaft deckt Standard-Webdesign, Hosting und Verwaltung ab. Komplexe Funktionen wie Blogs mit Kommentaren, Buchungssysteme oder maßgeschneiderte Anwendungen erfordern erhebliche zusätzliche Entwicklungszeit und werden als einmalige Projektgebühr abgerechnet.",
+            es: "Sí. La membresía mensual cubre el diseño web estándar, alojamiento y gestión. Las características complejas como blogs con comentarios, sistemas de reserva o aplicaciones a medida requieren un tiempo de desarrollo adicional significativo y se facturan como una tarifa de proyecto única."
         }
     },
     contact: {
