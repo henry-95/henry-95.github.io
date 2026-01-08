@@ -62,9 +62,9 @@ const glossary = {
         },
         s4_title: { en: "Lightning Fast", de: "Blitzschnelle Performance", es: "Velocidad del Rayo" },
         s4_desc: {
-            en: "Zero bloat. No slow page builders. Just clean, optimized code for instant load times and better Google rankings.",
-            de: "Kein unnötiger Ballast. Keine langsamen Baukästen. Nur sauberer, optimierter Code für sofortige Ladezeiten.",
-            es: "Sin código innecesario. Sin constructores lentos. Solo código limpio y optimizado para una carga instantánea."
+            en: "Zero bloat. Optimized for speed so your site loads instantly, even when you're out in the field with poor signal.",
+            de: "Kein unnötiger Ballast. Optimiert für Geschwindigkeit, damit Ihre Seite sofort lädt – auch draußen auf dem Feld bei schlechtem Empfang.",
+            es: "Sin código innecesario. Optimizado para velocidad, carga al instante incluso cuando estás en el campo con poca señal."
         }
     },
     portfolio: {
@@ -237,6 +237,11 @@ function changeLanguage(lang) {
 
 // Init
 document.addEventListener('DOMContentLoaded', () => {
+    // Initialize Lucide Icons if available
+    if (typeof lucide !== 'undefined' && lucide.createIcons) {
+        lucide.createIcons();
+    }
+
     // 1. Check LocalStorage
     let initialLang = localStorage.getItem('preferredLanguage');
 
