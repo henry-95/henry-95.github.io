@@ -12,35 +12,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
 
-    <!-- Tailwind CSS (CDN for standalone usage as requested) -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            dark: '#0f172a', // Slate 900
-                            gold: '#c5a059', // Muted Gold
-                            cream: '#f8f5f2', // Warm White
-                            gray: '#8b8b8b'
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                        display: ['Cinzel', 'serif'] // For very distinct headers
-                    },
-                    backgroundImage: {
-                        'hero-pattern': "linear-gradient(to bottom, rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.6))",
-                    }
-                }
-            }
-        }
-    </script>
+    <!-- Tailwind CSS (Local file) -->
+    <link rel="stylesheet" href="../css/output.css">
     <style>
         /* Minimal custom CSS for things Tailwind creates verbosely */
         .glass-nav {
@@ -145,7 +121,8 @@
 
         <div class="relative z-10 text-center px-4 max-w-4xl mx-auto mt-20">
             <p class="text-brand-gold tracking-[0.3em] uppercase text-sm mb-6 fade-in-up">Est. 2024</p>
-            <h1 class="font-serif text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-tight fade-in-up delay-100">
+            <h1
+                class="font-playfair text-5xl md:text-7xl lg:text-8xl text-white mb-8 leading-tight fade-in-up delay-100">
                 <span class="italic">Excellence</span> in Motion
             </h1>
             <p
@@ -189,7 +166,7 @@
             <div class="order-1 md:order-2">
                 <span class="text-brand-gold tracking-widest uppercase text-xs font-semibold mb-2 block">Our
                     Philosophy</span>
-                <h2 class="font-serif text-4xl md:text-5xl text-brand-dark mb-8 leading-tight">Where Tradition Meets
+                <h2 class="font-playfair text-4xl md:text-5xl text-brand-dark mb-8 leading-tight">Where Tradition Meets
                     <span class="italic text-brand-gold">Modernity</span>
                 </h2>
                 <div class="w-16 h-px bg-brand-gold mb-8"></div>
@@ -214,7 +191,7 @@
     <section class="py-24 px-4 bg-brand-cream">
         <div class="max-w-7xl mx-auto">
             <div class="text-center max-w-3xl mx-auto mb-20">
-                <h2 class="font-serif text-4xl text-brand-dark mb-4">Our Expertise</h2>
+                <h2 class="font-playfair text-4xl text-brand-dark mb-4">Our Expertise</h2>
                 <p class="text-gray-500 font-light">Comprehensive solutions for the ambitious equestrian.</p>
             </div>
 
@@ -230,7 +207,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl text-brand-dark mb-4">Elite Training</h3>
+                    <h3 class="font-playfair text-2xl text-brand-dark mb-4">Elite Training</h3>
                     <p class="text-gray-500 font-light leading-relaxed mb-6 text-sm">
                         Tailored training programs ensuring the physical and mental development of your horse up to
                         Grand Prix level.
@@ -251,7 +228,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl text-brand-dark mb-4">Luxury Livery</h3>
+                    <h3 class="font-playfair text-2xl text-brand-dark mb-4">Luxury Livery</h3>
                     <p class="text-gray-500 font-light leading-relaxed mb-6 text-sm">
                         Full-service care including individual nutrition plans, daily turnout, and 24/7 supervision in
                         our premium stables.
@@ -272,7 +249,7 @@
                             </path>
                         </svg>
                     </div>
-                    <h3 class="font-serif text-2xl text-brand-dark mb-4">Sales & Sourcing</h3>
+                    <h3 class="font-playfair text-2xl text-brand-dark mb-4">Sales & Sourcing</h3>
                     <p class="text-gray-500 font-light leading-relaxed mb-6 text-sm">
                         Connecting riders with their perfect partners through our extensive European network of
                         top-quality horses.
@@ -294,7 +271,7 @@
                 <path
                     d="M14.017 21L14.017 18C14.017 16.8954 13.1216 16 12.017 16H11.983C10.8784 16 9.983 16.8954 9.983 18L9.983 21H14.017ZM8.017 21L8.017 18C8.017 15.7909 9.80786 14 12.017 14H12.0494C14.2585 14 16.0494 15.7909 16.0494 18V21H20.0494V16.9926C20.0494 16.7909 20.0494 16.5936 20.1264 16.4011C20.2504 16.0913 20.4423 15.8115 20.686 15.5898L22.0494 14.3496L12.0332 3.33203L2.017 14.3496L3.38036 15.5898C3.62402 15.8115 3.81596 16.0913 3.93992 16.4011C4.01693 16.5936 4.017 16.7909 4.017 16.9926V21H8.017Z" />
             </svg>
-            <h2 class="font-serif text-3xl md:text-5xl text-white leading-tight italic font-light mb-8">
+            <h2 class="font-playfair text-3xl md:text-5xl text-white leading-tight italic font-light mb-8">
                 "The air of heaven is that which blows between a horse's ears."
             </h2>
             <p class="text-brand-gold tracking-widest uppercase text-sm font-semibold">— Arabian Proverb</p>

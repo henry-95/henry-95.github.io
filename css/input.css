@@ -10,8 +10,15 @@
     --color-equestrian-cream: #f4f1ea;
     --color-equestrian-leather: #8b5a2b;
 
+    --color-brand-dark: #0f172a;
+    --color-brand-gold: #c5a059;
+    --color-brand-cream: #f8f5f2;
+    --color-brand-gray: #8b8b8b;
+
     --font-sans: Inter, sans-serif;
     --font-serif: Lora, serif;
+    --font-playfair: "Playfair Display", serif;
+    --font-display: Cinzel, serif;
 
     --animate-fade-in: fadeIn 1s ease-out;
     --animate-slide-up: slideUp 0.8s ease-out;
