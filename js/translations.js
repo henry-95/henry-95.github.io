@@ -103,6 +103,7 @@ const glossary = {
         feat_updates: { en: "2 Hours Monthly Updates Included", de: "2 Stunden monatliche Updates inklusive", es: "2 Horas de Actualizaciones Mensuales Incluidas" },
         feat_support: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a Número Móvil Personal" },
         btn_start: { en: "Start Your Membership", de: "Mitgliedschaft starten", es: "Iniciar Membresía" },
+        contact_btn: { en: "Contact Me to Join", de: "Kontaktieren Sie mich zum Beitritt", es: "Contáctame para Unirte" },
         stripe_note: {
             en: "6-month minimum term. Secure payments via Stripe.",
             de: "6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
