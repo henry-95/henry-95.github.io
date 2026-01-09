@@ -218,9 +218,13 @@ function changeLanguage(lang) {
             const translation = valueObject[lang];
 
             if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
-                element.placeholder = translation;
+                if (element.placeholder !== translation) {
+                    element.placeholder = translation;
+                }
             } else {
-                element.innerText = translation;
+                if (element.innerText !== translation) {
+                    element.innerText = translation;
+                }
             }
         }
     });
