@@ -15,7 +15,6 @@
     <link rel="canonical" href="https://henrynorthen.com/">
 
     <!-- Performance Optimisations -->
-    <link rel="preload" href="fonts/inter-v20-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="fonts/lora-v37-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="img/me.webp" as="image">
 
@@ -39,7 +38,16 @@
         <link rel="stylesheet" href="css/output.css">
     </noscript>
 
-    <link rel="stylesheet" href="css/fonts.css">
+    <style>
+        /* Lora */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/lora-v37-latin_latin-ext-700.woff2') format('woff2');
+            font-display: swap;
+        }
+    </style>
 </head>
 
 <body class="bg-equestrian-cream text-equestrian-dark font-sans antialiased">
@@ -492,7 +500,7 @@
                             </div>
 
                             <div class="text-center border-b border-gray-100 pb-8 mb-8">
-                                <span class="block text-gray-500 font-serif text-lg mb-2"
+                                <span class="block text-gray-500 font-serif font-bold text-lg mb-2"
                                     data-i18n="pricing.card_title">Monthly Retainer</span>
                                 <div class="flex items-start justify-center text-equestrian-green">
                                     <span class="text-4xl font-serif font-bold mt-2">£</span>
