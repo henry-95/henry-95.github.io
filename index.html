@@ -760,8 +760,7 @@
                                     class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-equestrian-gold focus:ring-1 focus:ring-equestrian-gold transition-colors resize-none"
                                     placeholder="How can I help you?" data-i18n="contact.form_message"></textarea>
                             </div>
-                            <!--<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-                            <div class="g-recaptcha my-4" data-sitekey="6LfeZEUsAAAAAG7Dwp5q83Q-cN3GRX9OKtF-M3cu"></div>-->
+                            <div class="g-recaptcha my-4" data-sitekey="6LfeZEUsAAAAAG7Dwp5q83Q-cN3GRX9OKtF-M3cu"></div>
 
                             <button type="submit" id="submit-btn"
                                 class="w-full bg-equestrian-gold text-equestrian-dark font-bold py-3 px-6 rounded-lg hover:bg-white transition-all transform hover:scale-[1.02] flex items-center justify-center gap-2">
@@ -816,13 +815,51 @@
             });
         });
 
+
         // Contact Form Logic
         const contactForm = document.getElementById('contact-form');
         const submitBtn = document.getElementById('submit-btn');
         const statusMsg = document.getElementById('form-status');
 
+        // Lazy Load reCAPTCHA
+        let recaptchaLoaded = false;
+        function loadRecaptcha() {
+            if (recaptchaLoaded) return;
+
+            console.log('Lazy loading reCAPTCHA...');
+            const script = document.createElement('script');
+            script.src = 'https://www.google.com/recaptcha/api.js';
+            script.async = true;
+            script.defer = true;
+            document.head.appendChild(script);
+
+            recaptchaLoaded = true;
+        }
+
+        // Trigger load on interaction with form fields
+        const formInputs = contactForm.querySelectorAll('input, textarea');
+        formInputs.forEach(input => {
+            input.addEventListener('focus', loadRecaptcha, { once: true });
+            input.addEventListener('click', loadRecaptcha, { once: true });
+        });
+
         contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
+
+            // Check if reCAPTCHA is loaded and ready
+            if (typeof grecaptcha === 'undefined') {
+                // Determine current language safely
+                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                // Fallback message if glossary isn't loaded or key missing
+                const errorMsg = (glossary && glossary.contact && glossary.contact.captcha_error && glossary.contact.captcha_error[currentLang])
+                    ? glossary.contact.captcha_error[currentLang]
+                    : "Please wait for the security check to load.";
+
+                statusMsg.textContent = errorMsg;
+                statusMsg.classList.remove('hidden');
+                statusMsg.classList.add('text-red-400');
+                return;
+            }
 
             // Spam Check (Honeypot)
             const honeypot = contactForm.querySelector('input[name="website_url"]').value;
@@ -840,10 +877,14 @@
                 recaptchaToken: grecaptcha.getResponse() // Add token to payload
             };
 
-            // Verify Captcha
+            // Verify Captcha matches
             if (!formData.recaptchaToken) {
-                const curLang = localStorage.getItem('preferredLanguage') || 'en';
-                statusMsg.textContent = glossary.contact.captcha_error[curLang];
+                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
+                const errorMsg = (glossary && glossary.contact && glossary.contact.captcha_error && glossary.contact.captcha_error[currentLang])
+                    ? glossary.contact.captcha_error[currentLang]
+                    : "Please confirm you are not a robot.";
+
+                statusMsg.textContent = errorMsg;
                 statusMsg.classList.remove('hidden');
                 statusMsg.classList.add('text-red-400');
                 statusMsg.classList.remove('text-green-400');
@@ -852,7 +893,7 @@
 
             // Loading State
             const originalBtnText = submitBtn.innerHTML;
-            const sendingText = glossary.contact.form_sending[localStorage.getItem('preferredLanguage') || 'en'] || "Sending...";
+            const sendingText = (glossary && glossary.contact && glossary.contact.form_sending && glossary.contact.form_sending[localStorage.getItem('preferredLanguage') || 'en']) || "Sending...";
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span class="animate-pulse">${sendingText}</span>`;
@@ -881,6 +922,7 @@
                     statusMsg.classList.remove('hidden');
                     statusMsg.classList.add('text-green-400');
                     contactForm.reset();
+                    if (grecaptcha) grecaptcha.reset();
                 } else {
                     throw new Error('Submission failed: ' + (result.message || 'Unknown error'));
                 }
