@@ -14,9 +14,10 @@
     <meta name="author" content="Henry Northen">
     <link rel="canonical" href="https://henrynorthen.com/">
 
-    <!-- Performance Optimisations -->
+    <!-- Performance Optimisations (LCP) -->
+    <link rel="preload" href="img/me.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="css/output.css" as="style">
     <link rel="preload" href="fonts/lora-v37-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="img/me.webp" as="image">
 
     <!-- Social Media / Open Graph (For beautiful link previews) -->
     <meta property="og:type" content="website">
@@ -34,9 +35,6 @@
     <meta name="twitter:image" content="img/opengraph.webp">
 
     <link rel="stylesheet" href="css/output.css">
-    <noscript>
-        <link rel="stylesheet" href="css/output.css">
-    </noscript>
 
     <style>
         /* Lora */
@@ -159,7 +157,6 @@
                 <div class="absolute inset-0 bg-gradient-to-r from-equestrian-dark/90 to-equestrian-green/80 z-10">
                 </div>
                 <!-- Using the existing background image, styled better -->
-                <div class="absolute inset-0 opacity-40 mix-blend-overlay"></div>
             </div>
 
             <div class="container mx-auto px-6 relative z-30 text-center text-white">
