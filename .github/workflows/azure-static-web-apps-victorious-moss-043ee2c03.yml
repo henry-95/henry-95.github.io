@@ -19,6 +19,13 @@ jobs:
         with:
           submodules: true
           lfs: false
+      - name: Minify HTML
+        run: |
+          npm install -g html-minifier
+          find . -type f -name "*.html" -not -path '*/.*' -print0 | while IFS= read -r -d '' file; do
+            echo "Minifying $file"
+            html-minifier --collapse-whitespace --remove-comments --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-tag-whitespace --use-short-doctype --minify-css true --minify-js true "$file" -o "$file.min" && mv "$file.min" "$file"
+          done
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
