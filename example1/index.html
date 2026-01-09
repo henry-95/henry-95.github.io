@@ -60,15 +60,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-24">
                 <div class="flex-shrink-0 flex items-center gap-3">
-                    <img src="./assets/images/logo.png" alt="Aurum Equestrian Logo"
-                        class="h-12 w-auto invert brightness-0 filter invert-[1] opacity-90">
-                    <!-- Logo is gold on white, creating a white version for dark header via filter or we can use the original if background allows. 
-                         Let's keep the gold version but maybe standard text looks better. 
-                         Actually, let's just use text if image doesn't fit well over dark, but image is gold on white.
-                         We will use CSS mix-blend-mode or just let it box if it has background. 
-                         Wait, the generated logo has a white background? I should handle that. 
-                         I'll use mix-blend-multiply if on light, screen if on dark. 
-                         Actually, simplest is to use text for brand name alongside. -->
+                    <img src="./assets/images/logo.webp" alt="Aurum Equestrian Logo" class="h-12 w-auto opacity-90">
                     <span class="font-display text-white text-xl tracking-[0.2em] font-semibold">AURUM</span>
                 </div>
 
@@ -115,7 +107,7 @@
     <header class="relative h-screen flex items-center justify-center overflow-hidden">
         <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0">
-            <img src="./assets/images/hero.png" alt="Dressage Horse" class="w-full h-full object-cover">
+            <img src="./assets/images/hero.webp" alt="Dressage Horse" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-b from-brand-dark/40 via-brand-dark/20 to-brand-dark/60"></div>
         </div>
 
@@ -156,7 +148,7 @@
             <div class="order-2 md:order-1 relative">
                 <div class="aspect-[3/4] overflow-hidden bg-brand-cream relative">
                     <!-- Using the stable image here but cropped or styled -->
-                    <img src="./assets/images/stable.png" alt="Luxury Stables"
+                    <img src="./assets/images/stable.webp" alt="Luxury Stables"
                         class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 duration-1000">
                 </div>
                 <!-- Decorative element -->
@@ -264,7 +256,7 @@
 
     <!-- Parallax / Quote Section -->
     <section class="py-32 px-4 relative bg-brand-dark bg-fixed bg-cover bg-center"
-        style="background-image: url('./assets/images/hero.png');">
+        style="background-image: url('./assets/images/hero.webp');">
         <div class="absolute inset-0 bg-brand-dark/70"></div>
         <div class="relative z-10 max-w-4xl mx-auto text-center">
             <svg class="w-10 h-10 text-brand-gold mx-auto mb-8 opacity-80" fill="currentColor" viewBox="0 0 24 24">
