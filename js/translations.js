@@ -179,7 +179,8 @@ const glossary = {
         form_btn: { en: "Send Message", de: "Nachricht senden", es: "Enviar Mensaje" },
         form_sending: { en: "Sending...", de: "Senden...", es: "Enviando..." },
         form_success: { en: "Message sent successfully!", de: "Nachricht erfolgreich gesendet!", es: "¡Mensaje enviado con éxito!" },
-        form_error: { en: "Error sending message. Please try again.", de: "Fehler beim Senden. Bitte versuchen Sie es erneut.", es: "Error al enviar mensaje. Por favor intente de nuevo." }
+        form_error: { en: "Error sending message. Please try again.", de: "Fehler beim Senden. Bitte versuchen Sie es erneut.", es: "Error al enviar mensaje. Por favor intente de nuevo." },
+        captcha_error: { en: "Please confirm you are not a robot.", de: "Bitte bestätigen Sie, dass Sie kein Roboter sind.", es: "Por favor confirma que no eres un robot." }
     },
     footer: {
         tagline: { en: "Premium Web Services for the Equestrian World.", de: "Premium Webservices für die Welt des Pferdesports.", es: "Servicios Web Premium para el Mundo Ecuestre." },
