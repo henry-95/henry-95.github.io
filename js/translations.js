@@ -44,7 +44,7 @@ const glossary = {
         },
         s1_title: { en: "Secure Hosting", de: "Sicheres Hosting", es: "Alojamiento Seguro" },
         s1_desc: {
-            en: "Enterprise-grade hosting with SSL encryption. Your site remains fast, secure, and always online, protecting your client data.",
+            en: "Enterprise-grade hosting with SSL encryption. Your site remains fast, secure, and always online.",
             de: "Hosting auf Unternehmensniveau mit SSL-Verschlüsselung. Ihre Website bleibt schnell, sicher und immer online.",
             es: "Alojamiento de nivel empresarial con encriptación SSL. Tu sitio permanece rápido, seguro y siempre en línea."
         },
@@ -62,7 +62,7 @@ const glossary = {
         },
         s4_title: { en: "Lightning Fast", de: "Blitzschnelle Performance", es: "Velocidad del Rayo" },
         s4_desc: {
-            en: "Zero bloat. Optimized for speed so your site loads instantly, even when you're out in the field with poor signal.",
+            en: "Zero bloat. Optimised for speed so your site loads instantly, even when you're out in the field with poor signal.",
             de: "Kein unnötiger Ballast. Optimiert für Geschwindigkeit, damit Ihre Seite sofort lädt – auch draußen auf dem Feld bei schlechtem Empfang.",
             es: "Sin código innecesario. Optimizado para velocidad, carga al instante incluso cuando estás en el campo con poca señal."
         }
