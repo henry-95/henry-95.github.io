@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Aurum Equestrian</title>
+    <meta name="description" content="A glimpse into the world of Aurum Equestrian.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS (Local file) -->
+    <link rel="stylesheet" href="../css/output.css">
+
+    <!-- BaguetteBox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+
+    <style>
+        /* Minimal custom CSS */
+        .glass-nav {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Gallery specific overrides for baguetteBox */
+        #gallery a {
+            display: block;
+            overflow: hidden;
+            border-radius: 4px;
+            /* Optional rounded corners */
+        }
+
+        #gallery img {
+            transition: transform 0.5s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #gallery a:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="bg-brand-cream text-brand-dark antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="./assets/images/logo.webp" alt="Aurum Equestrian Logo" class="h-12 w-auto opacity-90">
+                    <span class="font-display text-white text-xl tracking-[0.2em] font-semibold">AURUM</span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-12">
+                    <a href="index.html"
+                        class="text-white/80 hover:text-white transition-colors text-xs tracking-widest uppercase font-medium">Home</a>
+                    <a href="about.html"
+                        class="text-white/80 hover:text-white transition-colors text-xs tracking-widest uppercase font-medium">About</a>
+                    <a href="services.html"
+                        class="text-white/80 hover:text-white transition-colors text-xs tracking-widest uppercase font-medium">Services</a>
+                    <a href="gallery.html"
+                        class="text-white hover:text-brand-gold transition-colors text-xs tracking-widest uppercase font-medium">Gallery</a>
+                    <a href="contact.html"
+                        class="text-brand-gold border border-brand-gold px-6 py-2 hover:bg-brand-gold hover:text-brand-dark transition-all duration-300 text-xs tracking-widest uppercase font-medium">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-white hover:text-brand-gold focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-brand-dark" id="mobile-menu">
+            <div class="px-4 pt-2 pb-8 space-y-4">
+                <a href="index.html"
+                    class="block text-white hover:text-brand-gold text-sm tracking-widest uppercase py-2">Home</a>
+                <a href="about.html"
+                    class="block text-white/80 hover:text-white text-sm tracking-widest uppercase py-2">About</a>
+                <a href="services.html"
+                    class="block text-white/80 hover:text-white text-sm tracking-widest uppercase py-2">Services</a>
+                <a href="gallery.html"
+                    class="block text-white/80 hover:text-white text-sm tracking-widest uppercase py-2">Gallery</a>
+                <a href="contact.html" class="block text-brand-gold py-2 text-sm tracking-widest uppercase">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section (Smaller than home hero) -->
+    <header class="relative pt-40 pb-20 bg-brand-dark px-4">
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h1 class="font-playfair text-4xl md:text-6xl text-white mb-6 leading-tight">
+                Our <span class="italic text-brand-gold">Gallery</span>
+            </h1>
+            <div class="w-16 h-px bg-brand-gold mx-auto mb-6"></div>
+            <p class="text-white/80 text-lg font-light">Witness the elegance and atmosphere of Aurum.</p>
+        </div>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="py-20 px-4 flex-grow">
+        <div class="max-w-7xl mx-auto">
+            <!-- BaguetteBox Gallery Container -->
+            <div id="gallery" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+
+                <!-- Item 1 -->
+                <a href="./assets/images/hero.webp" data-caption="Dressage Performance">
+                    <img src="./assets/images/hero.webp" alt="Dressage Performance"
+                        class="shadow-lg h-64 w-full object-cover">
+                </a>
+
+                <!-- Item 2 -->
+                <a href="./assets/images/stable.webp" data-caption="Luxury Stables">
+                    <img src="./assets/images/stable.webp" alt="Luxury Stables"
+                        class="shadow-lg h-64 w-full object-cover">
+                </a>
+
+                <!-- Item 3 -->
+                <a href="./assets/images/hero.webp" data-caption="Training Session">
+                    <img src="./assets/images/hero.webp" alt="Training Session"
+                        class="shadow-lg h-64 w-full object-cover">
+                </a>
+
+                <!-- Item 4 -->
+                <a href="./assets/images/stable.webp" data-caption="Morning Light">
+                    <img src="./assets/images/stable.webp" alt="Morning Light"
+                        class="shadow-lg h-64 w-full object-cover">
+                </a>
+
+                <!-- Item 5 -->
+                <a href="./assets/images/hero.webp" data-caption="Excellence in Motion">
+                    <img src="./assets/images/hero.webp" alt="Excellence in Motion"
+                        class="shadow-lg h-64 w-full object-cover">
+                </a>
+
+                <!-- Item 6 -->
+                <a href="./assets/images/stable.webp" data-caption="Our Facilities">
+                    <img src="./assets/images/stable.webp" alt="Facilities" class="shadow-lg h-64 w-full object-cover">
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-dark text-white pt-20 pb-10 border-t border-white/10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <!-- Brand -->
+                <div class="md:col-span-1">
+                    <p class="font-display text-2xl tracking-[0.1em] mb-6">AURUM</p>
+                    <p class="text-gray-400 text-sm font-light leading-relaxed">
+                        Setting the standard in professional dressage training and care. Where passion meets precision.
+                    </p>
+                </div>
+
+                <!-- Links -->
+                <div>
+                    <h4 class="text-sm font-semibold tracking-widest uppercase mb-6 text-brand-gold">Company</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li><a href="about.html" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="services.html" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="gallery.html" class="hover:text-white transition-colors">Gallery</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <!-- ... (Same as index.html) ... -->
+                    <h4 class="text-sm font-semibold tracking-widest uppercase mb-6 text-brand-gold">Services</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li><a href="#" class="hover:text-white transition-colors">Training Boards</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Clinics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-sm font-semibold tracking-widest uppercase mb-6 text-brand-gold">Contact</h4>
+                    <ul class="space-y-4 text-sm text-gray-400 font-light">
+                        <li>123 Equestrian Way</li>
+                        <li>Wellington, FL 33414</li>
+                        <li class="pt-2"><a href="mailto:info@aurum.com"
+                                class="hover:text-white transition-colors">info@aurum.com</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div
+                class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500 font-light">
+                <div class="flex flex-col text-center md:text-left">
+                    <p>&copy; 2024 Aurum Equestrian. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Example Site Disclaimer Banner -->
+    <div
+        class="fixed bottom-0 left-0 w-full bg-brand-dark/95 text-brand-cream text-center py-3 px-4 z-[100] border-t border-brand-gold/30 backdrop-blur-sm">
+        <p class="text-xs md:text-sm font-light tracking-wide">
+            <span class="font-semibold text-brand-gold uppercase mr-2">Example Site</span>
+            Website, layout, theme, colours can all be adjusted as per your requirements.
+        </p>
+    </div>
+
+    <!-- BaguetteBox Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            baguetteBox.run('#gallery', {
+                animation: 'slideIn', // simple slide animation
+                overlayBackgroundColor: 'rgba(15, 23, 42, 0.95)' // Match brand-dark with opacity
+            });
+        });
+
+        // Mobile menu toggle (copied from script.js logic simplified)
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('mobile-menu-btn');
+            const menu = document.getElementById('mobile-menu');
+            if (btn && menu) {
+                btn.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>
