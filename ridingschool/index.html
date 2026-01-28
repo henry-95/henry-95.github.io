@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Premier equestrian riding school in the UK. Offering private and group lessons, livery services, and more.">
+    <title>Green Valley Riding School | Excellence in Equestrian Training</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <!-- BaguetteBox CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <!-- Custom CSS -->
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body
+    class="font-sans text-slate-700 bg-light antialiased selection:bg-secondary selection:text-white overflow-x-hidden">
+
+    <!-- Fun Navbar -->
+    <nav class="fixed w-full z-50 transition-all duration-300 py-4" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white/80 backdrop-blur-md rounded-full shadow-lg border-2 border-primary/10 px-6">
+                <div class="flex justify-between items-center h-20">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="#"
+                            class="font-heading text-3xl font-bold text-primary tracking-tight group flex items-center gap-2">
+                            <span
+                                class="bg-primary text-white w-10 h-10 rounded-full flex items-center justify-center transform group-hover:rotate-12 transition-transform">G</span>
+                            Green Valley
+                        </a>
+                    </div>
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex space-x-2 items-center">
+                        <a href="#home"
+                            class="px-4 py-2 rounded-full font-heading font-medium text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">Home</a>
+                        <a href="#about"
+                            class="px-4 py-2 rounded-full font-heading font-medium text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">About</a>
+                        <a href="#services"
+                            class="px-4 py-2 rounded-full font-heading font-medium text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">Values</a>
+                        <a href="#gallery"
+                            class="px-4 py-2 rounded-full font-heading font-medium text-slate-600 hover:text-primary hover:bg-primary/5 transition-all">Gallery</a>
+                        <a href="#contact"
+                            class="ml-4 px-6 py-3 bg-secondary text-white font-heading font-bold rounded-full hover:bg-orange-600 transition-all hover:shadow-lg hover:scale-105 transform">Join
+                            the Club!</a>
+                    </div>
+                    <!-- Mobile Menu Button -->
+                    <div class="md:hidden flex items-center">
+                        <button id="mobile-menu-btn"
+                            class="text-primary hover:bg-primary/10 p-2 rounded-full focus:outline-none transition-colors">
+                            <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"
+                                    d="M4 6h16M4 12h16M4 18h16"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full top-24 px-4">
+            <div class="bg-white rounded-3xl shadow-xl border-2 border-primary/10 overflow-hidden">
+                <div class="p-4 space-y-2">
+                    <a href="#home"
+                        class="block px-4 py-3 text-lg font-heading font-bold text-slate-700 hover:bg-primary/5 rounded-xl">Home</a>
+                    <a href="#about"
+                        class="block px-4 py-3 text-lg font-heading font-bold text-slate-700 hover:bg-primary/5 rounded-xl">About</a>
+                    <a href="#services"
+                        class="block px-4 py-3 text-lg font-heading font-bold text-slate-700 hover:bg-primary/5 rounded-xl">Values</a>
+                    <a href="#gallery"
+                        class="block px-4 py-3 text-lg font-heading font-bold text-slate-700 hover:bg-primary/5 rounded-xl">Gallery</a>
+                    <a href="#contact"
+                        class="block px-4 py-3 text-lg font-heading font-bold text-secondary bg-orange-50 rounded-xl">Join
+                        the Club!</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Fun Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-light">
+        <!-- Abstract Decorations -->
+        <div
+            class="absolute top-0 right-0 w-1/3 h-full bg-accent/20 blob-shape blur-3xl transform translate-x-1/2 -translate-y-1/2">
+        </div>
+        <div
+            class="absolute bottom-0 left-0 w-1/3 h-full bg-primary/20 blob-shape blur-3xl transform -translate-x-1/2 translate-y-1/4">
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <div
+                        class="inline-block px-4 py-1.5 bg-accent/20 border border-accent text-orange-700 font-bold rounded-full mb-6 transform -rotate-2">
+                        🐴 New Term Starting Soon!
+                    </div>
+                    <h1 class="font-heading text-6xl lg:text-8xl font-bold text-primary mb-6 leading-tight">
+                        Ride into <br> <span
+                            class="text-secondary text-shadow-lg inline-block transform hover:scale-105 transition-transform duration-300 cursor-default">Adventure</span>
+                    </h1>
+                    <p class="text-xl text-slate-600 mb-8 max-w-lg mx-auto lg:mx-0 leading-relaxed font-medium">
+                        Where friendship, fun, and horsemanship come together! Join the happiest riding school in the
+                        UK.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#contact"
+                            class="px-8 py-4 bg-primary text-white font-heading font-bold text-xl rounded-full shadow-xl hover:shadow-2xl hover:bg-teal-700 transition-all transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                            Book a Lesson
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#about"
+                            class="px-8 py-4 bg-white text-primary font-heading font-bold text-xl rounded-full border-2 border-primary/20 hover:border-primary hover:bg-primary/5 transition-all">
+                            Meet the Ponies
+                        </a>
+                    </div>
+                </div>
+                <!-- Hero Image Blob -->
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-accent rounded-[3rem] transform rotate-6 scale-95 opacity-50 blur-sm">
+                    </div>
+                    <div
+                        class="absolute inset-0 bg-secondary rounded-[3rem] transform -rotate-3 scale-95 opacity-50 blur-sm">
+                    </div>
+                    <img src="img/gallery_1.png" alt="Happy kid riding"
+                        class="relative w-full rounded-[3rem] shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform duration-500 animate-float">
+
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 transform rotate-12 animate-bounce-slow">
+                        <p class="font-heading font-bold text-primary text-lg">⭐ BHS Approved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Wave -->
+    <section id="about" class="relative py-24 bg-white">
+        <!-- Top Wave -->
+        <div class="absolute -top-1 left-0 w-full overflow-hidden leading-none rotate-180">
+            <svg class="relative block w-[calc(110%+1.3px)] h-[50px] text-light" data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    fill="currentColor"></path>
+            </svg>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-accent/30 text-amber-800 rounded-full text-sm font-bold tracking-wide mb-4">WHO
+                    WE ARE</span>
+                <h2 class="font-heading text-5xl font-bold text-slate-800">More Than Just Riding</h2>
+                <div class="w-24 h-2 bg-secondary rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div
+                    class="bg-light p-8 rounded-3xl border-b-8 border-primary hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-4xl shadow-md mb-6">
+                        🤝</div>
+                    <h3 class="font-heading text-2xl font-bold text-primary mb-3">Best Friends</h3>
+                    <p class="text-slate-600 font-medium">It's all about the bond! Learn to care for, groom, and
+                        understand our four-legged friends.</p>
+                </div>
+                <div
+                    class="bg-orange-50 p-8 rounded-3xl border-b-8 border-secondary hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-4xl shadow-md mb-6">
+                        🏆</div>
+                    <h3 class="font-heading text-2xl font-bold text-secondary mb-3">Confidence</h3>
+                    <p class="text-slate-600 font-medium">Riding builds character. Stand tall, lead with kindness, and
+                        grow your confidence every week.</p>
+                </div>
+                <div
+                    class="bg-yellow-50 p-8 rounded-3xl border-b-8 border-accent hover:-translate-y-2 transition-transform duration-300">
+                    <div
+                        class="w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-4xl shadow-md mb-6">
+                        🎉</div>
+                    <h3 class="font-heading text-2xl font-bold text-amber-600 mb-3">Fun First</h3>
+                    <p class="text-slate-600 font-medium">Gymkhanas, games, and summer camps! We make sure every lesson
+                        is filled with smiles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services / Activities -->
+    <section id="services" class="py-24 bg-primary text-white relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10"
+            style="background-image: radial-gradient(#fff 2px, transparent 2px); background-size: 30px 30px;"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Activity Card -->
+                <div class="group relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-dark rounded-3xl p-6 h-full border border-white/10">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-accent">Group Lessons</h3>
+                        <p class="text-teal-100 mb-4">Make friends while you ride!</p>
+                        <a href="#contact"
+                            class="inline-block text-white font-bold hover:text-accent transition-colors">Join now →</a>
+                    </div>
+                </div>
+                <!-- Activity Card -->
+                <div class="group relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-dark rounded-3xl p-6 h-full border border-white/10">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-accent">Pony Club</h3>
+                        <p class="text-teal-100 mb-4">Badges, quizzes & care training.</p>
+                        <a href="#contact"
+                            class="inline-block text-white font-bold hover:text-accent transition-colors">Details →</a>
+                    </div>
+                </div>
+                <!-- Activity Card -->
+                <div class="group relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-dark rounded-3xl p-6 h-full border border-white/10">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-accent">Hacking</h3>
+                        <p class="text-teal-100 mb-4">Explore our beautiful woods.</p>
+                        <a href="#contact"
+                            class="inline-block text-white font-bold hover:text-accent transition-colors">Explore →</a>
+                    </div>
+                </div>
+                <!-- Activity Card -->
+                <div class="group relative">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-accent to-secondary rounded-3xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative bg-dark rounded-3xl p-6 h-full border border-white/10">
+                        <h3 class="font-heading text-2xl font-bold mb-2 text-accent">Summer Camp</h3>
+                        <p class="text-teal-100 mb-4">A whole week of pony fun!</p>
+                        <a href="#contact"
+                            class="inline-block text-white font-bold hover:text-accent transition-colors">Sign up →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-3 py-1 bg-accent/30 text-amber-800 rounded-full text-sm font-bold tracking-wide mb-4">AFFORDABLE
+                    FUN</span>
+                <h2 class="font-heading text-5xl font-bold text-slate-800">Lesson Prices</h2>
+                <div class="w-24 h-2 bg-secondary rounded-full mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Group Lesson -->
+                <div
+                    class="relative bg-light rounded-[2.5rem] p-8 hover:-translate-y-2 transition-transform duration-300 border-2 border-primary/10">
+                    <div
+                        class="absolute top-0 right-0 bg-primary text-white text-xs font-bold px-4 py-2 rounded-bl-2xl rounded-tr-2xl">
+                        MOST POPULAR</div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-700 mb-2">Group Lesson</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-primary">£25</span>
+                        <span class="text-slate-500 ml-2">/ hour</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Ride with friends
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Max 6 riders
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Fun games & drills
+                        </li>
+                    </ul>
+                    <a href="#contact"
+                        class="block w-full py-3 bg-white border-2 border-primary text-primary font-bold rounded-xl text-center hover:bg-primary hover:text-white transition-colors">Book
+                        Now</a>
+                </div>
+
+                <!-- Private Lesson -->
+                <div
+                    class="relative bg-white rounded-[2.5rem] p-8 shadow-xl hover:-translate-y-2 transition-transform duration-300 border-2 border-secondary overflow-hidden">
+                    <div class="absolute top-0 left-0 w-full h-2 bg-secondary"></div>
+                    <h3 class="font-heading text-2xl font-bold text-slate-700 mb-2">Private Lesson</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-secondary">£45</span>
+                        <span class="text-slate-500 ml-2">/ 45 mins</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            1-on-1 Instruction
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Faster progression
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Tailored to you
+                        </li>
+                    </ul>
+                    <a href="#contact"
+                        class="block w-full py-3 bg-secondary text-white font-bold rounded-xl text-center hover:bg-orange-600 transition-colors shadow-lg">Book
+                        Now</a>
+                </div>
+
+                <!-- Pony Club -->
+                <div
+                    class="relative bg-light rounded-[2.5rem] p-8 hover:-translate-y-2 transition-transform duration-300 border-2 border-primary/10">
+                    <h3 class="font-heading text-2xl font-bold text-slate-700 mb-2">Pony Club Day</h3>
+                    <div class="flex items-baseline mb-6">
+                        <span class="text-4xl font-bold text-primary">£50</span>
+                        <span class="text-slate-500 ml-2">/ day</span>
+                    </div>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            10am - 3pm
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Riding & Grooming
+                        </li>
+                        <li class="flex items-center text-slate-600">
+                            <svg class="w-5 h-5 text-secondary mr-3" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Earn badges!
+                        </li>
+                    </ul>
+                    <a href="#contact"
+                        class="block w-full py-3 bg-white border-2 border-primary text-primary font-bold rounded-xl text-center hover:bg-primary hover:text-white transition-colors">Book
+                        Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery (Masonry style look) -->
+        <section id="gallery" class="py-24 bg-light">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="font-heading text-5xl font-bold text-center text-primary mb-16">Stable Life 📸</h2>
+
+                <div class="baguetteBox-gallery grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px]">
+                    <!-- Large item -->
+                    <a href="img/gallery_1.png"
+                        class="col-span-2 row-span-2 group relative rounded-3xl overflow-hidden cursor-zoom-in">
+                        <img src="img/gallery_1.png" alt="Happy rider"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        <div
+                            class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </a>
+                    <!-- Small item -->
+                    <a href="img/gallery_2.png"
+                        class="col-span-1 row-span-1 group relative rounded-3xl overflow-hidden cursor-zoom-in">
+                        <img src="img/gallery_2.png" alt="Stable pony"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </a>
+                    <!-- Small item -->
+                    <a href="img/hero_bg.png"
+                        class="col-span-1 row-span-1 group relative rounded-3xl overflow-hidden cursor-zoom-in">
+                        <img src="img/hero_bg.png" alt="Views"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </a>
+                    <!-- Wide item -->
+                    <a href="img/gallery_1.png"
+                        class="col-span-2 row-span-1 group relative rounded-3xl overflow-hidden cursor-zoom-in">
+                        <img src="img/gallery_1.png" alt="Lessons"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Action -->
+        <section id="contact" class="py-20 bg-white relative">
+            <div class="max-w-4xl mx-auto px-4 text-center">
+                <div class="bg-secondary rounded-[3rem] p-12 shadow-2xl relative overflow-hidden">
+                    <!-- Circles -->
+                    <div
+                        class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full transform translate-x-1/2 -translate-y-1/2">
+                    </div>
+                    <div
+                        class="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full transform -translate-x-1/2 translate-y-1/2">
+                    </div>
+
+                    <h2 class="relative font-heading text-4xl md:text-5xl font-bold text-white mb-6">Ready to Ride?</h2>
+                    <p class="relative text-orange-100 text-xl mb-8 max-w-xl mx-auto">Drop us a message or give us a
+                        call to
+                        book your first taster session!</p>
+
+                    <form class="relative max-w-md mx-auto space-y-4">
+                        <input type="email" placeholder="Parent's Email"
+                            class="w-full px-6 py-4 rounded-full border-none focus:ring-4 focus:ring-accent text-slate-800 font-medium">
+                        <button type="submit"
+                            class="w-full px-6 py-4 bg-accent text-amber-900 font-heading font-bold text-xl rounded-full hover:bg-white hover:text-secondary transition-colors shadow-lg">
+                            Get Started!
+                        </button>
+                        <p class="text-white/80 text-sm mt-4">Or call us on <span class="font-bold underline">01234 567
+                                890</span></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sticky Footer Message -->
+        <div
+            class="fixed bottom-0 left-0 w-full bg-slate-900/95 backdrop-blur text-white text-center py-3 px-4 z-[100] border-t border-slate-700 shadow-lg">
+            <p class="text-sm md:text-base font-medium"><span class="text-accent font-bold">Example Site:</span>
+                Website,
+                layout, theme, colours can all be adjusted as per your requirements.</p>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+        <script src="./js/script.js"></script>
+</body>
+
+</html>

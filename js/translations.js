@@ -183,6 +183,18 @@ const glossary = {
         form_error: { en: "Error sending message. Please try again.", de: "Fehler beim Senden. Bitte versuchen Sie es erneut.", es: "Error al enviar mensaje. Por favor intente de nuevo." },
         captcha_error: { en: "Please confirm you are not a robot.", de: "Bitte bestätigen Sie, dass Sie kein Roboter sind.", es: "Por favor confirma que no eres un robot." }
     },
+    reasons: {
+        title: { en: "Why Choose Me?", de: "Warum mich wählen?", es: "¿Por qué elegirme?" },
+        subtitle: { en: "The Benefits", de: "Die Vorteile", es: "Los Beneficios" },
+        r1: { en: "A Flawless Experience: No broken links or technical errors.", de: "Ein makelloses Erlebnis: Keine defekten Links oder technischen Fehler.", es: "Una experiencia impecable: Sin enlaces rotos ni errores técnicos." },
+        r2: { en: "Bank-Grade Security: Always SSL certified, eliminating browser warnings.", de: "Sicherheit auf Bankenniveau: Immer SSL-zertifiziert.", es: "Seguridad de nivel bancario: Siempre certificado con SSL." },
+        r3: { en: "On-Demand Updates: Just text me, and I'll apply changes immediately.", de: "Updates auf Abruf: Einfach texten, und ich kümmere mich sofort darum.", es: "Actualizaciones a pedido: Solo envíame un mensaje y aplicaré los cambios de inmediato." },
+        r4: { en: "Transparent Pricing: One simple, all-inclusive subscription.", de: "Transparente Preise: Ein einfaches, alles umfassende Abonnement.", es: "Precios transparentes: Una suscripción simple y todo incluido." },
+        r5: { en: "Superior Performance: Lightning-fast loading speeds, optimized for all devices.", de: "Überragende Leistung: Blitzschnelle Ladezeiten.", es: "Rendimiento superior: Velocidad de carga ultrarrápida." },
+        r6: { en: "Platform Independence: Custom-built code, not reliant on Squarespace or WordPress.", de: "Plattformunabhängigkeit: Unabhängig von Squarespace oder WordPress.", es: "Independencia de plataforma: Código personalizado, sin depender de otros." },
+        r7: { en: "Total Ownership: You own 100% of your website's code and assets.", de: "Vollständiges Eigentum: Sie besitzen 100% des Codes Ihrer Website.", es: "Propiedad total: Usted es dueño del 100% del código de su sitio web." },
+        r8: { en: "World-Class Infrastructure: Hosted on Microsoft Azure's premium cloud network.", de: "Weltklasse-Infrastruktur: Gehostet auf Microsoft Azure.", es: "Infraestructura de clase mundial: Alojado en Microsoft Azure." }
+    },
     footer: {
         tagline: { en: "Premium Web Services for the Equestrian World.", de: "Premium Webservices für die Welt des Pferdesports.", es: "Servicios Web Premium para el Mundo Ecuestre." },
         rights: { en: "All Rights Reserved.", de: "Alle Rechte vorbehalten.", es: "Todos los derechos reservados." },
