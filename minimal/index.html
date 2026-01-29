@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysium Equestrian</title>
+
+    <!-- Fonts: Playfair (Elegant) + DM Sans (Modern/Clean) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body class="flex justify-center items-start min-h-screen py-12 px-4 md:px-8">
+
+    <!-- The Box -->
+    <main
+        class="w-full max-w-[1100px] bg-[#f4f1ea] shadow-[0_20px_40px_-10px_rgba(45,42,38,0.1)] relative selection:bg-[#dcd7cd]">
+
+        <!-- Navigation / Header -->
+        <header
+            class="flex justify-between items-center px-8 py-6 border-b-subtle sticky top-0 bg-[#f4f1ea]/95 backdrop-blur-sm z-50 relative">
+            <div class="text-xs uppercase tracking-widest font-bold text-[#8b7355]">est. 2026</div>
+            <a href="#" class="font-heading text-3xl italic">Elysium</a>
+
+            <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-[#2d2a26]/70">
+                <a href="#about">About</a>
+                <a href="#breeding">Stallions</a>
+                <a href="#livery">Livery</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <button id="nav-toggle"
+                class="md:hidden text-xs uppercase font-bold text-[#8b7355] cursor-pointer p-2">MENU</button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu"
+                class="hidden md:hidden absolute top-full left-0 w-full bg-[#f4f1ea] shadow-xl border-b border-[#dcd7cd] z-40 p-6 text-center transform origin-top animate-fade-in">
+                <nav class="flex flex-col gap-6 text-xs font-bold uppercase tracking-widest text-[#2d2a26]/70">
+                    <a href="#about" class="hover:text-[#8b7355] py-2">About</a>
+                    <a href="#breeding" class="hover:text-[#8b7355] py-2">Stallions</a>
+                    <a href="#livery" class="hover:text-[#8b7355] py-2">Livery</a>
+                    <a href="#contact" class="hover:text-[#8b7355] py-2">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section / About -->
+        <section id="about" class="grid md:grid-cols-[1.2fr_0.8fr] min-h-[500px] border-b-subtle scroll-mt-20">
+            <div class="p-12 md:p-16 flex flex-col justify-center border-b-subtle md:border-b-0 md:border-r-subtle">
+                <span class="text-[#8b7355] text-xs font-bold uppercase tracking-widest mb-6 block">Elite Equestrian
+                    Services</span>
+                <h2 class="font-heading text-5xl md:text-6xl leading-[1.1] mb-8">Where tradition meets modern
+                    performance.</h2>
+                <p class="text-[#2d2a26]/70 leading-relaxed max-w-md mb-10 font-[300]">
+                    We are a boutique facility dedicated to the breeding and training of exceptional sport horses.
+                    Located in the heart of Surrey, we offer a sanctuary for the modern equine athlete.
+                </p>
+                <div>
+                    <a href="#contact"
+                        class="inline-block border border-[#2d2a26] px-8 py-3 text-xs uppercase tracking-widest hover:bg-[#2d2a26] hover:text-[#f4f1ea] transition-all">Enquire
+                        Now</a>
+                </div>
+            </div>
+            <div class="relative overflow-hidden h-64 md:h-auto">
+                <img src="img/stallion.png" alt="Stallion Profile" class="w-full h-full object-cover">
+            </div>
+        </section>
+
+        <!-- Breeding Detail Section -->
+        <section id="breeding" class="grid md:grid-cols-2 border-b-subtle scroll-mt-20">
+            <div
+                class="relative h-[400px] md:h-auto border-b-subtle md:border-b-0 md:border-r-subtle order-2 md:order-1">
+                <img src="img/hero_bg.png" alt="Estate Grounds" class="w-full h-full object-cover filter sepia-[.15]">
+                <div class="absolute inset-0 bg-[#2d2a26]/5"></div>
+            </div>
+            <div class="p-12 md:p-16 flex flex-col justify-center order-1 md:order-2">
+                <div class="w-12 h-px bg-[#8b7355] mb-8"></div>
+                <h3 class="font-heading text-4xl italic mb-6">Our Stallions</h3>
+                <p class="text-sm text-[#2d2a26]/70 leading-relaxed mb-6">
+                    We stand a select roster of World Class stallions, chosen for their rideability, soundness, and
+                    scope. Our breeding philosophy centers on producing modern sports horses that are as kind as they
+                    are talented.
+                </p>
+                <ul class="text-xs font-bold uppercase tracking-widest text-[#2d2a26]/60 space-y-3 mb-8">
+                    <li class="flex items-center gap-3"><span
+                            class="w-1.5 h-1.5 rounded-full bg-[#8b7355]"></span>Hanoverian & KWPN</li>
+                    <li class="flex items-center gap-3"><span class="w-1.5 h-1.5 rounded-full bg-[#8b7355]"></span>Fresh
+                        & Chilled Semen</li>
+                    <li class="flex items-center gap-3"><span
+                            class="w-1.5 h-1.5 rounded-full bg-[#8b7355]"></span>Youngstock for Sale</li>
+                </ul>
+                <a href="#contact"
+                    class="text-xs font-bold uppercase tracking-widest text-[#8b7355] hover:text-[#2d2a26]">Request Stud
+                    Card →</a>
+            </div>
+        </section>
+
+        <!-- Livery Detail Section -->
+        <section id="livery" class="grid md:grid-cols-2 border-b-subtle scroll-mt-20">
+            <div class="p-12 md:p-16 flex flex-col justify-center border-b-subtle md:border-b-0 md:border-r-subtle">
+                <div class="w-12 h-px bg-[#8b7355] mb-8"></div>
+                <h3 class="font-heading text-4xl italic mb-6">Full Livery</h3>
+                <p class="text-sm text-[#2d2a26]/70 leading-relaxed mb-6">
+                    Experience peace of mind with our comprehensive livery packages. Every aspect of your horse's care
+                    is managed by our BHS qualified staff, from nutritional balanced diets to individual turnout plans.
+                </p>
+                <div class="grid grid-cols-2 gap-6 mt-2">
+                    <div>
+                        <span
+                            class="block text-xs font-bold uppercase tracking-widest text-[#2d2a26] mb-1">Facilities</span>
+                        <p class="text-xs text-[#2d2a26]/60">Indoor Arena, Solariums, Hot Wash, Horse Walker</p>
+                    </div>
+                    <div>
+                        <span class="block text-xs font-bold uppercase tracking-widest text-[#2d2a26] mb-1">Care</span>
+                        <p class="text-xs text-[#2d2a26]/60">Late night checks, 24/7 Supervision, Vet assistance</p>
+                    </div>
+                </div>
+            </div>
+            <div class="relative h-[400px] md:h-auto">
+                <img src="img/stable.png" alt="Stable Interior" class="w-full h-full object-cover filter sepia-[.15]">
+            </div>
+        </section>
+
+        <!-- Image Grid / Archive -->
+        <section class="grid grid-cols-3 border-b-subtle h-48 md:h-64">
+            <div class="border-r-subtle overflow-hidden relative group">
+                <img src="img/stallion.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="border-r-subtle overflow-hidden relative group">
+                <img src="img/stable.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+            <div class="overflow-hidden relative group">
+                <img src="img/hero_bg.png"
+                    class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            </div>
+        </section>
+
+        <!-- Quote -->
+        <section class="py-20 px-8 text-center border-b-subtle bg-white/40">
+            <blockquote class="max-w-2xl mx-auto">
+                <p class="font-heading text-3xl md:text-4xl italic leading-tight text-[#2d2a26] mb-8">
+                    "The essential joy of being with horses is that it brings us in contact with the rare elements of
+                    grace, beauty, spirit, and freedom."
+                </p>
+                <footer class="text-xs font-bold uppercase tracking-widest text-[#8b7355]">
+                    — Sharon Ralls Lemon
+                </footer>
+            </blockquote>
+        </section>
+
+        <!-- Footer -->
+        <footer id="contact" class="grid md:grid-cols-[1fr_auto] bg-[#2d2a26] text-[#f4f1ea] scroll-mt-20">
+            <div class="p-12 md:p-16 border-b border-[#f4f1ea]/10 md:border-b-0 md:border-r border-[#f4f1ea]/10">
+                <h2 class="font-heading text-4xl mb-8">Start your journey.</h2>
+                <div class="flex flex-col md:flex-row gap-12">
+                    <div>
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest text-[#8b7355] block mb-4">Contact</span>
+                        <p class="font-sans text-sm opacity-80 mb-2">hello@elysium-equestrian.com</p>
+                        <p class="font-sans text-sm opacity-80">+44 (0) 1234 567 890</p>
+                    </div>
+                    <div>
+                        <span
+                            class="text-xs font-bold uppercase tracking-widest text-[#8b7355] block mb-4">Location</span>
+                        <p class="font-sans text-sm opacity-80 mb-2">Lower Lane, Guildford</p>
+                        <p class="font-sans text-sm opacity-80">Surrey, GU1 2AB</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-12 md:p-16 flex items-end justify-end">
+                <a href="#"
+                    class="w-16 h-16 rounded-full border border-[#f4f1ea]/30 flex items-center justify-center hover:bg-[#f4f1ea] hover:text-[#2d2a26] transition-all"
+                    aria-label="Back to Top">
+                    <span class="text-2xl">↑</span>
+                </a>
+            </div>
+        </footer>
+
+    </main>
+
+    <div
+        class="fixed bottom-0 left-0 w-full bg-brand-dark/95 text-brand-cream text-center py-3 px-4 z-[100] border-t border-brand-gold/30 backdrop-blur-sm">
+        <p class="text-xs md:text-sm font-light tracking-wide">
+            <span class="font-semibold text-brand-gold uppercase mr-2">Example Site</span>
+            Website, layout, theme, colours can all be adjusted as per your requirements.
+        </p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

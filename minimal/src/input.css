@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@theme {
+    /* Muted Luxury Palette */
+    --color-primary: #2d2a26;
+    /* Warm Charcoal - Softer than black */
+    --color-secondary: #f4f1ea;
+    /* Bone/Cream Background */
+    --color-accent: #8b7355;
+    /* Muted Bronze/Gold */
+    --color-tertiary: #dcd7cd;
+    /* Stone Grey for borders */
+
+    --font-heading: 'Playfair Display', serif;
+    --font-sans: 'DM Sans', sans-serif;
+
+    --shadow-soft: 0 20px 40px -10px rgba(45, 42, 38, 0.1);
+
+    --animate-fade-in: fade-in 0.3s ease-out forwards;
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+@utility font-heading {
+    font-family: var(--font-heading);
+}
+
+@utility font-sans {
+    font-family: var(--font-sans);
+}
+
+/* Global Styles */
+body {
+    background-color: #e8e6e1;
+    /* Outer background */
+    color: var(--color-primary);
+    font-family: var(--font-sans);
+}
+
+/* Typography refinements */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+}
+
+/* Subtle Borders */
+@utility border-subtle {
+    border: 1px solid var(--color-tertiary);
+}
+
+@utility border-b-subtle {
+    border-bottom: 1px solid var(--color-tertiary);
+}
+
+@utility border-r-subtle {
+    border-right: 1px solid var(--color-tertiary);
+}
+
+/* Soft Hover Transitions */
+a {
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Image Filters */
+img {
+    filter: sepia(10%) contrast(105%);
+    /* Warm tone filter */
+}
