@@ -94,14 +94,17 @@ const glossary = {
         check2: { en: "Hosting & Updates Included", de: "Hosting & Updates inklusive", es: "Alojamiento y Actualizaciones Incluidos" },
         check3: { en: "Direct Personal Support", de: "Direkter persönlicher Support", es: "Soporte Personal Directo" },
         card_tag: { en: "All-Inclusive", de: "All-Inclusive", es: "Todo Incluido" },
-        card_title: { en: "Monthly Retainer", de: "Monatliches Honorar", es: "Retención Mensual" },
+        card_title_basic: { en: "Basic Plan", de: "Basis-Plan", es: "Plan Básico" },
+        card_title_plus: { en: "Plus Plan", de: "Plus-Plan", es: "Plan Plus" },
         per_month: { en: "per month", de: "pro Monat", es: "por mes" },
         feat_domain: { en: "Managed .com Domain Included", de: "Verwaltete .com Domain Inklusive", es: "Dominio .com Gestionado Incluido" },
         feat_hosting: { en: "Secure Cloud Hosting & SSL", de: "Sicheres Cloud-Hosting & SSL", es: "Alojamiento en la Nube y SSL" },
         feat_mobile: { en: "Mobile Optimised Design", de: "Für Mobilgeräte optimiertes Design", es: "Diseño Optimizado para Móviles" },
         feat_form: { en: "Visitor Contact Form", de: "Besucher-Kontaktformular", es: "Formulario de Contacto" },
-        feat_updates: { en: "2 Hours Monthly Updates Included", de: "2 Stunden monatliche Updates inklusive", es: "2 Horas de Actualizaciones Mensuales Incluidas" },
+        feat_updates_basic: { en: "Max 1 Content Update per month", de: "Max. 1 Inhaltsaktualisierung pro Monat", es: "Máx. 1 actualización de contenido por mes" },
+        feat_updates_plus: { en: "Up to 5 Content Updates per month", de: "Bis zu 5 Inhaltsaktualisierungen pro Monat", es: "Hasta 5 actualizaciones de contenido por mes" },
         feat_support: { en: "Personal Mobile Number Access", de: "Zugang zur persönlichen Handynummer", es: "Acceso a Número Móvil Personal" },
+        response_time: { en: "I will respond in less than 12 hours.", de: "Ich antworte in weniger als 12 Stunden.", es: "Responderé en menos de 12 horas." },
         btn_start: { en: "Start Your Membership", de: "Mitgliedschaft starten", es: "Iniciar Membresía" },
         contact_btn: { en: "Contact Me to Join", de: "Kontaktieren Sie mich zum Beitritt", es: "Contáctame para Unirte" },
         stripe_note: {
@@ -109,11 +112,10 @@ const glossary = {
             de: "6 Monate Mindestlaufzeit. Sichere Zahlung über Stripe.",
             es: "Plazo mínimo de 6 meses. Pagos seguros vía Stripe."
         },
-        setup_fee: {
-            en: "+ £250 One-Time Setup Fee",
-            de: "+ 250 £ Einmalige Einrichtungsgebühr",
-            es: "+ £250 Tarifa Única de Configuración"
-        },
+        setup_fee_old: { en: "£250", de: "250 £", es: "£250" },
+        setup_fee_free: { en: "No Setup Fee", de: "Keine Einrichtungsgebühr", es: "Sin Costo de Configuración" },
+        deal_badge: { en: "New Year Offer", de: "Neujahrsangebot", es: "Oferta de Año Nuevo" },
+        deal_terms: { en: "Valid until March 1st", de: "Gültig bis 1. März", es: "Válido hasta el 1 de marzo" },
         custom_work_note: {
             en: "* Special bespoke features (e.g., blogs with comments) are not included and will incur an extra one-off cost.",
             de: "* Besondere maßgeschneiderte Funktionen (z. B. Blogs mit Kommentaren) sind nicht inbegriffen und verursachen zusätzliche einmalige Kosten.",
