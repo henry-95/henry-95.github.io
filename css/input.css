@@ -3,6 +3,8 @@
 @source "../**/*.html";
 @source "../**/*.js";
 
+@custom-variant hover (&:hover);
+
 @theme {
     --color-equestrian-dark: #1a2e26;
     --color-equestrian-green: #2d5a4c;
