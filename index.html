@@ -87,7 +87,8 @@
                 <a href="#portfolio"
                     class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
                     data-i18n="nav.portfolio">Portfolio</a>
-                <a href="#pricing" class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
+                <a href="#pricing"
+                    class="hidden text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
                     data-i18n="nav.membership">Membership</a>
 
                 <!-- Desktop Language Selector -->
@@ -147,7 +148,7 @@
                     data-i18n="nav.services">Services</a>
                 <a href="#portfolio" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
                     data-i18n="nav.portfolio">Portfolio</a>
-                <a href="#pricing" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
+                <a href="#pricing" class="hidden block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
                     data-i18n="nav.membership">Membership</a>
 
                 <div class="flex gap-4 px-4 py-2">
@@ -203,9 +204,9 @@
                     </p>
 
                     <div class="flex flex-col md:flex-row gap-4 mb-20">
-                        <a href="#pricing"
+                        <a href="#services"
                             class="px-8 py-4 bg-equestrian-gold text-equestrian-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all shadow-xl text-lg flex items-center gap-2">
-                            <span data-i18n="hero.btn_membership">View Membership</span>
+                            <span data-i18n="hero.btn_services">Our Services</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="w-5 h-5">
@@ -597,7 +598,7 @@
         </section>
 
         <!-- Pricing Section -->
-        <section id="pricing" class="py-24 bg-equestrian-dark text-white relative overflow-hidden">
+        <section id="pricing" class="py-24 bg-equestrian-dark text-white relative overflow-hidden hidden">
             <!-- Background element -->
             <div
                 class="absolute top-0 right-0 w-1/2 h-full bg-equestrian-green/50 transform skew-x-12 translate-x-32 opacity-20">
@@ -836,7 +837,8 @@
 
                 <div class="space-y-6">
                     <!-- FAQ Item 1 -->
-                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                    <div
+                        class="hidden border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -853,7 +855,8 @@
                     </div>
 
                     <!-- FAQ Item 2 -->
-                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                    <div
+                        class="hidden border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -924,7 +927,8 @@
                     </div>
 
                     <!-- FAQ Item 7 -->
-                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                    <div
+                        class="hidden border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -953,10 +957,10 @@
                     <div class="md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
                         <h2 class="text-3xl md:text-4xl font-serif font-bold text-white mb-6" data-i18n="contact.title">
                             Let's Discuss Your Vision</h2>
-                        <p class="text-gray-300 mb-8 text-lg" data-i18n="contact.description">
-                            Send me an email to let me know everything you need out of your new website, or if you just
-                            need to change site hosting or management. Once you join, you'll get my direct line for
-                            instant support.
+                        <p class="text-gray-300 mb-8 text-lg">
+                            Send me an email to let me know what you need out of your new website. Contact me to discuss
+                            your plans, projects, and pricing privately. Once we partner together, you'll get my direct
+                            line for instant support.
                         </p>
 
                         <form id="contact-form" class="space-y-4">
