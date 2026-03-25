@@ -1051,21 +1051,6 @@
                             </div>
 
                             <div>
-                                <label class="sr-only">Project Type</label>
-                                <select id="project-type" required
-                                    class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-equestrian-gold focus:ring-1 focus:ring-equestrian-gold transition-colors appearance-none cursor-pointer">
-                                    <option value="" disabled selected class="bg-equestrian-dark text-gray-400">What do
-                                        you need help with?</option>
-                                    <option value="New Website" class="bg-equestrian-dark text-white">I need a brand new
-                                        website</option>
-                                    <option value="Upgrade/Fix" class="bg-equestrian-dark text-white">I want to
-                                        upgrade/fix my existing website</option>
-                                    <option value="Other" class="bg-equestrian-dark text-white">Other Equestrian inquiry
-                                    </option>
-                                </select>
-                            </div>
-
-                            <div>
                                 <label class="sr-only" data-i18n="contact.form_message">Message</label>
                                 <textarea id="message" required rows="4"
                                     class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-equestrian-gold focus:ring-1 focus:ring-equestrian-gold transition-colors resize-none"
@@ -1153,7 +1138,7 @@
         }
 
         // Trigger load on interaction with form fields
-        const formInputs = contactForm.querySelectorAll('input, textarea, select');
+        const formInputs = contactForm.querySelectorAll('input, textarea');
         formInputs.forEach(input => {
             input.addEventListener('focus', loadRecaptcha, { once: true });
             input.addEventListener('click', loadRecaptcha, { once: true });
@@ -1182,7 +1167,6 @@
                 clientId: 'henrynorthen', // Your own identifier
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
-                projectType: document.getElementById('project-type').value,
                 message: document.getElementById('message').value,
                 recaptchaToken: grecaptcha.getResponse() // Add token to payload
             };
