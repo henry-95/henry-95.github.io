@@ -79,46 +79,16 @@
             </a>
 
             <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#about" class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
-                    data-i18n="nav.about">About</a>
+                <a href="#about"
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">About</a>
                 <a href="#services"
-                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
-                    data-i18n="nav.services">Services</a>
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Services</a>
                 <a href="#portfolio"
-                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
-                    data-i18n="nav.portfolio">Portfolio</a>
+                    class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Portfolio</a>
                 <a href="#pricing"
-                    class="hidden text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors"
-                    data-i18n="nav.membership">Membership</a>
+                    class="hidden text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors">Membership</a>
 
-                <!-- Desktop Language Selector -->
-                <!-- Desktop Language Selector -->
-                <div class="relative group">
-                    <button
-                        class="text-sm uppercase tracking-wider hover:text-equestrian-gold transition-colors flex items-center gap-1 py-3">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                            class="w-4 h-4">
-                            <circle cx="12" cy="12" r="10" />
-                            <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
-                            <path d="M2 12h20" />
-                        </svg> <span class="text-xs">LANG</span>
-                    </button>
-                    <!-- Wrapper with padding-top to bridge the gap -->
-                    <div class="absolute right-0 top-full pt-1 w-32 hidden group-hover:block">
-                        <div class="bg-equestrian-dark border border-gray-700 rounded shadow-xl overflow-hidden">
-                            <button onclick="changeLanguage('en')"
-                                class="lang-btn block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
-                                data-lang="en">English</button>
-                            <button onclick="changeLanguage('de')"
-                                class="lang-btn block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
-                                data-lang="de">Deutsch</button>
-                            <button onclick="changeLanguage('es')"
-                                class="lang-btn block w-full text-left px-4 py-2 text-sm text-white hover:bg-gray-800 transition-colors"
-                                data-lang="es">Español</button>
-                        </div>
-                    </div>
-                </div>
+
 
                 <a href="#contact"
                     class="px-6 py-2 bg-equestrian-gold text-equestrian-dark font-bold rounded-full hover:bg-white hover:scale-105 transition-all shadow-lg transform"
@@ -142,29 +112,14 @@
         <div id="mobile-menu"
             class="hidden lg:hidden bg-equestrian-dark border-t border-gray-800 absolute w-full left-0">
             <div class="flex flex-col p-4 space-y-4">
-                <a href="#about" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
-                    data-i18n="nav.about">About</a>
-                <a href="#services" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
-                    data-i18n="nav.services">Services</a>
-                <a href="#portfolio" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
-                    data-i18n="nav.portfolio">Portfolio</a>
-                <a href="#pricing" class="hidden block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold"
-                    data-i18n="nav.membership">Membership</a>
+                <a href="#about" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">About</a>
+                <a href="#services" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Services</a>
+                <a href="#portfolio" class="block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Portfolio</a>
+                <a href="#pricing"
+                    class="hidden block py-2 px-4 hover:bg-white/5 rounded text-equestrian-gold">Membership</a>
 
-                <div class="flex gap-4 px-4 py-2">
-                    <button onclick="changeLanguage('en')"
-                        class="text-white text-xs uppercase border border-gray-600 px-2 py-1 rounded hover:bg-white/10"
-                        data-lang="en">EN</button>
-                    <button onclick="changeLanguage('de')"
-                        class="text-white text-xs uppercase border border-gray-600 px-2 py-1 rounded hover:bg-white/10"
-                        data-lang="de">DE</button>
-                    <button onclick="changeLanguage('es')"
-                        class="text-white text-xs uppercase border border-gray-600 px-2 py-1 rounded hover:bg-white/10"
-                        data-lang="es">ES</button>
-                </div>
-
-                <a href="#contact" class="block py-2 px-4 bg-equestrian-gold/20 text-equestrian-gold rounded font-bold"
-                    data-i18n="nav.contact">Contact</a>
+                <a href="#contact"
+                    class="block py-2 px-4 bg-equestrian-gold/20 text-equestrian-gold rounded font-bold">Contact</a>
             </div>
         </div>
     </header>
@@ -187,9 +142,13 @@
                             class="w-full h-full object-cover rounded-full border-4 border-equestrian-dark shadow-inner">
                     </div>
 
-                    <span
-                        class="text-equestrian-gold uppercase tracking-[0.2em] mb-4 font-semibold text-sm md:text-base"
-                        data-i18n="hero.subtitle">Digital Excellence for Equestrians</span>
+                    <div
+                        class="mb-6 px-4 py-1.5 rounded-full bg-white/10 border border-equestrian-gold/30 backdrop-blur-md flex items-center gap-2 shadow-lg animate-pulse-slow">
+                        <span class="w-2 h-2 rounded-full bg-green-400"></span>
+                        <span
+                            class="text-xs md:text-sm font-medium tracking-wider text-equestrian-gold uppercase">Currently
+                            Accepting 2026 Clients</span>
+                    </div>
 
                     <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
                         <span data-i18n="hero.title_prefix">Elevate Your</span> <br />
@@ -197,16 +156,15 @@
                             data-i18n="hero.title_highlight">Equine Business</span>
                     </h1>
 
-                    <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-10 font-light"
-                        data-i18n="hero.description">
-                        Premium web management for stables, breeders, and trainers. Dedicated support for those who
-                        demand excellence.
+                    <p class="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto mb-10 font-light">
+                        Maintaining & developing the industry's leading platforms. Now offering premium, dedicated web
+                        management to a limited number of private stables and breeders.
                     </p>
 
                     <div class="flex flex-col md:flex-row gap-4 mb-20">
                         <a href="#services"
                             class="px-8 py-4 bg-equestrian-gold text-equestrian-dark font-bold rounded-lg hover:bg-white hover:scale-105 transition-all shadow-xl text-lg flex items-center gap-2">
-                            <span data-i18n="hero.btn_services">Our Services</span>
+                            <span data-i18n="hero.btn_services">My Services</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="w-5 h-5">
@@ -257,15 +215,15 @@
                                 World</span>
                         </h2>
                         <div class="h-1 w-20 bg-equestrian-gold mb-8"></div>
-                        <p class="text-lg text-gray-700 mb-6 leading-relaxed" data-i18n="about.paragraph1">
-                            My journey isn't just in code; it's in the paddock. With experience working alongside
-                            platforms like <strong>YardandGroom</strong>, I possess a unique understanding of the
-                            equestrian industry's specific needs.
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            A unique, front-row seat to the equestrian business. <strong>YardandGroom</strong> is
+                            our family business that I now maintain and develop, giving me a deep technical insight into
+                            the industry's specific digital needs and challenges.
                         </p>
-                        <p class="text-lg text-gray-700 mb-8 leading-relaxed" data-i18n="about.paragraph2">
-                            You need a website that reflects the prestige of your stable and the quality of your stock.
-                            I build digital experiences that are as reliable as a good stable hand and as elegant as a
-                            dressage performance.
+                        <p class="text-lg text-gray-700 mb-8 leading-relaxed">
+                            I build high-performance, professional websites that reflect the standards and prestige of
+                            your stable. You get a partner who understands the equestrian market as well as the code
+                            behind it.
                         </p>
                         <div class="flex gap-8">
                             <div>
@@ -292,12 +250,13 @@
                         data-i18n="services.subtitle">What I Provide</span>
                     <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6"
                         data-i18n="services.title">Comprehensive Management</h2>
-                    <p class="text-gray-600 text-lg" data-i18n="services.description">Focus on your horses while I
-                        handle the entire digital side of your business. Seamless, professional, and always available.
+                    <p class="text-gray-600 text-lg">Focus on your horses while I
+                        create, manage, and maintain your professional website. Reliable, expert support - exactly when
+                        you need it.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Card 1 -->
                     <div
                         class="group p-8 bg-equestrian-cream rounded-xl hover:bg-equestrian-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
@@ -377,6 +336,45 @@
                         <p class="text-gray-600 group-hover:text-gray-300" data-i18n="services.s4_desc">
                             Zero bloat. Optimised for speed so your site loads instantly, even when you're out in the
                             field with poor signal.
+                        </p>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div
+                        class="group p-8 bg-equestrian-gold/10 rounded-xl hover:bg-equestrian-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-equestrian-gold/20">
+                        <div
+                            class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-7 h-7">
+                                <path d="m13 2 1.9 4.7 5.1.8-3.7 3.6.9 5.1-4.5-2.4-4.5 2.4.9-5.1-3.7-3.6 5.1-.8z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif"
+                            data-i18n="services.s5_title">Zero to Live</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300" data-i18n="services.s5_desc">
+                            No website? No problem. I handle the entire technical process from domain registration to
+                            design and hosting. You just provide the vision.
+                        </p>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div
+                        class="group p-8 bg-equestrian-gold/10 rounded-xl hover:bg-equestrian-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)] border border-equestrian-gold/20">
+                        <div
+                            class="w-14 h-14 bg-equestrian-dark text-equestrian-gold group-hover:bg-white group-hover:text-equestrian-dark rounded-full flex items-center justify-center mb-6 transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="w-7 h-7">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4 text-equestrian-dark group-hover:text-white font-serif"
+                            data-i18n="services.s6_title">Refresh & Repair</h3>
+                        <p class="text-gray-600 group-hover:text-gray-300" data-i18n="services.s6_desc">
+                            Website feeling dated or running into errors? I can give your current site a modern refresh
+                            or fix technical issues to get it back on track.
                         </p>
                     </div>
                 </div>
@@ -505,94 +503,145 @@
         <section id="portfolio" class="py-24 bg-equestrian-cream">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16 max-w-3xl mx-auto">
-                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block"
-                        data-i18n="portfolio.subtitle">Previous Work</span>
-                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6"
-                        data-i18n="portfolio.title">Example Projects</h2>
-                    <p class="text-gray-600 text-lg" data-i18n="portfolio.description">
-                        See what's possible for your stable. High-end, responsive, and tailored to your brand.
+                    <span class="text-equestrian-gold font-bold uppercase tracking-widest text-sm mb-2 block">My
+                        Work</span>
+                    <h2 class="text-4xl md:text-5xl font-serif font-bold text-equestrian-dark mb-6">My Portfolio</h2>
+                    <p class="text-gray-600 text-lg">
+                        From maintaining global recruitment platforms to building custom websites for private stables.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-8">
-                    <!-- Example 1: Aurum Equestrian -->
-                    <a href="./example1/index.html" target="_blank"
-                        class="group block relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img loading="lazy" src="img/aurum.png" alt="Aurum Equestrian"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-equestrian-dark/20 group-hover:bg-equestrian-dark/40 transition-colors">
-                            </div>
-
-                            <!-- Overlay Text -->
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-equestrian-dark/90 to-transparent">
-                                <h3 class="text-2xl font-serif font-bold mb-1">Dressage Website</h3>
-                                <p class="text-sm font-light text-equestrian-gold uppercase tracking-wider">Dressage
-                                    Example Website</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <a href="https://www.ranchandwrangler.com" target="_blank"
-                        class="group block relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img loading="lazy" src="img/ranchandwrangler.webp" alt="Ranch & Wrangler"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-equestrian-dark/20 group-hover:bg-equestrian-dark/40 transition-colors">
-                            </div>
-
-                            <!-- Overlay Text -->
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-equestrian-dark/90 to-transparent">
-                                <h3 class="text-2xl font-serif font-bold mb-1">Ranch & Wrangler</h3>
-                                <p class="text-sm font-light text-equestrian-gold uppercase tracking-wider">The Frontier
-                                    for Ranch Jobs</p>
-                            </div>
-                        </div>
-                    </a>
-
-                    <!-- Example 3: Green Valley Riding School -->
-                    <a href="./ridingschool/index.html" target="_blank"
-                        class="group block relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img loading="lazy" src="img/riding-school.png" alt="Green Valley Riding School"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
-                            <div
-                                class="absolute inset-0 bg-equestrian-dark/20 group-hover:bg-equestrian-dark/40 transition-colors">
-                            </div>
-
-                            <!-- Overlay Text -->
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-equestrian-dark/90 to-transparent">
-                                <h3 class="text-2xl font-serif font-bold mb-1">Riding School</h3>
-                                <p class="text-sm font-light text-equestrian-gold uppercase tracking-wider">Riding
-                                    Example Website</p>
+                <!-- Professional Platforms Section -->
+                <div class="mb-16">
+                    <div class="grid md:grid-cols-2 gap-10">
+                        <!-- YardandGroom -->
+                        <div class="flex flex-col gap-6 group">
+                            <a href="https://www.yardandgroom.com" target="_blank"
+                                class="block overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl">
+                                <div class="aspect-video bg-gray-200 relative overflow-hidden">
+                                    <img loading="lazy" src="img/yardandgroom.png" alt="YardandGroom"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                    <div
+                                        class="absolute inset-0 bg-equestrian-dark/10 group-hover:bg-transparent transition-colors">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="px-2">
+                                <h4 class="text-2xl font-serif font-bold text-equestrian-dark mb-2">YardandGroom</h4>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Currently maintaining and developing the world's leading equestrian recruitment
+                                    platform. I manage the end-to-end technical landscape, focusing on high-traffic
+                                    performance and sophisticated employer management tools.
+                                </p>
+                                <div class="flex flex-wrap gap-x-6 gap-y-2 mb-6 text-sm">
+                                    <a href="https://www.yardandgroom.com" target="_blank"
+                                        class="text-equestrian-gold hover:text-equestrian-leather font-bold flex items-center gap-1 transition-colors">
+                                        YardandGroom.com
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M15 3h6v6" />
+                                            <path d="M10 14 21 3" />
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </a>
 
-                    <!-- Example 4: Elysium Equestrian -->
-                    <a href="./minimal/index.html" target="_blank"
-                        class="group block relative overflow-hidden rounded-xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
-                        <div class="aspect-[4/3] bg-gray-200 relative overflow-hidden">
-                            <img loading="lazy" src="img/elysium.png" alt="Elysium Equestrian"
-                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 grayscale group-hover:grayscale-0">
-                            <div
-                                class="absolute inset-0 bg-equestrian-dark/20 group-hover:bg-equestrian-dark/40 transition-colors">
-                            </div>
-
-                            <!-- Overlay Text -->
-                            <div
-                                class="absolute bottom-0 left-0 w-full p-6 text-white bg-gradient-to-t from-equestrian-dark/90 to-transparent">
-                                <h3 class="text-2xl font-serif font-bold mb-1">Elysium Equestrian</h3>
-                                <p class="text-sm font-light text-equestrian-gold uppercase tracking-wider">Minimalist
-                                    Livery & Stud</p>
+                        <!-- Ranch & Wrangler -->
+                        <div class="flex flex-col gap-6 group">
+                            <a href="https://www.ranchandwrangler.com" target="_blank"
+                                class="block overflow-hidden rounded-xl shadow-xl transition-all duration-500 hover:shadow-2xl">
+                                <div class="aspect-video bg-gray-200 relative overflow-hidden">
+                                    <img loading="lazy" src="img/ranchandwrangler.webp" alt="Ranch & Wrangler"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                    <div
+                                        class="absolute inset-0 bg-equestrian-dark/10 group-hover:bg-transparent transition-colors">
+                                    </div>
+                                </div>
+                            </a>
+                            <div class="px-2">
+                                <h4 class="text-2xl font-serif font-bold text-equestrian-dark mb-2">Ranch & Wrangler
+                                </h4>
+                                <p class="text-gray-600 leading-relaxed mb-4">
+                                    Sole developer and architect for a bespoke multi-tenant recruitment platform. The
+                                    system powers multiple industry-specific job boards, including
+                                    <strong>Ranch & Wrangler</strong> and <strong>Care Staff Wanted</strong>, using a
+                                    unified codebase to deliver tailored experiences for different niche markets.
+                                </p>
+                                <div class="flex flex-wrap gap-x-6 gap-y-2 mb-6 text-sm">
+                                    <a href="https://www.ranchandwrangler.com" target="_blank"
+                                        class="text-equestrian-gold hover:text-equestrian-leather font-bold flex items-center gap-1 transition-colors">
+                                        RanchandWrangler.com
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M15 3h6v6" />
+                                            <path d="M10 14 21 3" />
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        </svg>
+                                    </a>
+                                    <a href="https://www.carestaffwanted.com" target="_blank"
+                                        class="text-equestrian-gold hover:text-equestrian-leather font-bold flex items-center gap-1 transition-colors">
+                                        CareStaffWanted.com
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M15 3h6v6" />
+                                            <path d="M10 14 21 3" />
+                                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                                        </svg>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
+                </div>
+
+                <!-- Custom Equestrian Designs -->
+                <div>
+                    <h3 class="text-xl font-bold text-equestrian-dark mb-8 flex items-center gap-3">
+                        <span class="h-px w-8 bg-equestrian-gold"></span>
+                        Custom Design Concepts
+                    </h3>
+                    <div class="grid md:grid-cols-3 gap-6 opacity-90">
+                        <!-- Example 1: Dressage -->
+                        <a href="./example1/index.html" target="_blank"
+                            class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all h-64">
+                            <img loading="lazy" src="img/aurum.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-equestrian-dark/90 to-transparent p-6 flex flex-col justify-end">
+                                <h5 class="text-white font-serif font-bold">Elite Dressage</h5>
+                                <p class="text-equestrian-gold text-xs uppercase tracking-widest">Brand Showcase</p>
+                            </div>
+                        </a>
+
+                        <!-- Example 2: Riding School -->
+                        <a href="./ridingschool/index.html" target="_blank"
+                            class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all h-64">
+                            <img loading="lazy" src="img/riding-school.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-equestrian-dark/90 to-transparent p-6 flex flex-col justify-end">
+                                <h5 class="text-white font-serif font-bold">Riding Academy</h5>
+                                <p class="text-equestrian-gold text-xs uppercase tracking-widest">User Focused</p>
+                            </div>
+                        </a>
+
+                        <!-- Example 3: Livery -->
+                        <a href="./minimal/index.html" target="_blank"
+                            class="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all h-64">
+                            <img loading="lazy" src="img/elysium.png"
+                                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-equestrian-dark/90 to-transparent p-6 flex flex-col justify-end">
+                                <h5 class="text-white font-serif font-bold">Elysium Livery</h5>
+                                <p class="text-equestrian-gold text-xs uppercase tracking-widest">Minimalist Design</p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -846,9 +895,9 @@
                                 <rect width="20" height="14" x="2" y="5" rx="2" />
                                 <line x1="2" x2="22" y1="10" y2="10" />
                             </svg>
-                            <span data-i18n="faq.q1">How does payment work?</span>
+                            <span>How does payment work?</span>
                         </h3>
-                        <p class="text-gray-600" data-i18n="faq.a1">
+                        <p class="text-gray-600">
                             We use <strong>Stripe</strong>, the industry standard for secure online payments. You'll be
                             billed £75 automatically each month. It's safe, encrypted, and hassle-free.
                         </p>
@@ -866,9 +915,9 @@
                                 <line x1="8" x2="8" y1="2" y2="6" />
                                 <line x1="3" x2="21" y1="10" y2="10" />
                             </svg>
-                            <span data-i18n="faq.q2">Can I cancel or pause my subscription?</span>
+                            <span>Can I cancel or pause my subscription?</span>
                         </h3>
-                        <p class="text-gray-600" data-i18n="faq.a2">
+                        <p class="text-gray-600">
                             Absolutely. You are never locked in. You can pause your membership during the off-season or
                             cancel anytime with a single click in your portal. No questions asked.
                         </p>
@@ -884,9 +933,9 @@
                                 <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
                                 <path d="M2 12h20" />
                             </svg>
-                            <span data-i18n="faq.q3">Do I own my domain name?</span>
+                            <span>Do I own my domain name?</span>
                         </h3>
-                        <p class="text-gray-600" data-i18n="faq.a3">
+                        <p class="text-gray-600">
                             Yes! You always retain 100% ownership of your domain name (e.g., yourstables.com). I simply
                             manage the technical side to keep it running smoothly.
                         </p>
@@ -900,10 +949,10 @@
                                 stroke-linejoin="round" class="text-equestrian-gold w-5 h-5">
                                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
                             </svg>
-                            <span data-i18n="faq.q4">How do I request updates?</span>
+                            <span>How do I request updates?</span>
                         </h3>
-                        <p class="text-gray-600" data-i18n="faq.a4">
-                            Once you're a member, you'll have my personal mobile number. Just text or WhatsApp me your
+                        <p class="text-gray-600">
+                            You'll have my personal mobile number. Just text or WhatsApp me your
                             photos and text updates, and I'll upload them for you. It's that simple.
                         </p>
                     </div>
@@ -917,33 +966,48 @@
                                 <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
                                 <circle cx="12" cy="7" r="4" />
                             </svg>
-                            <span data-i18n="faq.q5">Who am I?</span>
+                            <span>Who are you?</span>
                         </h3>
-                        <p class="text-gray-600" data-i18n="faq.a5">
-                            I am a web developer who grew up in the equestrian world. I work directly with YardandGroom
-                            and understand the unique needs of stables and breeders. You get a trustworthy partner who
-                            is on your side in the digital arena.
+                        <p class="text-gray-600">
+                            I am a web developer who grew up in Salisbury, Wiltshire with my 3 brothers! YardandGroom is
+                            our family business that I now maintain and develop, so I understand the unique needs of
+                            equestrian stables and employers. I enjoy playing chess, travelling, and a long countryside
+                            walk on a nice summer's day!
                         </p>
                     </div>
 
-                    <!-- FAQ Item 7 -->
-                    <div
-                        class="hidden border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                    <!-- FAQ Item 8 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
                         <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="text-equestrian-gold w-5 h-5">
-                                <circle cx="12" cy="12" r="10" />
-                                <path d="M12 8v8" />
-                                <path d="M8 12h8" />
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                                <path d="m9 12 2 2 4-4" />
                             </svg>
-                            <span data-i18n="faq.q7">Are there extra costs for custom features?</span>
+                            <span data-i18n="faq.q8">What if I don't have a website yet?</span>
                         </h3>
-                        <p class="text-gray-600" data-i18n="faq.a7">
-                            Yes. The monthly membership covers standard website design, hosting, and management. Complex
-                            features like blogs with comments, booking systems, or bespoke applications require
-                            significant
-                            extra development time and are billed as a one-time project fee.
+                        <p class="text-gray-600" data-i18n="faq.a8">
+                            Perfect! I specialise in building from the ground up. I'll deal with the domain, hosting,
+                            security, and design, so you don't have to touch a single line of code or technical
+                            settings.
+                        </p>
+                    </div>
+
+                    <!-- FAQ Item 9 -->
+                    <div class="border border-gray-200 rounded-lg p-6 hover:border-equestrian-gold transition-colors">
+                        <h3 class="text-xl font-bold text-equestrian-dark mb-2 flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="text-equestrian-gold w-5 h-5">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                            </svg>
+                            <span data-i18n="faq.q9">Can you fix my existing website?</span>
+                        </h3>
+                        <p class="text-gray-600" data-i18n="faq.a9">
+                            Yes! Whether your site is broken, slow, or just looks a bit 2010, I can migrate it to my
+                            secure platform and give it a complete professional refresh.
                         </p>
                     </div>
                 </div>
@@ -962,6 +1026,11 @@
                             your plans, projects, and pricing privately. Once we partner together, you'll get my direct
                             line for instant support.
                         </p>
+                        <div class="flex items-center gap-2 mb-8 text-equestrian-gold/80 text-sm font-medium italic">
+                            <span
+                                class="w-1.5 h-1.5 rounded-full bg-equestrian-gold shadow-[0_0_8px_rgba(212,175,55,0.8)]"></span>
+                            Currently accepting private clients. Limited 2026 spots available.
+                        </div>
 
                         <form id="contact-form" class="space-y-4">
                             <!-- Honeypot for spam (hidden) -->
@@ -979,6 +1048,21 @@
                                 <input type="email" id="email" required
                                     class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white placeholder-gray-400 focus:outline-none focus:border-equestrian-gold focus:ring-1 focus:ring-equestrian-gold transition-colors"
                                     placeholder="Email Address" data-i18n="contact.form_email">
+                            </div>
+
+                            <div>
+                                <label class="sr-only">Project Type</label>
+                                <select id="project-type" required
+                                    class="w-full bg-white/10 border border-white/20 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-equestrian-gold focus:ring-1 focus:ring-equestrian-gold transition-colors appearance-none cursor-pointer">
+                                    <option value="" disabled selected class="bg-equestrian-dark text-gray-400">What do
+                                        you need help with?</option>
+                                    <option value="New Website" class="bg-equestrian-dark text-white">I need a brand new
+                                        website</option>
+                                    <option value="Upgrade/Fix" class="bg-equestrian-dark text-white">I want to
+                                        upgrade/fix my existing website</option>
+                                    <option value="Other" class="bg-equestrian-dark text-white">Other Equestrian inquiry
+                                    </option>
+                                </select>
                             </div>
 
                             <div>
@@ -1030,7 +1114,7 @@
         </div>
     </footer>
 
-    <script defer src="js/translations.js"></script>
+
     <script>
         // Mobile Menu Logic
         const mobileMenuButton = document.getElementById('mobile-menu-button');
@@ -1069,7 +1153,7 @@
         }
 
         // Trigger load on interaction with form fields
-        const formInputs = contactForm.querySelectorAll('input, textarea');
+        const formInputs = contactForm.querySelectorAll('input, textarea, select');
         formInputs.forEach(input => {
             input.addEventListener('focus', loadRecaptcha, { once: true });
             input.addEventListener('click', loadRecaptcha, { once: true });
@@ -1080,14 +1164,7 @@
 
             // Check if reCAPTCHA is loaded and ready
             if (typeof grecaptcha === 'undefined') {
-                // Determine current language safely
-                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-                // Fallback message if glossary isn't loaded or key missing
-                const errorMsg = (glossary && glossary.contact && glossary.contact.captcha_error && glossary.contact.captcha_error[currentLang])
-                    ? glossary.contact.captcha_error[currentLang]
-                    : "Please wait for the security check to load.";
-
-                statusMsg.textContent = errorMsg;
+                statusMsg.textContent = "Please wait for the security check to load.";
                 statusMsg.classList.remove('hidden');
                 statusMsg.classList.add('text-red-400');
                 return;
@@ -1105,18 +1182,14 @@
                 clientId: 'henrynorthen', // Your own identifier
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
+                projectType: document.getElementById('project-type').value,
                 message: document.getElementById('message').value,
                 recaptchaToken: grecaptcha.getResponse() // Add token to payload
             };
 
             // Verify Captcha matches
             if (!formData.recaptchaToken) {
-                const currentLang = localStorage.getItem('preferredLanguage') || 'en';
-                const errorMsg = (glossary && glossary.contact && glossary.contact.captcha_error && glossary.contact.captcha_error[currentLang])
-                    ? glossary.contact.captcha_error[currentLang]
-                    : "Please confirm you are not a robot.";
-
-                statusMsg.textContent = errorMsg;
+                statusMsg.textContent = "Please confirm you are not a robot.";
                 statusMsg.classList.remove('hidden');
                 statusMsg.classList.add('text-red-400');
                 statusMsg.classList.remove('text-green-400');
@@ -1125,7 +1198,7 @@
 
             // Loading State
             const originalBtnText = submitBtn.innerHTML;
-            const sendingText = (glossary && glossary.contact && glossary.contact.form_sending && glossary.contact.form_sending[localStorage.getItem('preferredLanguage') || 'en']) || "Sending...";
+            const sendingText = "Sending...";
 
             submitBtn.disabled = true;
             submitBtn.innerHTML = `<span class="animate-pulse">${sendingText}</span>`;
@@ -1133,7 +1206,6 @@
             statusMsg.className = "text-center text-sm mt-2 hidden"; // Reset classes
 
             try {
-                // Placeholder URL - Update this when you have your Azure Function URL
                 const response = await fetch('/api/contact', {
                     method: 'POST',
                     headers: {
@@ -1150,7 +1222,7 @@
 
                 if (result.success) {
                     // Success State
-                    statusMsg.textContent = glossary.contact.form_success[localStorage.getItem('preferredLanguage') || 'en'];
+                    statusMsg.textContent = "Message sent successfully!";
                     statusMsg.classList.remove('hidden');
                     statusMsg.classList.add('text-green-400');
                     contactForm.reset();
@@ -1161,7 +1233,7 @@
             } catch (error) {
                 // Error State
                 console.error(error);
-                statusMsg.textContent = glossary.contact.form_error[localStorage.getItem('preferredLanguage') || 'en'];
+                statusMsg.textContent = "Error sending message. Please try again.";
                 statusMsg.classList.remove('hidden');
                 statusMsg.classList.add('text-red-400');
             } finally {

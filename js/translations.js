@@ -65,6 +65,18 @@ const glossary = {
             en: "Zero bloat. Optimised for speed so your site loads instantly, even when you're out in the field with poor signal.",
             de: "Kein unnötiger Ballast. Optimiert für Geschwindigkeit, damit Ihre Seite sofort lädt – auch draußen auf dem Feld bei schlechtem Empfang.",
             es: "Sin código innecesario. Optimizado para velocidad, carga al instante incluso cuando estás en el campo con poca señal."
+        },
+        s5_title: { en: "Zero to Live", de: "Von Null auf Live", es: "De Cero a En Línea" },
+        s5_desc: {
+            en: "No website? No problem. I handle the entire technical process from domain registration to design and hosting. You just provide the vision.",
+            de: "Keine Website? Kein Problem. Ich kümmere mich um den gesamten technischen Prozess – von der Domain-Registrierung bis zum Design und Hosting. Sie liefern nur die Vision.",
+            es: "¿No tienes sitio web? No hay problema. Me encargo de todo el proceso técnico, desde el registro del dominio hasta el diseño y el alojamiento. Solo pon la visión."
+        },
+        s6_title: { en: "Refresh & Repair", de: "Überarbeitung & Reparatur", es: "Renovación y Reparación" },
+        s6_desc: {
+            en: "Website feeling dated or running into errors? I can give your current site a modern refresh or fix technical issues to get it back on track.",
+            de: "Ihre Website wirkt veraltet oder weist Fehler auf? Ich modernisiere Ihren aktuellen Auftritt oder behebe technische Probleme.",
+            es: "¿Tu sitio web parece antiguo o tiene errores? Puedo darle un aire moderno a tu sitio actual o solucionar problemas técnicos para que todo vuelva a funcionar."
         }
     },
     portfolio: {
@@ -145,11 +157,11 @@ const glossary = {
             de: "Als Mitglied haben Sie meine persönliche Handynummer. Schicken Sie mir einfach Ihre Fotos und Texte per WhatsApp, und ich lade sie für Sie hoch.",
             es: "Una vez que eres miembro, tendrás mi número de móvil personal. Solo envíame tus fotos y textos por WhatsApp, y yo los subiré por ti."
         },
-        q5: { en: "Who am I?", de: "Wer bin ich?", es: "¿Quién soy?" },
+        q5: { en: "Who are you?", de: "Wer bist du?", es: "¿Quién eres?" },
         a5: {
-            en: "I am a web developer who grew up in the countryside. I work directly with YardandGroom and understand the unique needs of stables and breeders. You get a trustworthy partner who is on your side in the digital arena.",
-            de: "Ich bin Webentwickler und in der Reitwelt aufgewachsen. Ich arbeite direkt mit YardandGroom zusammen und verstehe die besonderen Bedürfnisse von Ställen und Züchtern. Sie erhalten einen vertrauenswürdigen Partner an Ihrer Seite.",
-            es: "Soy desarrollador web y crecí en el mundo ecuestre. Trabajo directamente con YardandGroom y entiendo las necesidades únicas de establos y criadores. Obtienes un socio de confianza que está de tu lado."
+            en: "I am a web developer who grew up in Salisbury, Wiltshire with my 3 brothers! YardandGroom is our family business that I now maintain and develop, so I understand the unique needs of equestrian stables and employers. You get a trustworthy partner who is on your side in the digital arena.",
+            de: "Ich bin Webentwickler und in Salisbury, Wiltshire, mit meinen 3 Brüdern aufgewachsen. YardandGroom ist unser Familienunternehmen, das ich heute pflege und entwickle. Daher verstehe ich die besonderen Bedürfnisse von Ställen und Arbeitgebern im Reitsport. Sie erhalten einen vertrauenswürdigen Partner an Ihrer Seite.",
+            es: "Soy desarrollador web y crecí en Salisbury, Wiltshire, con mis 3 hermanos. YardandGroom es nuestra empresa familiar, la cual mantengo y desarrollo hoy en día, por lo que entiendo las necesidades únicas de los establos y empleadores ecuestres. Obtienes un socio de confianza que está de tu lado."
         },
         q6: { en: "What languages do you support?", de: "Welche Sprachen unterstützen Sie?", es: "¿Qué idiomas soporta?" },
         a6: {
@@ -162,14 +174,26 @@ const glossary = {
             en: "Yes. The monthly membership covers standard website design, hosting, and management. Complex features like blogs with comments, booking systems, or bespoke applications require significant extra development time and are billed as a one-time project fee.",
             de: "Ja. Die monatliche Mitgliedschaft deckt Standard-Webdesign, Hosting und Verwaltung ab. Komplexe Funktionen wie Blogs mit Kommentaren, Buchungssysteme oder maßgeschneiderte Anwendungen erfordern erhebliche zusätzliche Entwicklungszeit und werden als einmalige Projektgebühr abgerechnet.",
             es: "Sí. La membresía mensual cubre el diseño web estándar, alojamiento y gestión. Las características complejas como blogs con comentarios, sistemas de reserva o aplicaciones a medida requieren un tiempo de desarrollo adicional significativo y se facturan como una tarifa de proyecto única."
+        },
+        q8: { en: "What if I don't have a website yet?", de: "Was ist, wenn ich noch keine Website habe?", es: "¿Qué pasa si aún no tengo un sitio web?" },
+        a8: {
+            en: "Perfect! I specialise in building from the ground up. I'll deal with the domain, hosting, security, and design, so you don't have to touch a single line of code or technical settings.",
+            de: "Perfekt! Ich bin darauf spezialisiert, von Grund auf neu zu bauen. Ich kümmere mich um Domain, Hosting, Sicherheit und Design, damit Sie sich nicht mit technischem Code oder Einstellungen befassen müssen.",
+            es: "¡Perfecto! Me especializo en construir desde cero. Me encargaré del dominio, alojamiento, seguridad y diseño, para que no tengas que tocar ni una línea de código ni configuraciones técnicas."
+        },
+        q9: { en: "Can you fix my existing website?", de: "Können Sie meine bestehende Website reparieren?", es: "¿Puedes arreglar mi sitio web actual?" },
+        a9: {
+            en: "Yes! Whether your site is broken, slow, or just looks a bit 2010, I can migrate it to my secure platform and give it a complete professional refresh.",
+            de: "Ja! Egal, ob Ihre Website defekt, langsam ist oder einfach nur nach 2010 aussieht: Ich migriere sie auf meine sichere Plattform und überarbeite sie professionell.",
+            es: "¡Sí! Ya sea que tu sitio esté roto, sea lento o simplemente parezca de 2010, puedo migrarlo a mi plataforma segura y darle una renovación profesional completa."
         }
     },
     contact: {
         title: { en: "Let's Discuss Your Vision", de: "Lassen Sie uns Ihre Vision besprechen", es: "Hablemos de Tu Visión" },
         description: {
-            en: "Send me an email to let me know everything you need out of your new website, or if you just need to change site hosting or management. Once you join, you'll get my direct line for instant support.",
-            de: "Senden Sie mir eine E-Mail, um mir mitzuteilen, was Sie für Ihre neue Website benötigen, oder ob Sie einfach nur das Hosting oder die Verwaltung wechseln möchten. Sobald Sie Mitglied sind, erhalten Sie meine Direktwahl für sofortigen Support.",
-            es: "Envíame un correo para contarme lo que necesitas para tu nuevo sitio web, o si solo necesitas cambiar el alojamiento o la gestión. Una vez que te unas, obtendrás mi línea directa para soporte instantáneo."
+            en: "Send me an email to let me know what you need out of your new website (or if you don't have one yet). Contact me to discuss your plans, projects, and pricing privately.",
+            de: "Senden Sie mir eine E-Mail, um mir mitzuteilen, was Sie für Ihre neue Website benötigen (oder wenn Sie noch keine haben). Kontaktieren Sie mich, um Ihre Pläne, Projekte und Preise privat zu besprechen.",
+            es: "Envíame un correo para decirme qué necesitas para tu nuevo sitio web (o si aún no tienes uno). Contáctame para discutir tus planes, proyectos y precios de forma privada."
         },
         members_only: { en: "Members Only Access", de: "Nur für Mitglieder", es: "Acceso Solo Miembros" },
         form_name: { en: "Your Name", de: "Ihr Name", es: "Tu Nombre" },
@@ -188,7 +212,7 @@ const glossary = {
         r2: { en: "Bank-Grade Security: Always SSL certified, eliminating browser warnings.", de: "Sicherheit auf Bankenniveau: Immer SSL-zertifiziert.", es: "Seguridad de nivel bancario: Siempre certificado con SSL." },
         r3: { en: "On-Demand Updates: Just text me, and I'll apply changes immediately.", de: "Updates auf Abruf: Einfach texten, und ich kümmere mich sofort darum.", es: "Actualizaciones a pedido: Solo envíame un mensaje y aplicaré los cambios de inmediato." },
         r4: { en: "Transparent Pricing: One simple, all-inclusive subscription.", de: "Transparente Preise: Ein einfaches, alles umfassende Abonnement.", es: "Precios transparentes: Una suscripción simple y todo incluido." },
-        r5: { en: "Superior Performance: Lightning-fast loading speeds, optimized for all devices.", de: "Überragende Leistung: Blitzschnelle Ladezeiten.", es: "Rendimiento superior: Velocidad de carga ultrarrápida." },
+        r5: { en: "Superior Performance: Lightning-fast loading speeds, optimised for all devices.", de: "Überragende Leistung: Blitzschnelle Ladezeiten.", es: "Rendimiento superior: Velocidad de carga ultrarrápida." },
         r6: { en: "Platform Independence: Custom-built code, not reliant on Squarespace or WordPress.", de: "Plattformunabhängigkeit: Unabhängig von Squarespace oder WordPress.", es: "Independencia de plataforma: Código personalizado, sin depender de otros." },
         r7: { en: "Total Ownership: You own 100% of your website's code and assets.", de: "Vollständiges Eigentum: Sie besitzen 100% des Codes Ihrer Website.", es: "Propiedad total: Usted es dueño del 100% del código de su sitio web." },
         r8: { en: "World-Class Infrastructure: Hosted on Microsoft Azure's premium cloud network.", de: "Weltklasse-Infrastruktur: Gehostet auf Microsoft Azure.", es: "Infraestructura de clase mundial: Alojado en Microsoft Azure." }
@@ -258,17 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // 1. Check LocalStorage
-    let initialLang = localStorage.getItem('preferredLanguage');
-
-    // 2. If not in Storage, check Browser Language
-    if (!initialLang) {
-        const browserLang = navigator.language.slice(0, 2); // e.g. 'en-US' -> 'en'
-        if (['en', 'de', 'es'].includes(browserLang)) {
-            initialLang = browserLang;
-        }
-    }
-
     // 3. Default to English
-    changeLanguage(initialLang || 'en');
+    changeLanguage('en');
 });
