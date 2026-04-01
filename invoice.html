@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice | Henry Northen</title>
+
+    <!-- Use existing styles -->
+    <link rel="stylesheet" href="css/output.css">
+
+    <style>
+        /* Lora Font */
+        @font-face {
+            font-family: 'Lora';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/lora-v37-latin_latin-ext-700.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        /* Make editable fields look natural when not focused */
+        [contenteditable="true"] {
+            outline: none;
+            transition: background-color 0.2s;
+            border-bottom: 1px dashed transparent;
+        }
+
+        [contenteditable="true"]:hover {
+            background-color: rgba(226, 232, 240, 0.4);
+            border-bottom: 1px dashed #cbd5e1;
+        }
+
+        [contenteditable="true"]:focus {
+            background-color: rgba(226, 232, 240, 0.8);
+            border-bottom: 1px dashed #94a3b8;
+        }
+
+        /* Print formatting */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0;
+            }
+
+            body {
+                background-color: white !important;
+                margin: 0;
+            }
+
+            .no-print {
+                display: none !important;
+            }
+
+            .print-container {
+                box-shadow: none !important;
+                margin: 0 !important;
+                padding: 12mm 15mm !important;
+                width: 210mm !important;
+                min-height: 297mm !important;
+                border: none !important;
+            }
+
+            [contenteditable="true"]:hover,
+            [contenteditable="true"]:focus {
+                background-color: transparent !important;
+                border-bottom: 1px dashed transparent !important;
+            }
+        }
+
+        .invoice-a4 {
+            width: 210mm;
+            min-height: 297mm;
+        }
+    </style>
+</head>
+
+<body class="bg-equestrian-cream text-equestrian-dark font-sans py-10 min-h-screen">
+
+    <!-- Controls to print -->
+    <div class="max-w-4xl mx-auto mb-6 flex justify-between items-center no-print px-4">
+        <a href="index.html"
+            class="text-equestrian-green hover:text-equestrian-gold flex items-center gap-2 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 12H5" />
+                <path d="m12 19-7-7 7-7" />
+            </svg>
+            Back to Home
+        </a>
+        <div class="flex items-center gap-4">
+            <span class="text-sm text-gray-500 italic">Click any text to edit before printing.</span>
+            <button onclick="window.print()"
+                class="px-6 py-2 bg-equestrian-gold text-equestrian-dark font-bold rounded shadow hover:bg-white transition-colors">
+                Save / Print as PDF
+            </button>
+        </div>
+    </div>
+
+    <!-- The actual Invoice A4 Page -->
+    <div
+        class="print-container invoice-a4 mx-auto bg-white p-12 md:p-16 shadow-2xl border border-gray-100 flex flex-col">
+
+        <!-- Header -->
+        <div class="flex justify-between items-start mb-16 border-b pb-8 border-gray-200">
+            <div>
+                <h1 class="text-4xl font-serif font-bold text-equestrian-dark mb-2 tracking-widest uppercase">INVOICE
+                </h1>
+                <p class="text-gray-500 font-mono text-sm" contenteditable="true">INV-2026-001</p>
+            </div>
+            <div class="text-right">
+                <h2 class="text-xl font-serif font-bold text-equestrian-gold tracking-widest">HENRY NORTHEN</h2>
+                <div class="text-gray-600 space-y-1 mt-2 text-sm" contenteditable="true">
+                    <div>123 Equestrian Lane</div>
+                    <div>London, UK W1K 1AB</div>
+                    <div>henry@henrynorthen.com</div>
+                    <div>+44 7700 900077</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bill To / Details -->
+        <div class="flex justify-between mb-16">
+            <div class="w-1/2">
+                <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-3">Bill To:</h3>
+                <div class="text-equestrian-dark text-lg font-semibold mb-1" contenteditable="true">Client Name</div>
+                <div class="text-gray-600 text-sm space-y-1" contenteditable="true">
+                    <div>Company Name</div>
+                    <div>Client Address Line 1</div>
+                    <div>City, Country, ZIP</div>
+                    <div>client.email@example.com</div>
+                </div>
+            </div>
+            <div class="w-1/3 text-right">
+                <div class="mb-4">
+                    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Invoice Date:</h3>
+                    <div class="text-equestrian-dark font-medium" contenteditable="true">Feb 28, 2026</div>
+                </div>
+                <div>
+                    <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-1">Due Date:</h3>
+                    <div class="text-equestrian-dark font-medium" contenteditable="true">Mar 15, 2026</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Line Items -->
+        <div class="mb-12 flex-grow">
+            <div
+                class="flex justify-between border-b-2 border-equestrian-dark pb-3 mb-4 text-xs uppercase tracking-widest text-gray-400 font-bold">
+                <div class="flex-1 pr-8">Description</div>
+                <div class="w-32 text-right">Amount</div>
+            </div>
+
+            <!-- Item 1 -->
+            <div class="flex justify-between border-b border-gray-100 py-4 items-start group">
+                <div class="flex-1 pr-8 text-equestrian-dark" contenteditable="true">
+                    <div class="font-semibold">Monthly Web Management Fee</div>
+                    <div class="text-sm text-gray-500">Includes secure hosting, content updates, and personal support
+                        for the month of February.</div>
+                </div>
+                <div class="w-32 text-right font-medium text-equestrian-dark" contenteditable="true">£75.00</div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="flex justify-between border-b border-gray-100 py-4 items-start">
+                <div class="flex-1 pr-8 text-equestrian-dark" contenteditable="true">
+                    <div class="font-semibold">Additional Feature Customisation</div>
+                    <div class="text-sm text-gray-500">Fixed rate for designing and developing the new property listings
+                        page entirely.</div>
+                </div>
+                <div class="w-32 text-right font-medium text-equestrian-dark" contenteditable="true">£200.00</div>
+            </div>
+
+            <!-- You can add more rows here if needed -->
+            <div class="flex justify-between py-4 items-center">
+                <div class="flex-1 pr-8 text-gray-400 italic text-sm no-print" contenteditable="true">
+                    Click to add another item description here...
+                </div>
+                <div class="w-32 text-right text-transparent no-print" contenteditable="true">0</div>
+            </div>
+        </div>
+
+        <!-- Totals -->
+        <div class="flex justify-end mb-16">
+            <div class="w-1/2 md:w-1/3 space-y-3">
+                <div class="flex justify-between text-gray-600 border-b border-gray-100 pb-2">
+                    <span>Subtotal:</span>
+                    <span contenteditable="true">£275.00</span>
+                </div>
+
+                <div
+                    class="flex justify-between text-xl font-bold text-equestrian-green border-t-2 border-equestrian-dark pt-3">
+                    <span>Total Due:</span>
+                    <span contenteditable="true">£275.00</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Info & Footer -->
+        <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 mb-8">
+            <h3 class="text-xs uppercase tracking-widest text-gray-400 font-bold mb-2">Payment Details:</h3>
+            <div class="text-sm text-gray-700 space-y-1" contenteditable="true">
+                <div><strong>Bank Name:</strong> Example Bank UK</div>
+                <div><strong>Sort Code:</strong> 12-34-56</div>
+                <div><strong>Account No:</strong> 12345678</div>
+                <div class="mt-2 text-xs italic text-gray-500">Please include the invoice number (INV-2026-001) as the
+                    payment reference.</div>
+            </div>
+        </div>
+
+        <div class="text-center text-sm text-gray-400 mt-12" contenteditable="true">
+            Thank you for your business! If you have any questions about this invoice, please contact me.
+        </div>
+
+    </div>
+
+</body>
+
+</html>
